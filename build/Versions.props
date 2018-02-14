@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+
+    <!-- This repo version -->
+    <VersionBase>1.0.0</VersionBase>
+    <PreReleaseVersionLabel>beta</PreReleaseVersionLabel>
+
+    <!-- Opt-in repo features -->
+    <UsingToolVSSDK>true</UsingToolVSSDK>
+
+    <!-- Toolset -->
+    <RoslynToolsRepoToolsetVersion>1.0.0-beta-62522-01</RoslynToolsRepoToolsetVersion>
+    <DotNetCliVersion>2.0.2</DotNetCliVersion>
+    <VSWhereVersion>2.3.2</VSWhereVersion>
+
+    <!-- VS SDK -->
+    <VSLangProjVersion>7.0.3300</VSLangProjVersion>
+    <VSSDKTemplateWizardInterfaceVersion>12.0.4</VSSDKTemplateWizardInterfaceVersion>
+    <EnvDTEVersion>8.0.1</EnvDTEVersion>
+    <EnvDTE80Version>8.0.0</EnvDTE80Version>
+    <MicrosoftVisualStudioComponentModelHostVersion>15.0.26606</MicrosoftVisualStudioComponentModelHostVersion>
+    <MicrosoftVisualStudioCoreUtilityVersion>15.0.26606</MicrosoftVisualStudioCoreUtilityVersion>
+    <MicrosoftVisualStudioEditorVersion>15.0.26606</MicrosoftVisualStudioEditorVersion>
+    <MicrosoftVisualStudioOLEInteropVersion>7.10.6070</MicrosoftVisualStudioOLEInteropVersion>
+    <MicrosoftVisualStudioShell140Version>14.3.25407</MicrosoftVisualStudioShell140Version>
+    <MicrosoftVisualStudioShellInteropVersion>7.10.6071</MicrosoftVisualStudioShellInteropVersion>
+    <MicrosoftVisualStudioShellInterop80Version>8.0.50727</MicrosoftVisualStudioShellInterop80Version>
+    <MicrosoftVisualStudioShellInterop90Version>9.0.30729</MicrosoftVisualStudioShellInterop90Version>
+    <MicrosoftVisualStudioShellInterop100Version>10.0.30319</MicrosoftVisualStudioShellInterop100Version>
+    <MicrosoftVisualStudioTextDataVersion>15.0.26606</MicrosoftVisualStudioTextDataVersion>
+    <MicrosoftVisualStudioTextLogicVersion>15.0.26606</MicrosoftVisualStudioTextLogicVersion>
+    <MicrosoftVisualStudioTextManagerInteropVersion>7.10.6070</MicrosoftVisualStudioTextManagerInteropVersion>
+    <MicrosoftVisualStudioTextUIVersion>15.0.26606</MicrosoftVisualStudioTextUIVersion>
+    <MicrosoftVisualStudioUtilitiesVersion>15.0.26606</MicrosoftVisualStudioUtilitiesVersion>
+    <MicrosoftVisualStudioThreadingVersion>15.3.20</MicrosoftVisualStudioThreadingVersion>
+  </PropertyGroup>
+
+</Project>

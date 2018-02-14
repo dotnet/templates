@@ -1,0 +1,17 @@
+<!-- Copyright (c)  Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+
+    <!-- VSIX -->
+    <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
+    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates</ExtensionInstallationFolder>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.GettingStartedTemplates.Desktop</VisualStudioInsertionComponent>
+  </PropertyGroup>
+  <ItemGroup>
+    <VSTemplate Include="Content\DesktopApplication.vstemplate">
+      <OutputSubPath>Getting Started</OutputSubPath>
+    </VSTemplate>
+    <Compile Remove="Content\*.cs" />
+  </ItemGroup>
+</Project>

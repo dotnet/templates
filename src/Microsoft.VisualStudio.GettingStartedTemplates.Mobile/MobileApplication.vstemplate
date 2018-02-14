@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Mobile</TemplateID>
+    <Name>C# Mobile App</Name>
+    <Description>Creates a C# app that can be run on Android or iOS based phones.</Description>
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4554" />
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>4</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>MobileApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$safeprojectname$">
+        Content\Netstandard\MobileApplication.Netstandard.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Android">
+        Content\Android\MobileApplication.Android.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.iOS">
+        Content\iOS\MobileApplication.iOS.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>GettingStartedTemplates.Mobile.Wizard, Version=42.42.42.42, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <FullClassName>GettingStartedRootTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

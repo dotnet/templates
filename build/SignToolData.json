@@ -1,0 +1,11 @@
+{
+  "sign": [
+    {
+      "certificate": "VsixSHA2",
+      "strongName": null,
+      "values": [
+        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.vsix"
+      ]
+    }
+  ]
+}

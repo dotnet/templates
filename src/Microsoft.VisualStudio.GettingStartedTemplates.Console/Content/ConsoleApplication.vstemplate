@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Console</TemplateID>
+    <Name>C# Console App</Name>
+    <Description>Creates a C# app that interacts with the command line console.</Description>
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4548" />
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>0</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ConsoleApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>false</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="content.consoleapplication.csproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">content.assemblyinfo.cs</ProjectItem>
+      <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true">content.program.cs</ProjectItem>
+      <ProjectItem TargetFileName="App.config" ReplaceParameters="true">content.app.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

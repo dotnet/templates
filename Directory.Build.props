@@ -1,0 +1,32 @@
+<!-- Copyright (c)  Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<Project>
+  <Import Project="build\NuGet.props"/>
+  <Import Project="build\Versions.props"/>
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+    <RepoToolsetDir>$(NuGetPackageRoot)roslyntools.repotoolset\$(RoslynToolsRepoToolsetVersion)\tools\</RepoToolsetDir>
+    <RepositoryUrl>https://github.com/jmarolf/getting-started-templates</RepositoryUrl>
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <!--
+      RepoToolset props and targets are conditionally imported based on whether RepoToolsetDir is set or not
+      to allow VS to load packages and perform automatic package restore.
+      TODO: Remove once we can use a custom SDK (https://github.com/Microsoft/msbuild/issues/1493)
+    -->
+    <_RepoToolsetDir>$(NuGetPackageRoot)roslyntools.repotoolset\$(RoslynToolsRepoToolsetVersion)\tools\</_RepoToolsetDir>
+    <RepoToolsetDir Condition="'$(BuildingInsideVisualStudio)' != 'true' or Exists('$(_RepoToolsetDir)')">$(_RepoToolsetDir)</RepoToolsetDir>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ForceGenerationOfBindingRedirects>true</ForceGenerationOfBindingRedirects>
+
+    <VSSDKTargetPlatformRegRootSuffix Condition="'$(RootSuffix)' != ''">$(RootSuffix)</VSSDKTargetPlatformRegRootSuffix>
+    <VSSDKTargetPlatformRegRootSuffix Condition="'$(VSSDKTargetPlatformRegRootSuffix)' == ''">Exp</VSSDKTargetPlatformRegRootSuffix>
+  </PropertyGroup>
+
+  <!-- Workaround https://github.com/dotnet/sdk/issues/1510 -->
+  <Target Name="WorkaroundConflictResolution" AfterTargets="_ComputeActiveTFMFileDependencies" Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
+    <ItemGroup>
+      <_ActiveTFMFileDependencies Remove="@(_ActiveTFMFileDependencies->WithMetadataValue('FileGroup', 'RuntimeTarget'))" />
+    </ItemGroup>
+  </Target>
+</Project>

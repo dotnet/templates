@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VSTemplate Version="3.0.0" Type="Project"
+  xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Mobile.iOS</TemplateID>
+    <Name>C# Mobile App</Name>
+    <Description>Creates a C# app that can be run on Android or iOS based phones.</Description>
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4554" />
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>3</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MobileApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>false</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="App1.iOS.csproj" File="App1.iOS.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppDelegate.cs">AppDelegate.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Entitlements.plist">Entitlements.plist</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Info.plist">Info.plist</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Main.cs">Main.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Resources" TargetFolderName="Resources">
+        <ProjectItem ReplaceParameters="false" TargetFileName="LaunchScreen.storyboard">LaunchScreen.storyboard</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="tab_about.png">tab_about.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="tab_about@2x.png">tab_about@2x.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="tab_about@3x.png">tab_about@3x.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="tab_feed.png">tab_feed.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="tab_feed@2x.png">tab_feed@2x.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="tab_feed@3x.png">tab_feed@3x.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="xamarin_logo.png">xamarin_logo.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="xamarin_logo@2x.png">xamarin_logo@2x.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="xamarin_logo@3x.png">xamarin_logo@3x.png</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Assets.xcassets\AppIcon.appiconset\Contents.json">content.contents.json</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon20.png">content.icon20.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon29.png">content.icon29.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon40.png">content.icon40.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon58.png">content.icon58.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon60.png">content.icon60.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon76.png">content.icon76.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon80.png">content.icon80.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon87.png">content.icon87.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon120.png">content.icon120.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon152.png">content.icon152.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon167.png">content.icon167.png</ProjectItem>
+      <ProjectItem TargetFileName="Assets.xcassets\AppIcon.appiconset\Icon180.png">content.icon180.png</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>GettingStartedTemplates.Mobile.Wizard, Version=42.42.42.42, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <FullClassName>GettingStartedMobileTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
