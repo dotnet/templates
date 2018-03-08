@@ -50,7 +50,7 @@
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>GettingStartedTemplates.Mobile.Wizard, Version=42.42.42.42, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <Assembly>GettingStartedTemplates.Mobile.Wizard, Version=$(AssemblyVersion), Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
     <FullClassName>GettingStartedMobileTemplateWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

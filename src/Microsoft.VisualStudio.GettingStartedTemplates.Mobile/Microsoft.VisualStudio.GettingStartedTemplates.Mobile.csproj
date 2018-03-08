@@ -19,5 +19,20 @@
       <OutputSubPath>Getting Started</OutputSubPath>
     </VSTemplate>
     <Compile Remove="Content\**\*.cs" />
+    <Compile Remove="ModifiedTemplates\**\*.cs" />
   </ItemGroup>
+
+  <!-- rewriting of .vstemplate files to reference the correct assembly version number -->
+  <UsingTask AssemblyFile="$(ArtifactsBinDir)UpdateTemplateVersion\UpdateTemplateVersion.dll" TaskName="UpdateTemplateVersion" />
+  <Target Name="UpdateAssemblyVersionInTemplates" BeforeTargets="GetZipFilesFromVSTemplates">
+    <ItemGroup>
+      <_OriginalVSTemplate Include="@(VSTemplate)" />
+    </ItemGroup>
+    <UpdateTemplateVersion VSTemplatesToRewrite="@(VSTemplate)" AssemblyVersion="$(AssemblyVersion)" IntermediatePath="ModifiedTemplates">
+      <Output TaskParameter="NewVSTemplates" ItemName="VSTemplate" />
+    </UpdateTemplateVersion>
+    <ItemGroup>
+      <VSTemplate Remove="@(_OriginalVSTemplate)" />
+    </ItemGroup>
+  </Target>
 </Project>

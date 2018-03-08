@@ -17,6 +17,7 @@ x64/
 [Oo]bj/
 .dotnet/
 .tools/
+src/Microsoft.VisualStudio.GettingStartedTemplates.Mobile/ModifiedTemplates/
 
 # Per-user project properties
 launchSettings.json

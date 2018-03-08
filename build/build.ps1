@@ -9,6 +9,7 @@ Param(
   [switch] $rebuild,
   [switch] $deploy,
   [switch] $test,
+  [switch] $integrationTest,
   [switch] $sign,
   [switch] $pack,
   [switch] $ci,
@@ -54,8 +55,16 @@ if ($help -or (($properties -ne $null) -and ($properties.Contains("/help") -or $
   exit 0
 }
 
+$RepoRoot = Join-Path $PSScriptRoot "..\"
+$ToolsRoot = Join-Path $RepoRoot ".tools"
+$BuildProj = Join-Path $PSScriptRoot "build.proj"
+$DependenciesProps = Join-Path $PSScriptRoot "Versions.props"
+$ArtifactsDir = Join-Path $RepoRoot "artifacts"
+$LogDir = Join-Path (Join-Path $ArtifactsDir $configuration) "log"
+$TempDir = Join-Path (Join-Path $ArtifactsDir $configuration) "tmp"
+
 function Create-Directory([string[]] $path) {
-  if (!(Test-Path $path)) {
+  if (!(Test-Path -path $path)) {
     New-Item -path $path -force -itemType "Directory" | Out-Null
   }
 }
@@ -95,23 +104,27 @@ function LocateVisualStudio {
   return $vsInstallDir
 }
 
-function InstallToolset {
-  if (!(Test-Path $ToolsetBuildProj)) {
-    & $MsbuildExe $ToolsetRestoreProj /t:restore /m /nologo /clp:None /warnaserror /v:quiet /p:DeployDeps=$deployDeps /p:NuGetPackageRoot=$NuGetPackageRoot /p:BaseIntermediateOutputPath=$ToolsetDir /p:ExcludeRestorePackageImports=true
-  }
-}
 
 function Build {
+  $vsInstallDir = LocateVisualStudio
+  $msbuildExe = Join-Path $vsInstallDir "MSBuild\15.0\Bin\msbuild.exe"
+
+  # Microbuild is on 15.1 which doesn't support binary log
   if ($ci -or $log) {
     Create-Directory($logDir)
-    $logCmd = "/bl:" + (Join-Path $LogDir "Build.binlog")
+
+    if ($env:BUILD_BUILDNUMBER -eq $null) {
+      $logCmd = "/bl:" + (Join-Path $LogDir "Build.binlog")
+    } else {
+      $logCmd = "/flp1:Summary;Verbosity=diagnostic;Encoding=UTF-8;LogFile=" + (Join-Path $LogDir "Build.log")
+    }
   } else {
     $logCmd = ""
   }
 
-  $nodeReuse = !$ci
+  $nodeReuse = "false"
 
-  & $MsbuildExe $ToolsetBuildProj /m /nologo /clp:Summary /nodeReuse:$nodeReuse /warnaserror /v:$verbosity $logCmd /p:Configuration=$configuration /p:SolutionPath=$solution /p:Restore=$restore /p:DeployDeps=$deployDeps /p:Build=$build /p:Rebuild=$rebuild /p:Deploy=$deploy /p:Test=$test /p:Sign=$sign /p:Pack=$pack /p:CIBuild=$ci /p:NuGetPackageRoot=$NuGetPackageRoot $properties
+  & $msbuildExe $BuildProj /m /nologo /clp:Summary /nodeReuse:$nodeReuse /warnaserror /v:$verbosity $logCmd /p:Configuration=$configuration /p:SolutionPath=$solution /p:Restore=$restore /p:DeployDeps=$deployDeps /p:Build=$build /p:Rebuild=$rebuild /p:Deploy=$deploy /p:Test=$test /p:IntegrationTest=$integrationTest /p:Sign=$sign /p:Pack=$pack /p:CIBuild=$ci $properties
 }
 
 function Stop-Processes() {
@@ -172,10 +185,6 @@ try {
   # Preparation of a CI machine
   if ($prepareMachine) {
     Clear-NuGetCache
-  }
-
-  if ($restore) {
-    InstallToolset
   }
 
   Build
