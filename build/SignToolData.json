@@ -1,11 +1,25 @@
 {
   "sign": [
     {
+      "certificate": "MicrosoftSHA2",
+      "strongName": "MsSharedLib72",
+      "values": [
+        "bin/Templates/GettingStartedTemplates.Mobile.Wizard/GettingStartedTemplates.Mobile.Wizard.dll"
+      ]
+    },
+    {
       "certificate": "VsixSHA2",
       "strongName": null,
       "values": [
-        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.vsix"
+        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Console.vsix",
+        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Desktop.vsix",
+        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Mobile.vsix",
+        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Web.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Console.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Desktop.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Mobile.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Web.vsix",
       ]
     }
-  ]
+  ],
 }
