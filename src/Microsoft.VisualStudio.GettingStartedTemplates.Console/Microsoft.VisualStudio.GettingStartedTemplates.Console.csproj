@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <VSTemplate Include="Content\ConsoleApplication.vstemplate">
-      <OutputSubPath>Getting Started</OutputSubPath>
+      <OutputSubPath>Get Started</OutputSubPath>
     </VSTemplate>
     <Compile Remove="Content\*.cs" />
   </ItemGroup>

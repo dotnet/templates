@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <VSTemplate Include="WebApplication.vstemplate">
-      <OutputSubPath>Getting Started</OutputSubPath>
+      <OutputSubPath>Get Started</OutputSubPath>
     </VSTemplate>
     <Compile Remove="Content\*.cs" />
   </ItemGroup>

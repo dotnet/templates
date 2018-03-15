@@ -16,7 +16,7 @@
       <ForceIncludeInVSIX>true</ForceIncludeInVSIX>
     </ProjectReference>
     <VSTemplate Include="MobileApplication.vstemplate">
-      <OutputSubPath>Getting Started</OutputSubPath>
+      <OutputSubPath>Get Started</OutputSubPath>
     </VSTemplate>
     <Compile Remove="Content\**\*.cs" />
     <Compile Remove="ModifiedTemplates\**\*.cs" />
