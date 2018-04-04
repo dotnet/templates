@@ -9,7 +9,7 @@
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.GettingStartedTemplates.Web</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
-    <VSTemplate Include="Content\WebApplication.vstemplate">
+    <VSTemplate Include="WebApplication.vstemplate">
       <OutputSubPath>Get Started</OutputSubPath>
     </VSTemplate>
     <Compile Remove="Content\*.cs" />
