@@ -2,8 +2,8 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Web</TemplateID>
-    <Name>C# Web App</Name>
-    <Description>Creates a C# app that runs on a server and shows a web page in your internet browser.</Description>
+    <Name>Web App</Name>
+    <Description>Create an app that can be accessed through any web browser.</Description>
     <Icon>webapplication.png</Icon>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>3</SortOrder>
