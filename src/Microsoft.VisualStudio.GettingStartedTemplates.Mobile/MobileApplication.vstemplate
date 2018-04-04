@@ -4,7 +4,7 @@
     <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Mobile</TemplateID>
     <Name>Mobile App</Name>
     <Description>Create an app that runs on Android or iOS mobile devices.</Description>
-    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4554" />
+    <Icon>FormsProject.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>4</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
