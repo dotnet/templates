@@ -2,8 +2,8 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Console</TemplateID>
-    <Name>C# Console App</Name>
-    <Description>Creates a C# app that interacts with the command line console.</Description>
+    <Name>Console App</Name>
+    <Description>Create an app that can write to and accept input from the command line.</Description>
     <Icon>consoleapplication.png</Icon>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>0</SortOrder>
