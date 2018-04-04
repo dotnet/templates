@@ -15,7 +15,7 @@
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.csproj" File="content.consoleapplication.csproj" ReplaceParameters="true">
       <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">content.assemblyinfo.cs</ProjectItem>
-      <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true">content.program.cs</ProjectItem>
+      <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true" OpenInEditor="true">content.program.cs</ProjectItem>
       <ProjectItem TargetFileName="App.config" ReplaceParameters="true">content.app.config</ProjectItem>
     </Project>
   </TemplateContent>
