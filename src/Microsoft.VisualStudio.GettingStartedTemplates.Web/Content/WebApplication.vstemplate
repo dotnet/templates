@@ -1,0 +1,91 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+    <TemplateData>
+        <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Web</TemplateID>
+        <Name>Web App</Name>
+        <Description>Create an app that can be accessed through any web browser.</Description>
+        <Icon Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="4701"/>
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>3</SortOrder>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>WebApp</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+    </TemplateData>
+    <TemplateContent>
+        <Project File="WebApplication.webproj" ReplaceParameters="true">
+            <Folder Name="Account">
+                <ProjectItem>_ExternalLoginsList.cshtml</ProjectItem>
+                <ProjectItem>AccountLockedOut.cshtml</ProjectItem>
+                <ProjectItem>Confirm.cshtml</ProjectItem>
+                <ProjectItem>ExternalLoginFailure.cshtml</ProjectItem>
+                <ProjectItem>ForgotPassword.cshtml</ProjectItem>
+                <ProjectItem>Login.cshtml</ProjectItem>
+                <ProjectItem>Logout.cshtml</ProjectItem>
+                <ProjectItem>Manage.cshtml</ProjectItem>
+                <ProjectItem>PasswordReset.cshtml</ProjectItem>
+                <ProjectItem>Register.cshtml</ProjectItem>
+                <ProjectItem>RegisterService.cshtml</ProjectItem>
+                <ProjectItem>Thanks.cshtml</ProjectItem>
+            </Folder>
+            <Folder Name="App_Data">
+                <ProjectItem>StarterSite.sdf</ProjectItem>
+            </Folder>
+            <Folder Name="Content">
+                <ProjectItem>Site.css</ProjectItem>
+            </Folder>
+            <Folder Name="Images">
+                <ProjectItem>accent.png</ProjectItem>
+                <ProjectItem>bullet.png</ProjectItem>
+                <ProjectItem>heroAccent.png</ProjectItem>
+                <ProjectItem>orderedList0.png</ProjectItem>
+                <ProjectItem>orderedList1.png</ProjectItem>
+                <ProjectItem>orderedList2.png</ProjectItem>
+                <ProjectItem>orderedList3.png</ProjectItem>
+                <ProjectItem>orderedList4.png</ProjectItem>
+                <ProjectItem>orderedList5.png</ProjectItem>
+                <ProjectItem>orderedList6.png</ProjectItem>
+                <ProjectItem>orderedList7.png</ProjectItem>
+                <ProjectItem>orderedList8.png</ProjectItem>
+                <ProjectItem>orderedList9.png</ProjectItem>
+            </Folder>
+            <Folder Name="Scripts" />
+            <ProjectItem>_AppStart.cshtml</ProjectItem>
+            <ProjectItem>_SiteLayout.cshtml</ProjectItem>
+            <ProjectItem>About.cshtml</ProjectItem>
+            <ProjectItem>Contact.cshtml</ProjectItem>
+            <ProjectItem>Default.cshtml</ProjectItem>
+            <ProjectItem>favicon.ico</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web12.config</ProjectItem>
+        </Project>
+    </TemplateContent>
+    <WizardExtension>
+        <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+        <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+    </WizardExtension>
+    <WizardData>
+        <packages repository="registry" keyName="WebStackVS15" isPreunzipped="true">
+            <package id="jQuery" version="3.3.1" skipAssemblyReferences="true" />
+            <package id="jQuery.Validation" version="1.17.0" skipAssemblyReferences="true" />
+            <package id="jQuery.UI.Combined" version="1.12.1" skipAssemblyReferences="true" />
+            <package id="Microsoft.jQuery.Unobtrusive.Validation" version="3.2.4" skipAssemblyReferences="true" />
+            <package id="Modernizr" version="2.8.3" skipAssemblyReferences="true" />
+            <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" skipAssemblyReferences="true" />
+            <package id="Microsoft.AspNet.Razor" version="3.2.4" skipAssemblyReferences="true" />
+            <package id="Microsoft.AspNet.WebPages" version="3.2.4" skipAssemblyReferences="true" />
+            <package id="Microsoft.SqlServer.Compact" version="4.0.8876.1" skipAssemblyReferences="true" />
+            <package id="Microsoft.AspNet.WebPages.Data" version="3.2.4" skipAssemblyReferences="true" />
+            <package id="Microsoft.AspNet.WebPages.WebData" version="3.2.4" skipAssemblyReferences="true" />
+            <package id="Microsoft.AspNet.Web.Optimization" version="1.1.3" skipAssemblyReferences="true" />
+            <package id="WebGrease" version="1.6.0" skipAssemblyReferences="true" />
+            <package id="knockoutjs" version="3.4.2" skipAssemblyReferences="true" />
+            <package id="DotNetOpenAuth.AspNet" version="4.3.4.13329" skipAssemblyReferences="true" />
+            <package id="DotNetOpenAuth.Core" version="4.3.4.13329" skipAssemblyReferences="true" />
+            <package id="DotNetOpenAuth.OAuth.Consumer" version="4.3.4.13329" skipAssemblyReferences="true" />
+            <package id="DotNetOpenAuth.OAuth.Core" version="4.3.4.13329" skipAssemblyReferences="true" />
+            <package id="DotNetOpenAuth.OpenId.Core" version="4.3.4.13329" skipAssemblyReferences="true" />
+            <package id="DotNetOpenAuth.OpenId.RelyingParty" version="4.3.4.13329" skipAssemblyReferences="true" />
+            <package id="Microsoft.AspNet.WebPages.OAuth" version="3.2.4" skipAssemblyReferences="true" />
+            <package id="Microsoft.Net.Compilers" version="2.6.1" />
+            <package id="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" version="1.0.8" />
+        </packages>
+    </WizardData>
+</VSTemplate>
