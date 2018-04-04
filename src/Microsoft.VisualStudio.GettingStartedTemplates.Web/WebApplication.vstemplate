@@ -4,7 +4,7 @@
     <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Web</TemplateID>
     <Name>Web App</Name>
     <Description>Create an app that can be accessed through any web browser.</Description>
-    <Icon>webapplication.png</Icon>
+    <Icon Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="4701"/>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>3</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
