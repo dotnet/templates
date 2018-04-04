@@ -2,8 +2,8 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Mobile</TemplateID>
-    <Name>C# Mobile App</Name>
-    <Description>Creates a C# app that can be run on Android or iOS based phones.</Description>
+    <Name>Mobile App</Name>
+    <Description>Create an app that runs on Android or iOS mobile devices.</Description>
     <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4554" />
     <ProjectType>CSharp</ProjectType>
     <SortOrder>4</SortOrder>
