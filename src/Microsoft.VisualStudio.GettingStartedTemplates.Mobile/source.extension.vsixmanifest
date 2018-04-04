@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="Microsoft.VisualStudio.GettingStartedTemplates.Mobile" Version="|%CurrentProject%;GetBuildVersion|" Language="en-US" Publisher="Microsoft" />
-    <DisplayName>C# Mobile App</DisplayName>
-    <Description>Creates a C# app that can be run on Android or iOS based phones.</Description>
+    <DisplayName>Mobile App</DisplayName>
+    <Description>Create an app that runs on Android or iOS mobile devices.</Description>
   </Metadata>
   <Installation SystemComponent="true" Experimental="true">
     <InstallationTarget Version="[15.0,]" Id="Microsoft.VisualStudio.Pro" />

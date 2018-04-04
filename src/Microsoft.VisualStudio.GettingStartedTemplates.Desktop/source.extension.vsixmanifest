@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="Microsoft.VisualStudio.GettingStartedTemplates.Desktop" Version="|%CurrentProject%;GetBuildVersion|" Language="en-US" Publisher="Microsoft" />
-    <DisplayName>C# Desktop App</DisplayName>
-    <Description>Creates a C# app that displays a new window when run.</Description>
+    <DisplayName>Desktop App</DisplayName>
+    <Description>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</Description>
   </Metadata>
   <Installation SystemComponent="true" Experimental="true">
     <InstallationTarget Version="[15.0,]" Id="Microsoft.VisualStudio.Pro" />
