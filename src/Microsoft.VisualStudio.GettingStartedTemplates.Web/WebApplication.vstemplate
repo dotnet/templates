@@ -17,7 +17,7 @@
     <CustomParameters>
       <CustomParameter Name="$language$" Value="C#" />
       <CustomParameter Name="$uistyle$" Value="none" />
-      <CustomParameter Name="$groupid$" Value="Microsoft.Web.Mvc" />
+      <CustomParameter Name="$groupid$" Value="Microsoft.Web.RazorPages" />
     </CustomParameters>
   </TemplateContent>
   <WizardExtension>
