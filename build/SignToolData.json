@@ -4,7 +4,7 @@
       "certificate": "MicrosoftSHA2",
       "strongName": "MsSharedLib72",
       "values": [
-        "bin/Templates/GettingStartedTemplates.Mobile.Wizard/GettingStartedTemplates.Mobile.Wizard.dll"
+        "bin/GettingStartedTemplates.Mobile.Wizard/net461/GettingStartedTemplates.Mobile.Wizard.dll"
       ]
     },
     {
