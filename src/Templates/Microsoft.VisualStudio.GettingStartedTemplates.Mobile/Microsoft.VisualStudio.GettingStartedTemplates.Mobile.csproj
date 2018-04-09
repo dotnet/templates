@@ -9,7 +9,7 @@
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.GettingStartedTemplates.Mobile</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GettingStartedTemplates.Mobile.Wizard\GettingStartedTemplates.Mobile.Wizard.csproj">
+    <ProjectReference Include="..\..\Tools\GettingStartedTemplates.Mobile.Wizard\GettingStartedTemplates.Mobile.Wizard.csproj">
       <Name>GettingStartedTemplates.Mobile.Wizard</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bGetCopyToOutputDirectoryItems</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
