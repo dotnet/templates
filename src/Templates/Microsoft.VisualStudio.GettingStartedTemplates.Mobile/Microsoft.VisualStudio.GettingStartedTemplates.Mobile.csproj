@@ -18,8 +18,6 @@
     <VSTemplate Include="MobileApplication.vstemplate">
       <OutputSubPath>Get Started</OutputSubPath>
     </VSTemplate>
-    <Compile Remove="Content\**\*.cs" />
-    <Compile Remove="ModifiedTemplates\**\*.cs" />
   </ItemGroup>
 
   <!-- rewriting of .vstemplate files to reference the correct assembly version number -->
