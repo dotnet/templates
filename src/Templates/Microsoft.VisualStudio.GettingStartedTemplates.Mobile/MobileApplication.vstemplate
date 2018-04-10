@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Mobile</TemplateID>
+    <TemplateID>Microsoft.VisualStudio.Templates.CS.GettingStarted.Mobile</TemplateID>
     <Name>Mobile App</Name>
     <Description>Create an app that runs on Android or iOS mobile devices.</Description>
     <Icon>FormsProject.ico</Icon>
