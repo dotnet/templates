@@ -4,9 +4,9 @@
     <TargetFramework>net461</TargetFramework>
 
     <!-- VSIX -->
-    <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>Microsoft.VisualStudio.GettingStartedTemplates.Console</VisualStudioInsertionComponent>
+    <ExtensionInstallationRoot>ProjectTemplates</ExtensionInstallationRoot>
+    <ExtensionInstallationFolder></ExtensionInstallationFolder>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.GettingStarted.Console</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
     <VSTemplate Include="Content\ConsoleApplication.vstemplate">

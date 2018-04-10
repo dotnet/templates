@@ -4,9 +4,9 @@
     <TargetFramework>net461</TargetFramework>
 
     <!-- VSIX -->
-    <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>Microsoft.VisualStudio.GettingStartedTemplates.Desktop</VisualStudioInsertionComponent>
+    <ExtensionInstallationRoot>ProjectTemplates</ExtensionInstallationRoot>
+    <ExtensionInstallationFolder></ExtensionInstallationFolder>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.GettingStarted.Desktop</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
     <VSTemplate Include="Content\DesktopApplication.vstemplate">
