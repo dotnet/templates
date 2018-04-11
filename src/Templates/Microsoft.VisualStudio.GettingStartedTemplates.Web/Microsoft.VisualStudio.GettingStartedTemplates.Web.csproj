@@ -12,6 +12,5 @@
     <VSTemplate Include="WebApplication.vstemplate">
       <OutputSubPath>Get Started</OutputSubPath>
     </VSTemplate>
-    <Compile Remove="Content\*.cs" />
   </ItemGroup>
 </Project>
