@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Desktop</TemplateID>
+    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Desktop.fadab7d9-7c00-42d0-9ee0-f02b3b1b9813</TemplateID>
     <Name>Desktop App</Name>
     <Description>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</Description>
     <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4554" />

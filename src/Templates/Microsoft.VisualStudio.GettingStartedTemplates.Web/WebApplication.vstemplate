@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Web</TemplateID>
+    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Web.11efeb70-6d4c-4038-83a2-ac353e5b853c</TemplateID>
     <Name>Web App</Name>
     <Description>Create an app that can be accessed through any web browser.</Description>
     <Icon Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="4701"/>

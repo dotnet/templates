@@ -4,7 +4,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
 
     <!-- This repo version -->
-    <VersionBase>1.0.0</VersionBase>
+    <VersionBase>15.7.0</VersionBase>
     <PreReleaseVersionLabel>beta</PreReleaseVersionLabel>
 
     <!-- Opt-in repo features -->
