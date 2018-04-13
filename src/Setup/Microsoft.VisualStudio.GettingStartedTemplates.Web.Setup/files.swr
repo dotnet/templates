@@ -1,0 +1,12 @@
+use vs
+
+package name=Microsoft.VisualStudio.GettingStartedTemplates.Web.Setup
+        version=$(Version)
+
+vs.localizedResources
+  vs.localizedResource language=en-us
+                       title="Get Started Web App"
+                       description="Template to create an app that can be accessed through any web browser."
+
+folder "InstallDir:Common7\IDE\ProjectTemplates\CSharp\Get Started\1033\Web"
+  file source="$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Web\WebApplication.vstemplate"

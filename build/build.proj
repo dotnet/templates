@@ -16,7 +16,8 @@
       Properties        List of properties to pass to each build phase ("Name=Value;Name=Value;...")
   -->
   <PropertyGroup>
-    <SolutionPath Condition="'$(SolutionPath)' == ''">$(MSBuildThisFileDirectory)..\Templates.sln</SolutionPath>
+    <SolutionPath Condition="'$(Solution)' == 'Templates.sln'">$(MSBuildThisFileDirectory)..\Templates.sln</SolutionPath>
+    <SolutionPath Condition="'$(SolutionPath)' == ''">$(MSBuildThisFileDirectory)..\Setup.sln</SolutionPath>
   </PropertyGroup>
   <Import Project="..\Directory.build.props"/>
   <Target Name="Build">
