@@ -5,7 +5,7 @@
 
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates</ExtensionInstallationFolder>
+    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates\Mobile</ExtensionInstallationFolder>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.GettingStarted.Mobile</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>

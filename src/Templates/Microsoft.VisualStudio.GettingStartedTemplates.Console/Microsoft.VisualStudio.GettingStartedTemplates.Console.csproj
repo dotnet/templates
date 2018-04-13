@@ -5,7 +5,7 @@
 
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates</ExtensionInstallationFolder>
+    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates\Console</ExtensionInstallationFolder>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.GettingStarted.Console</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>

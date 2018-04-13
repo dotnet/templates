@@ -5,7 +5,7 @@
 
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates</ExtensionInstallationFolder>
+    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates\Desktop</ExtensionInstallationFolder>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.GettingStarted.Desktop</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>

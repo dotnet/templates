@@ -15,7 +15,7 @@
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.csproj" File="content.desktopapplication.csproj" ReplaceParameters="true">
       <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">content.assemblyinfo.cs</ProjectItem>
-      <ProjectItem TargetFileName="Properties\Resources.resx">content.resources.resx.do.not.run.xlf.tasks</ProjectItem>
+      <ProjectItem TargetFileName="Properties\Resources.resx">content.resources.resx</ProjectItem>
       <ProjectItem TargetFileName="Properties\Resources.Designer.cs" ReplaceParameters="true">content.resources.designer.cs</ProjectItem>
       <ProjectItem TargetFileName="Properties\Settings.settings">content.settings.settings</ProjectItem>
       <ProjectItem TargetFileName="Properties\Settings.Designer.cs" ReplaceParameters="true" >content.settings.designer.cs</ProjectItem>

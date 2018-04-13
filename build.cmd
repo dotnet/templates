@@ -1,3 +1,3 @@
 @echo off
-powershell -ExecutionPolicy ByPass %~dp0build\Build.ps1 -restore -build -deploy %*
+powershell -ExecutionPolicy ByPass %~dp0build\Build.ps1 -restore -build -deploy -pack %*
 exit /b %ErrorLevel%

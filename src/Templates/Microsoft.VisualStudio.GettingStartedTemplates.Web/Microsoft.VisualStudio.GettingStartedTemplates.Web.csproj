@@ -5,7 +5,7 @@
 
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates</ExtensionInstallationFolder>
+    <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates\Web</ExtensionInstallationFolder>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.GettingStarted.Web</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>

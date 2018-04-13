@@ -1,0 +1,21 @@
+<!-- Copyright (c)  Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<Project>
+  <Import Project="..\Directory.Build.props"/>
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <DebugSymbols>false</DebugSymbols>
+    <PublishOutputToSymStore>false</PublishOutputToSymStore>
+    <UseCommonOutputDirectory Condition="'$(UseCommonOutputDirectory)' == ''">true</UseCommonOutputDirectory>
+
+    <!-- VSIX -->
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="source.extension.vsixmanifest" />
+  </ItemGroup>
+</Project>
