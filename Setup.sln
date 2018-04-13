@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedTemplates.Mob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GettingStartedTemplates.Mobile.Setup", "src\Setup\Microsoft.VisualStudio.GettingStartedTemplates.Mobile.Setup\Microsoft.VisualStudio.GettingStartedTemplates.Mobile.Setup.csproj", "{A94258C5-005D-4487-A541-75B7F57BF008}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedTemplates.Mobile.Wizard.Setup", "src\Setup\GettingStartedTemplates.Mobile.Wizard.Setup\GettingStartedTemplates.Mobile.Wizard.Setup.csproj", "{0FC4D4ED-9265-4DBB-A087-807A67620A92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +108,18 @@ Global
 		{A94258C5-005D-4487-A541-75B7F57BF008}.Release|x64.Build.0 = Release|x64
 		{A94258C5-005D-4487-A541-75B7F57BF008}.Release|x86.ActiveCfg = Release|x86
 		{A94258C5-005D-4487-A541-75B7F57BF008}.Release|x86.Build.0 = Release|x86
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Debug|x64.ActiveCfg = Debug|x64
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Debug|x64.Build.0 = Debug|x64
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Debug|x86.ActiveCfg = Debug|x86
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Debug|x86.Build.0 = Debug|x86
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Release|x64.ActiveCfg = Release|x64
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Release|x64.Build.0 = Release|x64
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Release|x86.ActiveCfg = Release|x86
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E54462A5-4693-4469-937C-FBE1FCD7A69C} = {99C404AA-E67A-41BC-B14E-DE771D7B8393}
@@ -116,5 +130,6 @@ Global
 		{9181AD33-0513-404A-9967-6CF555BA159B} = {99C404AA-E67A-41BC-B14E-DE771D7B8393}
 		{75316BF8-9CC2-40FD-881C-D1FCB8F0AEF6} = {9181AD33-0513-404A-9967-6CF555BA159B}
 		{A94258C5-005D-4487-A541-75B7F57BF008} = {E54462A5-4693-4469-937C-FBE1FCD7A69C}
+		{0FC4D4ED-9265-4DBB-A087-807A67620A92} = {E54462A5-4693-4469-937C-FBE1FCD7A69C}
 	EndGlobalSection
 EndGlobal
