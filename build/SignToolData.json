@@ -11,14 +11,14 @@
       "certificate": "VsixSHA2",
       "strongName": null,
       "values": [
-        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Console.vsix",
-        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Desktop.vsix",
+        "VSSetup/GettingStartedTemplates.Mobile.Wizard.Setup.vsix",
         "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Mobile.vsix",
-        "VSSetup/Microsoft.VisualStudio.GettingStartedTemplates.Web.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Console.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Desktop.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Mobile.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Web.vsix",
+        "VSSetup/Insertion/GettingStartedTemplates.Mobile.Wizard.Setup.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Common.Setup.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Console.Setup.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Desktop.Setup.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Mobile.Setup.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Web.Setup.vsix"
       ]
     }
   ],
