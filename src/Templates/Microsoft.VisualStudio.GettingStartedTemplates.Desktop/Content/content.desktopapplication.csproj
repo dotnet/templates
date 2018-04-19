@@ -8,11 +8,9 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>$safeprojectname$</RootNamespace>
     <AssemblyName>$safeprojectname$</AssemblyName>
-    <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    $if$ ($targetframeworkversion$ > 4.5)
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    $endif$
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,20 +33,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System"/>
-    $if$ ($targetframeworkversion$ >= 3.5)
     <Reference Include="System.Core"/>
     <Reference Include="System.Xml.Linq"/>
     <Reference Include="System.Data.DataSetExtensions"/>
-    $endif$
-    $if$ ($targetframeworkversion$ >= 4.0)
     <Reference Include="Microsoft.CSharp"/>
-    $endif$
     <Reference Include="System.Data"/>
     <Reference Include="System.Deployment"/>
     <Reference Include="System.Drawing"/>
-    $if$ ($targetframeworkversion$ >= 4.5)
     <Reference Include="System.Net.Http"/>
-    $endif$
     <Reference Include="System.Windows.Forms"/>
     <Reference Include="System.Xml"/>
   </ItemGroup>
@@ -81,10 +73,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  $if$ ($targetframeworkversion$ > 4.0)
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  $endif$
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
  </Project>
