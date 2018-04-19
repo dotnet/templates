@@ -11,6 +11,7 @@ vs.localizedResources
 folder "InstallDir:Common7\IDE\ProjectTemplates\CSharp\Get Started\1033\Desktop"
   file source="$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Desktop\Content\content.app.config"
   file source="$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Desktop\Content\content.assemblyinfo.cs"
+  file source="$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Desktop\Content\content.desktopapplication.csproj"
   file source="$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Desktop\Content\content.form1.cs"
   file source="$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Desktop\Content\content.form1.designer.cs"
   file source="$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Desktop\Content\content.program.cs"
