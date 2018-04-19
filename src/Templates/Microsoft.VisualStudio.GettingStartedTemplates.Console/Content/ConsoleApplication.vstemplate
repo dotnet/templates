@@ -6,6 +6,7 @@
     <Description>Create an app that can write to and accept input from the command line.</Description>
     <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4548" />
     <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>0</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>ConsoleApp</DefaultName>
