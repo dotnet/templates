@@ -21,6 +21,7 @@
         "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Console.Setup.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Desktop.Setup.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Mobile.Setup.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.GettingStartedTemplates.Web.Setup.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.vsix",
         "VSSetup/Insertion/Templates.Editorconfig.Wizard.Setup.vsix"
       ]
