@@ -49,11 +49,13 @@ Public Class UpdateTemplateVersion
                 For Each extraFile In New DirectoryInfo(originalDirectory).GetFiles("*.*", SearchOption.AllDirectories)
                     If extraFile.Extension = ".vstemplate" Then
                         ' If this is one of our multi-project template files we need to do a rename
-                        Dim referencedTemplateXml = UpdateAssemblyVersion(extraFile.FullName)
-                        Dim relativePath = GetRelativePath(Path.GetFullPath(newDirectory), extraFile.FullName).
-                                            Replace("..\", String.Empty)
-                        Dim fullPath = Path.GetFullPath(Path.Combine(newDirectory, relativePath))
-                        referencedTemplateXml.Save(fullPath)
+                        If extraFile.Name <> template.ItemSpec Then
+                            Dim referencedTemplateXml = UpdateAssemblyVersion(extraFile.FullName)
+                            Dim relativePath = GetRelativePath(Path.GetFullPath(newDirectory), extraFile.FullName).
+                                                Replace("..\", String.Empty)
+                            Dim fullPath = Path.GetFullPath(Path.Combine(newDirectory, relativePath))
+                            referencedTemplateXml.Save(fullPath)
+                        End If
                     Else
                         ' For all other files, just copy them along
                         CopyExtraFile(newDirectory, originalDirectory, extraFile.FullName)
