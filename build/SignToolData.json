@@ -5,7 +5,20 @@
       "strongName": "MsSharedLib72",
       "values": [
         "bin/GettingStartedTemplates.Mobile.Wizard/net461/GettingStartedTemplates.Mobile.Wizard.dll",
-        "bin/Templates.Editorconfig.Wizard/net461/Templates.Editorconfig.Wizard.dll"
+        "bin/Templates.Editorconfig.Wizard/net461/Templates.Editorconfig.Wizard.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/cs/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/de/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/es/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/fr/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/it/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/ja/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/ko/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/pl/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/pt-BR/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/ru/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/tr/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/zh-Hans/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Templates.Editorconfig.Wizard/net461/zh-Hant/Templates.Editorconfig.Wizard.resources.dll"
       ]
     },
     {
