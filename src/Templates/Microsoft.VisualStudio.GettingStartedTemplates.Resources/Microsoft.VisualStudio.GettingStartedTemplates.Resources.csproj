@@ -6,6 +6,7 @@
     <!-- VSIX -->
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
     <EnableDefaultItems>true</EnableDefaultItems>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
     <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates\Resources</ExtensionInstallationFolder>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.GettingStartedTemplates.Resources</VisualStudioInsertionComponent>
