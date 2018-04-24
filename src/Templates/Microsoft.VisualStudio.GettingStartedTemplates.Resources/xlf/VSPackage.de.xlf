@@ -19,7 +19,7 @@
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">Create an app that can write to and accept input from the command line.</target>
+        <target state="new">Erstellen Sie eine App, mit der Sie über die Befehlszeile schreiben und Eingaben akzeptieren können.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Create an app with a graphical user interface that runs stand-alone on a Windows computer.</target>
+        <target state="new">Erstellen Sie eine App mit einer grafischen Benutzeroberfläche, die eigenständig auf einem Windows-Computer ausgeführt wird.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
@@ -39,7 +39,7 @@
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Create an app that runs on Android or iOS mobile devices.</target>
+        <target state="new">Erstellen Sie eine App, die auf Android- oder iOS-Mobilgeräten ausgeführt wird.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
@@ -49,12 +49,12 @@
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">Create an app that can be accessed through any web browser.</target>
+        <target state="new">Erstellen Sie eine App, auf die über einen beliebigen Webbrowser zugegriffen werden kann.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">Get Started</target>
+        <target state="new">Loslegen</target>
         <note />
       </trans-unit>
     </body>

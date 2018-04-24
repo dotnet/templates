@@ -19,7 +19,7 @@
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">Create an app that can write to and accept input from the command line.</target>
+        <target state="new">명령 행에 쓰고 입력을 허용 할 수있는 앱을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Create an app with a graphical user interface that runs stand-alone on a Windows computer.</target>
+        <target state="new">Windows 컴퓨터에서 독립형으로 실행되는 그래픽 사용자 인터페이스를 사용하여 응용 프로그램을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
@@ -39,7 +39,7 @@
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Create an app that runs on Android or iOS mobile devices.</target>
+        <target state="new">Android 또는 iOS 휴대 기기에서 실행되는 앱을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
@@ -49,12 +49,12 @@
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">Create an app that can be accessed through any web browser.</target>
+        <target state="new">모든 웹 브라우저를 통해 액세스 할 수있는 앱을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">Get Started</target>
+        <target state="new">시작하다</target>
         <note />
       </trans-unit>
     </body>

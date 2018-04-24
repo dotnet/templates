@@ -19,7 +19,7 @@
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">Create an app that can write to and accept input from the command line.</target>
+        <target state="new">Создайте приложение, которое может записывать и принимать ввод из командной строки.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Create an app with a graphical user interface that runs stand-alone on a Windows computer.</target>
+        <target state="new">Создайте приложение с графическим интерфейсом пользователя, который работает автономно на компьютере под управлением Windows.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
@@ -39,7 +39,7 @@
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Create an app that runs on Android or iOS mobile devices.</target>
+        <target state="new">Создайте приложение, которое работает на мобильных устройствах Android или iOS.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
@@ -49,12 +49,12 @@
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">Create an app that can be accessed through any web browser.</target>
+        <target state="new">Создайте приложение, доступ к которому можно получить через любой веб-браузер.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">Get Started</target>
+        <target state="new">Начать</target>
         <note />
       </trans-unit>
     </body>
