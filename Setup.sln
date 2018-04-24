@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates.Editorconfig.Solu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates.Editorconfig.Wizard.Setup", "src\Setup\Templates.Editorconfig.Wizard.Setup\Templates.Editorconfig.Wizard.Setup.csproj", "{5DD8F936-3C87-4210-B63B-C9911372F73C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GettingStartedTemplates.Resources", "src\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Resources\Microsoft.VisualStudio.GettingStartedTemplates.Resources.csproj", "{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +194,18 @@ Global
 		{5DD8F936-3C87-4210-B63B-C9911372F73C}.Release|x64.Build.0 = Release|x64
 		{5DD8F936-3C87-4210-B63B-C9911372F73C}.Release|x86.ActiveCfg = Release|x86
 		{5DD8F936-3C87-4210-B63B-C9911372F73C}.Release|x86.Build.0 = Release|x86
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Debug|x64.ActiveCfg = Debug|x64
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Debug|x64.Build.0 = Debug|x64
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Debug|x86.ActiveCfg = Debug|x86
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Debug|x86.Build.0 = Debug|x86
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Release|x64.ActiveCfg = Release|x64
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Release|x64.Build.0 = Release|x64
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Release|x86.ActiveCfg = Release|x86
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E54462A5-4693-4469-937C-FBE1FCD7A69C} = {99C404AA-E67A-41BC-B14E-DE771D7B8393}
@@ -209,5 +223,6 @@ Global
 		{23AF1971-88D8-4887-838E-1EF139FE66A3} = {9181AD33-0513-404A-9967-6CF555BA159B}
 		{D94BC971-8EB8-42A7-B785-F8BA8B9D8E46} = {E54462A5-4693-4469-937C-FBE1FCD7A69C}
 		{5DD8F936-3C87-4210-B63B-C9911372F73C} = {E54462A5-4693-4469-937C-FBE1FCD7A69C}
+		{63F1DD6F-2B74-4A63-B081-E0B1AA95BB78} = {ED59C864-9A28-4C71-8054-5DB9AC276CB1}
 	EndGlobalSection
 EndGlobal
