@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="cs" original="../VSPackage.resx">
+    <body>
+      <trans-unit id="110">
+        <source>ResourcePackage Extension</source>
+        <target state="new">ResourcePackage Extension</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="112">
+        <source>ResourcePackage Visual Studio Extension Detailed Info</source>
+        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="115">
+        <source>Console App</source>
+        <target state="new">Console App</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="116">
+        <source>Create an app that can write to and accept input from the command line.</source>
+        <target state="new">Vytvořte aplikaci, která může psát a přijímat vstup z příkazového řádku.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="117">
+        <source>Desktop App</source>
+        <target state="new">Desktop App</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="118">
+        <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
+        <target state="new">Vytvořte aplikaci s grafickým uživatelským rozhraním, které běží samostatně v počítači se systémem Windows.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="119">
+        <source>Mobile App</source>
+        <target state="new">Mobile App</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="120">
+        <source>Create an app that runs on Android or iOS mobile devices.</source>
+        <target state="new">Vytvořte aplikaci, která běží na mobilních zařízeních Android nebo iOS.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="121">
+        <source>Web App</source>
+        <target state="new">Web App</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="122">
+        <source>Create an app that can be accessed through any web browser.</source>
+        <target state="new">Vytvořte aplikaci, do které můžete přistupovat prostřednictvím libovolného webového prohlížeče.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="130">
+        <source>Get Started</source>
+        <target state="new">Začít</target>
+        <note />
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

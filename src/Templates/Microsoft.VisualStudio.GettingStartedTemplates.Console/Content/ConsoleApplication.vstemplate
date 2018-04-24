@@ -2,8 +2,8 @@
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Console.bf10b637-59b1-4db8-acbe-52da010b4e10</TemplateID>
-    <Name>Console App</Name>
-    <Description>Create an app that can write to and accept input from the command line.</Description>
+    <Name Package="{5FDCE33E-ACEE-47DA-AAF1-C341D333BBB9}" ID="115" />
+    <Description Package="{5FDCE33E-ACEE-47DA-AAF1-C341D333BBB9}" ID="116" />
     <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4548" />
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
