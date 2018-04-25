@@ -17,7 +17,7 @@ x64/
 [Oo]bj/
 .dotnet/
 .tools/
-src/Templates/Microsoft.VisualStudio.GettingStartedTemplates.Mobile/ModifiedTemplates/
+src/Templates/Microsoft.VisualStudio.Templates.GetStarted.Mobile/ModifiedTemplates/
 src/Templates/Microsoft.VisualStudio.Templates.Editorconfig/ModifiedTemplates
 
 # Per-user project properties
