@@ -7,6 +7,8 @@ using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Templates.Editorconfig.Wizard;
 using System.Windows;
+using VSServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
+using Microsoft.VisualStudio.LanguageServices;
 
 namespace Templates.EditorConfig.FileGenerator
 {
@@ -21,6 +23,8 @@ namespace Templates.EditorConfig.FileGenerator
 
         internal (bool success, string fileName) TryGenerateFile(bool isDotnet)
         {
+            // TODO: Enumerate Options
+
             var (success, path, isAtSolutionLevel, selectedItem) = TryGetSelectedItemAndPath();
             if (!success)
             {
@@ -69,7 +73,7 @@ namespace Templates.EditorConfig.FileGenerator
             string fileName = Path.Combine(projectPath, TemplateConstants.FileName);
             if (File.Exists(fileName))
             {
-                
+
                 MessageBox.Show(WizardResource.AlreadyExists, ".editorconfig item template", MessageBoxButton.OK, MessageBoxImage.Information);
                 return (false, null);
             }
@@ -129,14 +133,19 @@ namespace Templates.EditorConfig.FileGenerator
 
         internal void OpenFile(string fileName)
         {
-            var serviceProvider = new ServiceProvider(_dte as Microsoft.VisualStudio.OLE.Interop.IServiceProvider);
-            VsShellUtilities.OpenDocument(serviceProvider, fileName);
-            Command command = _dte.Commands.Item("SolutionExplorer.SyncWithActiveDocument");
-            if (command.IsAvailable)
+            if (_dte is VSServiceProvider sp)
             {
-                _dte.Commands.Raise(command.Guid, command.ID, null, null);
+                using (var serviceProvider = new ServiceProvider(sp))
+                {
+                    VsShellUtilities.OpenDocument(serviceProvider, fileName);
+                    Command command = _dte.Commands.Item("SolutionExplorer.SyncWithActiveDocument");
+                    if (command.IsAvailable)
+                    {
+                        _dte.Commands.Raise(command.Guid, command.ID, null, null);
+                    }
+                    _dte.ActiveDocument.Activate();
+                }
             }
-            _dte.ActiveDocument.Activate();
         }
     }
 }

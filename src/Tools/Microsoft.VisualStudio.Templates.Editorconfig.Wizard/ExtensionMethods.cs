@@ -11,6 +11,16 @@ namespace Templates.Editorconfig.Wizard
     {
         private const string SolutionFolder = "{66A26720-8FB5-11D2-AA7E-00C04F688DDE}";
         
+        public static T GetService<T>(this IServiceProvider serviceProvider)
+        {
+            if (serviceProvider == null)
+            {
+                throw new ArgumentNullException(nameof(serviceProvider));
+            }
+
+            return (T)serviceProvider.GetService(typeof(T));
+        }
+
         public static (bool success, string rootFolder) TryGetRootFolder(this Project project, string solutionFullName)
         {
             if (project == null)
