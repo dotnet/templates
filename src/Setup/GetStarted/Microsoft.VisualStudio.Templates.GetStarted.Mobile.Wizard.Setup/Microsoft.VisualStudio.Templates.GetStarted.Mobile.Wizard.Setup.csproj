@@ -6,11 +6,11 @@
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
     <ExtensionInstallationFolder>Microsoft\GetStartedTemplates\Wizard</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.Setup</VisualStudioInsertionComponent>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard.Setup</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Tools\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.csproj">
-      <Name>Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard</Name>
+    <ProjectReference Include="..\..\..\Tools\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard.csproj">
+      <Name>Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bGetCopyToOutputDirectoryItems</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
       <ForceIncludeInVSIX>true</ForceIncludeInVSIX>

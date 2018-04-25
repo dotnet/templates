@@ -5,13 +5,13 @@
     <VisualStudioInsertionComponent>$(MSBuildProjectName)</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Templates\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Mobile\Microsoft.VisualStudio.GetStarted.Templates.Mobile.csproj" />
+    <ProjectReference Include="..\..\..\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Mobile\Microsoft.VisualStudio.Templates.GetStarted.Mobile.csproj" />
   </ItemGroup>
   <ItemGroup>
     <SwrProperty Include="Version=$(VsixVersion)" />
     <SwrProperty Include="MSBuildProjectDirectory=$(MSBuildProjectDirectory)" />
     <SwrProperty Include="Configuration=$(Configuration)" />
-    <SwrProperty Include="ModifiedTemplates=$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Mobile\ModifiedTemplates" />
+    <SwrProperty Include="ModifiedTemplates=$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Mobile\ModifiedTemplates" />
   </ItemGroup>
   <ItemGroup>
     <SwrFile Include="*.swr" />

@@ -24,29 +24,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Temp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup", "src\Setup\Editorconfig\Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup\Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.csproj", "{5499ED4E-A7D6-4519-AA50-BA03A22D2284}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GetStarted.Templates.Common.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Common.Setup\Microsoft.VisualStudio.GetStarted.Templates.Common.Setup.csproj", "{F2CE66E8-6DD1-41A2-AC2A-65C282DDF9BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.GetStarted.Common.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Common.Setup\Microsoft.VisualStudio.Templates.GetStarted.Common.Setup.csproj", "{F2CE66E8-6DD1-41A2-AC2A-65C282DDF9BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GetStarted.Templates.Console.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Console.Setup\Microsoft.VisualStudio.GetStarted.Templates.Console.Setup.csproj", "{0856065E-6A26-4B5A-9F19-ABE0F3A602E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.GetStarted.Console.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Console.Setup\Microsoft.VisualStudio.Templates.GetStarted.Console.Setup.csproj", "{0856065E-6A26-4B5A-9F19-ABE0F3A602E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GetStarted.Templates.Desktop.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Desktop.Setup\Microsoft.VisualStudio.GetStarted.Templates.Desktop.Setup.csproj", "{4AED4CC7-AE1A-4C80-B804-E930DBA104E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.GetStarted.Desktop.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Desktop.Setup\Microsoft.VisualStudio.Templates.GetStarted.Desktop.Setup.csproj", "{4AED4CC7-AE1A-4C80-B804-E930DBA104E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GetStarted.Templates.Mobile.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Setup\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Setup.csproj", "{435C19F4-D915-4BE0-B13E-96EF24A4EF6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.GetStarted.Mobile.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Setup\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Setup.csproj", "{435C19F4-D915-4BE0-B13E-96EF24A4EF6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.Setup\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.Setup.csproj", "{5060B15A-54E1-46D6-85C7-60B792467F48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard.Setup\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard.Setup.csproj", "{5060B15A-54E1-46D6-85C7-60B792467F48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GetStarted.Templates.Web.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Web.Setup\Microsoft.VisualStudio.GetStarted.Templates.Web.Setup.csproj", "{01418AEA-86BA-4A39-B718-00CB705D11A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.GetStarted.Web.Setup", "src\Setup\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Web.Setup\Microsoft.VisualStudio.Templates.GetStarted.Web.Setup.csproj", "{01418AEA-86BA-4A39-B718-00CB705D11A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.GetStarted.Templates.Console", "src\Templates\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Console\Microsoft.VisualStudio.GetStarted.Templates.Console.csproj", "{947EDEF7-77AE-4C1E-9E89-69A7F2DEA89B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.GetStarted.Console", "src\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Console\Microsoft.VisualStudio.Templates.GetStarted.Console.csproj", "{947EDEF7-77AE-4C1E-9E89-69A7F2DEA89B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.GetStarted.Templates.Desktop", "src\Templates\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Desktop\Microsoft.VisualStudio.GetStarted.Templates.Desktop.csproj", "{B59D1CE3-C325-48ED-8263-4538CBCB053A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.GetStarted.Desktop", "src\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Desktop\Microsoft.VisualStudio.Templates.GetStarted.Desktop.csproj", "{B59D1CE3-C325-48ED-8263-4538CBCB053A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.GetStarted.Templates.Mobile", "src\Templates\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Mobile\Microsoft.VisualStudio.GetStarted.Templates.Mobile.csproj", "{F0F662C6-9202-4094-8A8B-393435B15ABA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.GetStarted.Mobile", "src\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Mobile\Microsoft.VisualStudio.Templates.GetStarted.Mobile.csproj", "{F0F662C6-9202-4094-8A8B-393435B15ABA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.GetStarted.Templates.Resources", "src\Templates\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Resources\Microsoft.VisualStudio.GetStarted.Templates.Resources.csproj", "{9D501DC2-6296-4A49-800C-FDFE7EA2F347}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.GetStarted.Resources", "src\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Resources\Microsoft.VisualStudio.Templates.GetStarted.Resources.csproj", "{9D501DC2-6296-4A49-800C-FDFE7EA2F347}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.GetStarted.Templates.Web", "src\Templates\GetStarted\Microsoft.VisualStudio.GetStarted.Templates.Web\Microsoft.VisualStudio.GetStarted.Templates.Web.csproj", "{FC42213C-70BF-4074-B522-21B4C51374AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.GetStarted.Web", "src\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Web\Microsoft.VisualStudio.Templates.GetStarted.Web.csproj", "{FC42213C-70BF-4074-B522-21B4C51374AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard", "src\Tools\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.csproj", "{472B58E0-B280-4A4B-AB48-B3E33D8F289A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard", "src\Tools\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard\Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard.csproj", "{472B58E0-B280-4A4B-AB48-B3E33D8F289A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.Editorconfig.Wizard", "src\Tools\Microsoft.VisualStudio.Templates.Editorconfig.Wizard\Microsoft.VisualStudio.Templates.Editorconfig.Wizard.csproj", "{14FB6077-8F5C-4487-B8E3-400DBE9E004F}"
 EndProject

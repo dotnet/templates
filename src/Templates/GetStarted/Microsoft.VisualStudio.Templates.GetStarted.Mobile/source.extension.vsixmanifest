@@ -21,8 +21,8 @@
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="MobileApplication" />
     <Asset Type="Microsoft.VisualStudio.Assembly"
            d:Source="Project"
-           d:ProjectName="Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard"
-           Path="|Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard|"
-           AssemblyName="|Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard;AssemblyName|" />
+           d:ProjectName="Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard"
+           Path="|Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard|"
+           AssemblyName="|Microsoft.VisualStudio.Templates.GetStarted.Mobile.Wizard;AssemblyName|" />
   </Assets>
 </PackageManifest>
