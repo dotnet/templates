@@ -6,7 +6,7 @@
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
     <ExtensionInstallationFolder>Microsoft\GetStartedTemplates\Wizard</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>GettingStartedTemplates.Mobile.Wizard.Setup</VisualStudioInsertionComponent>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.Setup</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Tools\GettingStartedTemplates.Mobile.Wizard\GettingStartedTemplates.Mobile.Wizard.csproj">
