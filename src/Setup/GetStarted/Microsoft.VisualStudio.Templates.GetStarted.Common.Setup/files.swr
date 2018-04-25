@@ -1,0 +1,12 @@
+use vs
+
+package name=Microsoft.VisualStudio.Templates.GetStarted.Common.Setup
+        version=$(Version)
+
+vs.localizedResources
+  vs.localizedResource language=en-us
+                       title="Common files for all Get Started Templates"
+                       description="Common files for all Get Started Templates"
+
+folder "InstallDir:Common7\IDE\ProjectTemplates\CSharp\Get Started"
+  file source="$(MSBuildProjectDirectory)\GetStarted.VSTDIR"

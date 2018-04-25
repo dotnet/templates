@@ -1,0 +1,16 @@
+use vs
+
+package name=Microsoft.VisualStudio.Templates.GetStarted.Console.Setup
+        version=$(Version)
+
+vs.localizedResources
+  vs.localizedResource language=en-us
+                       title="Get Started Console App"
+                       description="Template to create an app that can write to and accept input from the command line."
+
+folder "InstallDir:Common7\IDE\ProjectTemplates\CSharp\Get Started\1033\Console"
+  file source="$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Console\Content\ConsoleApplication.vstemplate"
+  file source="$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Console\Content\content.app.config"
+  file source="$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Console\Content\content.assemblyinfo.cs"
+  file source="$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Console\Content\content.consoleapplication.csproj"
+  file source="$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.Templates.GetStarted.Console\Content\content.program.cs"
