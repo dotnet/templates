@@ -9,7 +9,7 @@
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
     <ExtensionInstallationFolder>Microsoft\GettingStartedTemplates\Resources</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>Microsoft.VisualStudio.GettingStartedTemplates.Resources</VisualStudioInsertionComponent>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.GetStarted.Templates.Resources</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="VSPackage.resx">

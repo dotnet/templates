@@ -7,5 +7,5 @@
 @="ResourcePackage"
 "InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
 "Class"="ResourcePackage.ResourcePackage"
-"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.GettingStartedTemplates.Resources.dll"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.GetStarted.Templates.Resources.dll"
 "AllowsBackgroundLoad"=dword:00000001

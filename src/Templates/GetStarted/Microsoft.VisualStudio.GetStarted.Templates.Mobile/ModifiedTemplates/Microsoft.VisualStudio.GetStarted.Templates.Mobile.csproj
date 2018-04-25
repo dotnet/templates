@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Tools\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.csproj">
-      <Name>GettingStartedTemplates.Mobile.Wizard</Name>
+      <Name>Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bGetCopyToOutputDirectoryItems</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
       <ForceIncludeInVSIX>true</ForceIncludeInVSIX>

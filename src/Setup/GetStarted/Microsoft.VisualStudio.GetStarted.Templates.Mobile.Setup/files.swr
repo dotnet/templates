@@ -1,6 +1,6 @@
 use vs
 
-package name=Microsoft.VisualStudio.GettingStartedTemplates.Mobile.Setup
+package name=Microsoft.VisualStudio.GetStarted.Templates.Mobile.Setup
         version=$(Version)
 
 vs.localizedResources
