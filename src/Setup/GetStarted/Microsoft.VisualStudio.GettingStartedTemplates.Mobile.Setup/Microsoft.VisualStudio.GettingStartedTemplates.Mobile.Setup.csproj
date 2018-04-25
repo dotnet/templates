@@ -11,7 +11,7 @@
     <SwrProperty Include="Version=$(VsixVersion)" />
     <SwrProperty Include="MSBuildProjectDirectory=$(MSBuildProjectDirectory)" />
     <SwrProperty Include="Configuration=$(Configuration)" />
-    <SwrProperty Include="ModifiedTemplates=$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Mobile\ModifiedTemplates" />
+    <SwrProperty Include="ModifiedTemplates=$(MSBuildProjectDirectory)\..\..\..\Templates\GetStarted\Microsoft.VisualStudio.GettingStartedTemplates.Mobile\ModifiedTemplates" />
   </ItemGroup>
   <ItemGroup>
     <SwrFile Include="*.swr" />
