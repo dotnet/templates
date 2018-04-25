@@ -9,8 +9,8 @@
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.Setup</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Tools\GettingStartedTemplates.Mobile.Wizard\GettingStartedTemplates.Mobile.Wizard.csproj">
-      <Name>GettingStartedTemplates.Mobile.Wizard</Name>
+    <ProjectReference Include="..\..\..\Tools\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard\Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard.csproj">
+      <Name>Microsoft.VisualStudio.GetStarted.Templates.Mobile.Wizard</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bGetCopyToOutputDirectoryItems</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
       <ForceIncludeInVSIX>true</ForceIncludeInVSIX>
