@@ -1,0 +1,19 @@
+<!-- Copyright (c)  Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- VS Insertion -->
+    <VisualStudioInsertionComponent>$(MSBuildProjectName)</VisualStudioInsertionComponent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Templates\GetStarted\Microsoft.VisualStudio.GettingStartedTemplates.Mobile\Microsoft.VisualStudio.GettingStartedTemplates.Mobile.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <SwrProperty Include="Version=$(VsixVersion)" />
+    <SwrProperty Include="MSBuildProjectDirectory=$(MSBuildProjectDirectory)" />
+    <SwrProperty Include="Configuration=$(Configuration)" />
+    <SwrProperty Include="ModifiedTemplates=$(MSBuildProjectDirectory)\..\..\Templates\Microsoft.VisualStudio.GettingStartedTemplates.Mobile\ModifiedTemplates" />
+  </ItemGroup>
+  <ItemGroup>
+    <SwrFile Include="*.swr" />
+  </ItemGroup>
+</Project>
