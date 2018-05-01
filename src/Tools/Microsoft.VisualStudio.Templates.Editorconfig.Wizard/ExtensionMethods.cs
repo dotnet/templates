@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using EnvDTE;
 using EnvDTE80;
+using Microsoft.CodeAnalysis.CodeStyle;
 
 namespace Templates.Editorconfig.Wizard
 {
@@ -154,6 +155,23 @@ namespace Templates.Editorconfig.Wizard
             }
 
             return false;
+        }
+
+        public static string AsString(this NotificationOption notification)
+        {
+            switch (notification.Value)
+            {
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Hidden:
+                    return "none";
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Info:
+                    return "suggestion";
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Warning:
+                    return "warning";
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Error:
+                    return "error";
+                default:
+                    return null;
+            }
         }
     }
 }
