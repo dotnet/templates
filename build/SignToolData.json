@@ -32,7 +32,21 @@
         "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard/net461/ru/Templates.Editorconfig.Wizard.resources.dll",
         "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard/net461/tr/Templates.Editorconfig.Wizard.resources.dll",
         "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard/net461/zh-Hans/Templates.Editorconfig.Wizard.resources.dll",
-        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard/net461/zh-Hant/Templates.Editorconfig.Wizard.resources.dll"
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard/net461/zh-Hant/Templates.Editorconfig.Wizard.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/cs/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/de/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/es/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/fr/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/it/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/ja/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/ko/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/pl/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/pt-BR/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/ru/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/tr/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/zh-Hans/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll",
+        "bin/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup/net461/zh-Hant/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.resources.dll"
       ]
     },
     {
