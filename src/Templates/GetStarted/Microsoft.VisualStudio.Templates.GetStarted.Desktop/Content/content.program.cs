@@ -14,10 +14,6 @@ namespace $safeprojectname$
         [STAThread]
         static void Main()
         {
-            // Press F5 on the keyboard to debug this app
-            // Go here for more information:
-            // https://aka.ms/desktop-app-get-started
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

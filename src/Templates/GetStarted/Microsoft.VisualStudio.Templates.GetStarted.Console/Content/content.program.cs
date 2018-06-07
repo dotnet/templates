@@ -10,10 +10,6 @@ namespace $safeprojectname$
     {
         static void Main(string[] args)
         {
-            // Press F5 on the keyboard to debug this app
-            // Go here for more information:
-            // https://aka.ms/console-app-get-started
-
             Console.WriteLine("Hello World!");
             Console.ReadKey();
         }
