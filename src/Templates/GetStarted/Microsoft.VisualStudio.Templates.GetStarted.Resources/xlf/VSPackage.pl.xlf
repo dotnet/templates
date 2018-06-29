@@ -4,57 +4,57 @@
     <body>
       <trans-unit id="110">
         <source>ResourcePackage Extension</source>
-        <target state="new">ResourcePackage Extension</target>
+        <target state="translated">Rozszerzenie ResourcePackage</target>
         <note />
       </trans-unit>
       <trans-unit id="112">
         <source>ResourcePackage Visual Studio Extension Detailed Info</source>
-        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <target state="translated">Szczegółowe informacje dotyczące rozszerzenia ResourcePackage programu Visual Studio</target>
         <note />
       </trans-unit>
       <trans-unit id="115">
         <source>Console App</source>
-        <target state="new">Console App</target>
+        <target state="translated">Aplikacja konsolowa</target>
         <note />
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">Utwórz aplikację, która może zapisywać i akceptować dane wejściowe z wiersza poleceń.</target>
+        <target state="translated">Utwórz aplikację, która może zapisywać dane w wierszu polecenia i akceptować z niego dane wejściowe.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
         <source>Desktop App</source>
-        <target state="new">Desktop App</target>
+        <target state="translated">Aplikacja klasyczna</target>
         <note />
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Utwórz aplikację z graficznym interfejsem użytkownika, który działa autonomicznie na komputerze z systemem Windows.</target>
+        <target state="translated">Utwórz aplikację z graficznym interfejsem użytkownika, która działa autonomicznie na komputerze z systemem Windows.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
         <source>Mobile App</source>
-        <target state="new">Mobile App</target>
+        <target state="translated">Aplikacja mobilna</target>
         <note />
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Utwórz aplikację działającą na urządzeniach mobilnych z systemem Android lub iOS.</target>
+        <target state="translated">Utwórz aplikację, która działa na urządzeniach mobilnych z systemem Android lub iOS.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
         <source>Web App</source>
-        <target state="new">Web App</target>
+        <target state="translated">Aplikacja internetowa</target>
         <note />
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">Utwórz aplikację, do której można uzyskać dostęp za pośrednictwem dowolnej przeglądarki internetowej.</target>
+        <target state="translated">Utwórz aplikację, do której można uzyskać dostęp przez dowolną przeglądarkę internetową.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">Zaczynać</target>
+        <target state="translated">Rozpocznij</target>
         <note />
       </trans-unit>
     </body>

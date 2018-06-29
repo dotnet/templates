@@ -4,57 +4,57 @@
     <body>
       <trans-unit id="110">
         <source>ResourcePackage Extension</source>
-        <target state="new">ResourcePackage Extension</target>
+        <target state="translated">Rozšíření ResourcePackage</target>
         <note />
       </trans-unit>
       <trans-unit id="112">
         <source>ResourcePackage Visual Studio Extension Detailed Info</source>
-        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <target state="translated">Podrobné informace o rozšíření ResourcePackage sady Visual Studio</target>
         <note />
       </trans-unit>
       <trans-unit id="115">
         <source>Console App</source>
-        <target state="new">Console App</target>
+        <target state="translated">Konzolová aplikace</target>
         <note />
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">Vytvořte aplikaci, která může psát a přijímat vstup z příkazového řádku.</target>
+        <target state="translated">Vytvoříte aplikaci, která může zapisovat na příkazový řádek a přijímat z něj zadání.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
         <source>Desktop App</source>
-        <target state="new">Desktop App</target>
+        <target state="translated">Desktopová aplikace</target>
         <note />
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Vytvořte aplikaci s grafickým uživatelským rozhraním, které běží samostatně v počítači se systémem Windows.</target>
+        <target state="translated">Vytvoříte aplikaci s grafickým uživatelským rozhraním, která poběží samostatně na počítači s Windows.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
         <source>Mobile App</source>
-        <target state="new">Mobile App</target>
+        <target state="translated">Mobilní aplikace</target>
         <note />
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Vytvořte aplikaci, která běží na mobilních zařízeních Android nebo iOS.</target>
+        <target state="translated">Vytvoříte aplikaci, která poběží na mobilních zařízeních s Androidem nebo iOS.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
         <source>Web App</source>
-        <target state="new">Web App</target>
+        <target state="translated">Webová aplikace</target>
         <note />
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">Vytvořte aplikaci, do které můžete přistupovat prostřednictvím libovolného webového prohlížeče.</target>
+        <target state="translated">Vytvoříte aplikaci, s kterou půjde pracovat v kterémkoliv webovém prohlížeči.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">Začít</target>
+        <target state="translated">Začínáme</target>
         <note />
       </trans-unit>
     </body>

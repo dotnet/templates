@@ -4,57 +4,57 @@
     <body>
       <trans-unit id="110">
         <source>ResourcePackage Extension</source>
-        <target state="new">ResourcePackage Extension</target>
+        <target state="translated">ResourcePackage Uzantısı</target>
         <note />
       </trans-unit>
       <trans-unit id="112">
         <source>ResourcePackage Visual Studio Extension Detailed Info</source>
-        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <target state="translated">ResourcePackage Visual Studio Uzantısı Hakkında Ayrıntılı Bilgi</target>
         <note />
       </trans-unit>
       <trans-unit id="115">
         <source>Console App</source>
-        <target state="new">Console App</target>
+        <target state="translated">Konsol Uygulaması</target>
         <note />
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">Komut satırından yazabilecek ve girişi kabul edebilecek bir uygulama oluşturun.</target>
+        <target state="translated">Komut satırına yazabilen ve buradan giriş kabul edebilen bir uygulama oluşturun.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
         <source>Desktop App</source>
-        <target state="new">Desktop App</target>
+        <target state="translated">Masaüstü Uygulaması</target>
         <note />
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Bir Windows bilgisayarında bağımsız çalışan bir grafik kullanıcı arayüzü ile bir uygulama oluşturun.</target>
+        <target state="translated">Grafik kullanıcı arabirimi olan ve bir Windows bilgisayarında tek başına çalışan bir uygulama oluşturun.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
         <source>Mobile App</source>
-        <target state="new">Mobile App</target>
+        <target state="translated">Mobil Uygulama</target>
         <note />
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Android veya iOS mobil cihazlarda çalışan bir uygulama oluşturun.</target>
+        <target state="translated">Android veya iOS mobil cihazlarında çalışan bir uygulama oluşturun.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
         <source>Web App</source>
-        <target state="new">Web App</target>
+        <target state="translated">Web Uygulaması</target>
         <note />
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">Herhangi bir web tarayıcısı üzerinden erişilebilen bir uygulama oluşturun.</target>
+        <target state="translated">Tüm web tarayıcıları aracılığıyla erişilebilen bir uygulama oluşturun.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">Başlamak</target>
+        <target state="translated">Kullanmaya Başlayın</target>
         <note />
       </trans-unit>
     </body>

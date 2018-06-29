@@ -4,57 +4,57 @@
     <body>
       <trans-unit id="110">
         <source>ResourcePackage Extension</source>
-        <target state="new">ResourcePackage Extension</target>
+        <target state="translated">ResourcePackage 拡張機能</target>
         <note />
       </trans-unit>
       <trans-unit id="112">
         <source>ResourcePackage Visual Studio Extension Detailed Info</source>
-        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <target state="translated">Visual Studio の拡張機能 ResourcePackage に関する詳細情報</target>
         <note />
       </trans-unit>
       <trans-unit id="115">
         <source>Console App</source>
-        <target state="new">Console App</target>
+        <target state="translated">コンソール アプリ</target>
         <note />
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">コマンドラインから書き込みを行い、コマンドラインからの入力を受け入れることができるアプリケーションを作成します。</target>
+        <target state="translated">コマンド ラインへの書き込みと、コマンド ラインからの入力が可能なアプリを作成します。</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
         <source>Desktop App</source>
-        <target state="new">Desktop App</target>
+        <target state="translated">デスクトップ アプリ</target>
         <note />
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Windowsコンピュータでスタンドアロンで実行されるグラフィカルユーザーインターフェイスを使用してアプリケーションを作成します。</target>
+        <target state="translated">Windows コンピューターでスタンドアロンに実行される、グラフィカル ユーザー インターフェイスを備えたアプリを作成します。</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
         <source>Mobile App</source>
-        <target state="new">Mobile App</target>
+        <target state="translated">モバイル アプリ</target>
         <note />
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">AndroidまたはiOSモバイルデバイスで動作するアプリを作成します。</target>
+        <target state="translated">Android または iOS モバイル デバイスで実行されるアプリを作成します。</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
         <source>Web App</source>
-        <target state="new">Web App</target>
+        <target state="translated">Web アプリ</target>
         <note />
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">任意のウェブブラウザからアクセスできるアプリを作成します。</target>
+        <target state="translated">任意の Web ブラウザーからアクセスできるアプリを作成します。</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">開始する</target>
+        <target state="translated">作業の開始</target>
         <note />
       </trans-unit>
     </body>
