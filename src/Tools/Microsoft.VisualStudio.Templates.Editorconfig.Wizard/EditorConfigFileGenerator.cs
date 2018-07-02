@@ -7,6 +7,11 @@ using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Templates.Editorconfig.Wizard;
 using System.Windows;
+using VSServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
+using Microsoft.VisualStudio.LanguageServices;
+using Microsoft.VisualStudio.Templates.Editorconfig.Wizard;
+using Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Options;
+using System.Text;
 
 namespace Templates.EditorConfig.FileGenerator
 {
@@ -21,13 +26,26 @@ namespace Templates.EditorConfig.FileGenerator
 
         internal (bool success, string fileName) TryGenerateFile(bool isDotnet)
         {
+            CodeOptions codeOptions = null;
+            if (_dte is VSServiceProvider sp)
+            {
+                using (var serviceProvider = new ServiceProvider(sp))
+                {
+                    var options = serviceProvider.GetService<VisualStudioWorkspace>()?.Options;
+                    if (options != null)
+                    {
+                        codeOptions = new CodeOptions(options);
+                    }
+                }
+            }
+
             var (success, path, isAtSolutionLevel, selectedItem) = TryGetSelectedItemAndPath();
             if (!success)
             {
                 return (false, null);
             }
 
-            var createFileResult = TryCreateFile(path, isDotnet, isAtSolutionLevel);
+            var createFileResult = TryCreateFile(path, isDotnet, isAtSolutionLevel, codeOptions);
             if (!createFileResult.success)
             {
                 return (false, null);
@@ -64,20 +82,122 @@ namespace Templates.EditorConfig.FileGenerator
             return (selectedItem != null, Path.GetDirectoryName(_dte.Solution.FullName), false, selectedItem);
         }
 
-        private (bool success, string fileName) TryCreateFile(string projectPath, bool isDotnet, bool isAtSolutionLevel)
+        private (bool success, string fileName) TryCreateFile(string projectPath, bool isDotnet, bool isAtSolutionLevel, CodeOptions options)
         {
-            string fileName = Path.Combine(projectPath, TemplateConstants.FileName);
-            if (File.Exists(fileName))
+            try
             {
-                
-                MessageBox.Show(WizardResource.AlreadyExists, ".editorconfig item template", MessageBoxButton.OK, MessageBoxImage.Information);
+                string fileName = Path.Combine(projectPath, TemplateConstants.FileName);
+                if (File.Exists(fileName))
+                {
+
+                    MessageBox.Show(WizardResource.AlreadyExists, ".editorconfig item template", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return (false, null);
+                }
+                else
+                {
+                    if (TryGetFileFromOptions(options, isAtSolutionLevel, out var file))
+                    {
+                        WriteFile(fileName, file);
+                        return (true, fileName);
+                    }
+
+                    WriteFile(fileName, isDotnet, isAtSolutionLevel);
+                    return (true, fileName);
+                }
+            }
+            catch (Exception)
+            {
                 return (false, null);
+            }
+        }
+
+        private bool TryGetFileFromOptions(CodeOptions options, bool isAtSolutionLevel, out string file)
+        {
+            if (options == null)
+            {
+                file = null;
+                return false;
+            }
+
+            var builder = new StringBuilder();
+            builder.AppendLine($@"# {WizardResource.MoreAbout} https://aka.ms/editorconfigdocs");
+            if (isAtSolutionLevel)
+            {
+                builder.AppendLine(@"root = true");
+            }
+            builder.AppendLine();
+
+            // All Files
+            builder.AppendLine(@"# All files");
+            builder.AppendLine(@"[*]");
+            builder.AppendLine(@"indent_style = space");
+
+            builder.AppendLine();
+
+            // Code Files
+            if (options.VisualBasicFormatting.IndentationSize.IsDefault &&
+                options.VisualBasicFormatting.NewLineValue.IsDefault)
+            {
+                builder.AppendLine(@"# Code files");
+                builder.AppendLine(@"[*.{{cs,csx,vb,vbx}}]");
+                builder.AppendLine($@"indent_size = {options.CSharpFormattingOptions.IndentationSize}");
+                builder.AppendLine($@"end_of_line = {options.CSharpFormattingOptions.NewLineValue}");
             }
             else
             {
-                WriteFile(fileName, isDotnet, isAtSolutionLevel);
-                return (true, fileName);
+                builder.AppendLine(@"# C# files");
+                builder.AppendLine(@"[*.{{cs,csx]");
+                builder.AppendLine($@"indent_size = {options.CSharpFormattingOptions.IndentationSize}");
+                builder.AppendLine($@"end_of_line = {options.CSharpFormattingOptions.NewLineValue}");
+                builder.AppendLine();
+
+                builder.AppendLine(@"# Visual Basic files");
+                builder.AppendLine(@"[*.{{vb,vbx]");
+                builder.AppendLine($@"indent_size = {options.VisualBasicFormatting.IndentationSize}");
+                builder.AppendLine($@"indent_size = {options.VisualBasicFormatting.NewLineValue}");
             }
+            builder.AppendLine();
+
+            // XML Files
+            builder.AppendLine(@"# Xml files");
+            builder.AppendLine(@"[*.xml]");
+            builder.AppendLine(@"indent_size = 2");
+            builder.AppendLine();
+
+            // Dotnet code style
+            builder.AppendLine(@"# Dotnet code style");
+            builder.AppendLine(@"[*.{{cs,vb}}]");
+            builder.AppendLine(@"# Organize usings");
+            builder.AppendLine(@"dotnet_sort_system_directives_first = true");
+            builder.AppendLine();
+            builder.AppendLine(@"# this. qualification");
+            var qualifyFieldAccess = options.CSharpCodeStyle.QualifyFieldAccess.GetValue();
+            builder.AppendLine(@$"dotnet_style_qualification_for_field = {qualifyFieldAccess.Value}:{qualifyFieldAccess.Notification.AsString()}");
+            var qualifyPropertyAccess = options.CSharpCodeStyle.QualifyPropertyAccess.GetValue();
+            builder.AppendLine(@$"dotnet_style_qualification_for_property = {qualifyPropertyAccess.Value}:{qualifyPropertyAccess.Notification.AsString()}");
+            var qualifyMethodAccess = options.CSharpCodeStyle.QualifyMethodAccess.GetValue();
+            builder.AppendLine(@$"dotnet_style_qualification_for_method = {qualifyMethodAccess.Value}:{qualifyMethodAccess.Notification.AsString()}");
+            var qualifyEventAccess = options.CSharpCodeStyle.QualifyEventAccess.GetValue();
+            builder.AppendLine(@$"dotnet_style_qualification_for_event = {qualifyEventAccess.Value}:{qualifyEventAccess.Notification.AsString()}");
+            builder.AppendLine();
+            builder.AppendLine(@"# Language keywords use on BCL types");
+            var preferIntrinsicPredefinedTypeKeywordInDeclaration = options.CSharpCodeStyle.PreferIntrinsicPredefinedTypeKeywordInDeclaration.GetValue();
+            builder.AppendLine(@$"dotnet_style_predefined_type_for_locals_parameters_members = {preferIntrinsicPredefinedTypeKeywordInDeclaration.Value}:{preferIntrinsicPredefinedTypeKeywordInDeclaration.Notification.AsString()}");
+            var preferIntrinsicPredefinedTypeKeywordInMemberAccess = options.CSharpCodeStyle.PreferIntrinsicPredefinedTypeKeywordInMemberAccess.GetValue();
+            builder.AppendLine(@$"dotnet_style_predefined_type_for_member_access = {preferIntrinsicPredefinedTypeKeywordInMemberAccess.Value}:{preferIntrinsicPredefinedTypeKeywordInMemberAccess.Notification.AsString()}");
+            builder.AppendLine();
+            builder.AppendLine(@"# Naming conventions");
+            builder.AppendLine(@"dotnet_naming_style.pascal_case_style.capitalization        = pascal_case");
+            builder.AppendLine(@"# Classes, structs, methods, enums, events, properties, namespaces, delegates must be PascalCase");
+            builder.AppendLine(@"dotnet_naming_rule.general_naming.severity                  = suggestion");
+            builder.AppendLine(@"dotnet_naming_rule.general_naming.symbols                   = general");
+            builder.AppendLine(@"dotnet_naming_rule.general_naming.style                     = pascal_case_style");
+            builder.AppendLine(@"dotnet_naming_symbols.general.applicable_kinds              = class,struct,enum,property,method,event,namespace,delegate");
+            builder.AppendLine(@"dotnet_naming_symbols.general.applicable_accessibilities    = *");
+            builder.AppendLine();
+
+            file = builder.ToString();
+            return true;
         }
 
         private void WriteFile(string fileName, bool isDotnet, bool isAtSolutionLevel)
@@ -86,24 +206,29 @@ namespace Templates.EditorConfig.FileGenerator
             {
                 if (isDotnet)
                 {
-                    File.WriteAllText(fileName, TemplateConstants.DotNetFileContentIsRoot);
+                    WriteFile(fileName, TemplateConstants.DotNetFileContentIsRoot);
                 }
                 else
                 {
-                    File.WriteAllText(fileName, TemplateConstants.DefaultFileContentIsRoot);
+                    WriteFile(fileName, TemplateConstants.DefaultFileContentIsRoot);
                 }
             }
             else
             {
                 if (isDotnet)
                 {
-                    File.WriteAllText(fileName, TemplateConstants.DotNetFileContent);
+                    WriteFile(fileName, TemplateConstants.DotNetFileContent);
                 }
                 else
                 {
-                    File.WriteAllText(fileName, TemplateConstants.DefaultFileContent);
+                    WriteFile(fileName, TemplateConstants.DefaultFileContent);
                 }
             }
+        }
+
+        private void WriteFile(string fileName, string fileContests)
+        {
+            File.WriteAllText(fileName, fileContests);
         }
 
         private (bool success, ProjectItem projectItem) TryAddFileToHierarchy(object item, string fileName)
@@ -129,14 +254,19 @@ namespace Templates.EditorConfig.FileGenerator
 
         internal void OpenFile(string fileName)
         {
-            var serviceProvider = new ServiceProvider(_dte as Microsoft.VisualStudio.OLE.Interop.IServiceProvider);
-            VsShellUtilities.OpenDocument(serviceProvider, fileName);
-            Command command = _dte.Commands.Item("SolutionExplorer.SyncWithActiveDocument");
-            if (command.IsAvailable)
+            if (_dte is VSServiceProvider sp)
             {
-                _dte.Commands.Raise(command.Guid, command.ID, null, null);
+                using (var serviceProvider = new ServiceProvider(sp))
+                {
+                    VsShellUtilities.OpenDocument(serviceProvider, fileName);
+                    Command command = _dte.Commands.Item("SolutionExplorer.SyncWithActiveDocument");
+                    if (command.IsAvailable)
+                    {
+                        _dte.Commands.Raise(command.Guid, command.ID, null, null);
+                    }
+                    _dte.ActiveDocument.Activate();
+                }
             }
-            _dte.ActiveDocument.Activate();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using EnvDTE;
 using EnvDTE80;
+using Microsoft.CodeAnalysis.CodeStyle;
 
 namespace Templates.Editorconfig.Wizard
 {
@@ -11,6 +12,16 @@ namespace Templates.Editorconfig.Wizard
     {
         private const string SolutionFolder = "{66A26720-8FB5-11D2-AA7E-00C04F688DDE}";
         
+        public static T GetService<T>(this IServiceProvider serviceProvider)
+        {
+            if (serviceProvider == null)
+            {
+                throw new ArgumentNullException(nameof(serviceProvider));
+            }
+
+            return (T)serviceProvider.GetService(typeof(T));
+        }
+
         public static (bool success, string rootFolder) TryGetRootFolder(this Project project, string solutionFullName)
         {
             if (project == null)
@@ -144,6 +155,23 @@ namespace Templates.Editorconfig.Wizard
             }
 
             return false;
+        }
+
+        public static string AsString(this NotificationOption notification)
+        {
+            switch (notification.Value)
+            {
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Hidden:
+                    return "none";
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Info:
+                    return "suggestion";
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Warning:
+                    return "warning";
+                case Microsoft.CodeAnalysis.DiagnosticSeverity.Error:
+                    return "error";
+                default:
+                    return null;
+            }
         }
     }
 }
