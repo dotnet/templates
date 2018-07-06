@@ -4,57 +4,57 @@
     <body>
       <trans-unit id="110">
         <source>ResourcePackage Extension</source>
-        <target state="new">ResourcePackage Extension</target>
+        <target state="translated">ResourcePackage 扩展</target>
         <note />
       </trans-unit>
       <trans-unit id="112">
         <source>ResourcePackage Visual Studio Extension Detailed Info</source>
-        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <target state="translated">ResourcePackage Visual Studio 扩展详细信息</target>
         <note />
       </trans-unit>
       <trans-unit id="115">
         <source>Console App</source>
-        <target state="new">Console App</target>
+        <target state="translated">控制台应用</target>
         <note />
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">创建一个可写入并接受命令行输入的应用程序。</target>
+        <target state="translated">创建一个可以写入命令行和接收命令行中的输入的应用。</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
         <source>Desktop App</source>
-        <target state="new">Desktop App</target>
+        <target state="translated">桌面应用</target>
         <note />
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">使用在Windows计算机上独立运行的图形用户界面创建应用程序。</target>
+        <target state="translated">创建一个在 Windows 计算机上独立运行的包含图形用户界面的应用。</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
         <source>Mobile App</source>
-        <target state="new">Mobile App</target>
+        <target state="translated">移动应用</target>
         <note />
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">创建一个在Android或iOS移动设备上运行的应用程序。</target>
+        <target state="translated">创建一个在 Android 或 iOS 移动设备上运行的应用。</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
         <source>Web App</source>
-        <target state="new">Web App</target>
+        <target state="translated">Web 应用</target>
         <note />
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">创建一个可以通过任何网页浏览器访问的应用程序。</target>
+        <target state="translated">创建一个可通过任意 Web 浏览器访问的应用。</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">开始使用</target>
+        <target state="translated">开始使用</target>
         <note />
       </trans-unit>
     </body>

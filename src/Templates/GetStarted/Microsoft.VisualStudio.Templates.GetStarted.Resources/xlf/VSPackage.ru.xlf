@@ -4,57 +4,57 @@
     <body>
       <trans-unit id="110">
         <source>ResourcePackage Extension</source>
-        <target state="new">ResourcePackage Extension</target>
+        <target state="translated">Расширение ResourcePackage</target>
         <note />
       </trans-unit>
       <trans-unit id="112">
         <source>ResourcePackage Visual Studio Extension Detailed Info</source>
-        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <target state="translated">Подробные сведения о расширении ResourcePackage для Visual Studio</target>
         <note />
       </trans-unit>
       <trans-unit id="115">
         <source>Console App</source>
-        <target state="new">Console App</target>
+        <target state="translated">Консольное приложение</target>
         <note />
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">Создайте приложение, которое может записывать и принимать ввод из командной строки.</target>
+        <target state="translated">Создайте приложение, поддерживающее возможность записи в командную строку и принимающее входные данные из нее.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
         <source>Desktop App</source>
-        <target state="new">Desktop App</target>
+        <target state="translated">Классическое приложение</target>
         <note />
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Создайте приложение с графическим интерфейсом пользователя, который работает автономно на компьютере под управлением Windows.</target>
+        <target state="translated">Создайте приложение с графическим пользовательским интерфейсом, работающее в автономном режиме на компьютере с ОС Windows.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
         <source>Mobile App</source>
-        <target state="new">Mobile App</target>
+        <target state="translated">Мобильное приложение</target>
         <note />
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Создайте приложение, которое работает на мобильных устройствах Android или iOS.</target>
+        <target state="translated">Создайте приложение, работающее на мобильных устройствах Android или iOS.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
         <source>Web App</source>
-        <target state="new">Web App</target>
+        <target state="translated">Веб-приложение</target>
         <note />
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">Создайте приложение, доступ к которому можно получить через любой веб-браузер.</target>
+        <target state="translated">Создайте приложение, доступное из любого веб-браузера.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">Начать</target>
+        <target state="translated">Начало работы</target>
         <note />
       </trans-unit>
     </body>

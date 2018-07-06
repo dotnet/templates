@@ -4,57 +4,57 @@
     <body>
       <trans-unit id="110">
         <source>ResourcePackage Extension</source>
-        <target state="new">ResourcePackage Extension</target>
+        <target state="translated">ResourcePackage 확장</target>
         <note />
       </trans-unit>
       <trans-unit id="112">
         <source>ResourcePackage Visual Studio Extension Detailed Info</source>
-        <target state="new">ResourcePackage Visual Studio Extension Detailed Info</target>
+        <target state="translated">ResourcePackage Visual Studio 확장 세부 정보</target>
         <note />
       </trans-unit>
       <trans-unit id="115">
         <source>Console App</source>
-        <target state="new">Console App</target>
+        <target state="translated">콘솔 앱</target>
         <note />
       </trans-unit>
       <trans-unit id="116">
         <source>Create an app that can write to and accept input from the command line.</source>
-        <target state="new">명령 행에 쓰고 입력을 허용 할 수있는 앱을 만듭니다.</target>
+        <target state="translated">명령줄에 쓸 수 있고 명령줄의 입력을 허용하는 앱을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="117">
         <source>Desktop App</source>
-        <target state="new">Desktop App</target>
+        <target state="translated">데스크톱 앱</target>
         <note />
       </trans-unit>
       <trans-unit id="118">
         <source>Create an app with a graphical user interface that runs stand-alone on a Windows computer.</source>
-        <target state="new">Windows 컴퓨터에서 독립형으로 실행되는 그래픽 사용자 인터페이스를 사용하여 응용 프로그램을 만듭니다.</target>
+        <target state="translated">Windows 컴퓨터에서 독립형으로 실행되는 그래픽 사용자 인터페이스가 포함된 앱을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="119">
         <source>Mobile App</source>
-        <target state="new">Mobile App</target>
+        <target state="translated">모바일 앱</target>
         <note />
       </trans-unit>
       <trans-unit id="120">
         <source>Create an app that runs on Android or iOS mobile devices.</source>
-        <target state="new">Android 또는 iOS 휴대 기기에서 실행되는 앱을 만듭니다.</target>
+        <target state="translated">Android 또는 iOS 모바일 장치에서 실행되는 앱을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="121">
         <source>Web App</source>
-        <target state="new">Web App</target>
+        <target state="translated">웹앱</target>
         <note />
       </trans-unit>
       <trans-unit id="122">
         <source>Create an app that can be accessed through any web browser.</source>
-        <target state="new">모든 웹 브라우저를 통해 액세스 할 수있는 앱을 만듭니다.</target>
+        <target state="translated">모든 웹 브라우저를 통해 액세스할 수 있는 앱을 만듭니다.</target>
         <note />
       </trans-unit>
       <trans-unit id="130">
         <source>Get Started</source>
-        <target state="new">시작하다</target>
+        <target state="translated">시작</target>
         <note />
       </trans-unit>
     </body>
