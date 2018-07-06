@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--This is the code for the initial page of your mobile app.-->
+<!--Go to http://aka.ms/dotnet-get-started-mobile to continue learning how to build a mobile app using Xamarin.Forms!-->
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:views="clr-namespace:$safeprojectname$.Views"

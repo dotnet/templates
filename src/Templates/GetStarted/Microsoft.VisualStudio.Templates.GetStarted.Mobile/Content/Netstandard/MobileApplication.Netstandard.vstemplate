@@ -35,7 +35,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="ItemsPage.xaml">ItemsPage.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ItemsPage.xaml.cs">ItemsPage.xaml.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml">MainPage.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs">MainPage.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs" OpenInEditor="true">MainPage.xaml.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="NewItemPage.xaml">NewItemPage.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="NewItemPage.xaml.cs">NewItemPage.xaml.cs</ProjectItem>
       </Folder>
