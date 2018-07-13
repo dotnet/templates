@@ -13,7 +13,12 @@
     <!-- Toolset -->
     <RoslynToolsRepoToolsetVersion>1.0.0-beta-62522-01</RoslynToolsRepoToolsetVersion>
     <DotNetCliVersion>2.0.2</DotNetCliVersion>
-    <VSWhereVersion>2.3.2</VSWhereVersion>
+    <VSWhereVersion>2.3.2</VSWhereVersion> 
+    
+    <!--
+      Override SwixBuild version. We need newer SwixBuild than the one referenced by the current RepoToolset.
+    -->
+    <MicroBuildPluginsSwixBuildVersion>1.0.422</MicroBuildPluginsSwixBuildVersion>
 
     <!-- VS SDK -->
     <VSLangProjVersion>7.0.3300</VSLangProjVersion>
