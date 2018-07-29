@@ -5,7 +5,7 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <DebugSymbols>false</DebugSymbols>
-    <PublishOutputToSymStore>false</PublishOutputToSymStore>
+    <PublishOutputToSymStore>true</PublishOutputToSymStore>
     <UseCommonOutputDirectory Condition="'$(UseCommonOutputDirectory)' == ''">true</UseCommonOutputDirectory>
 
     <!-- VSIX -->

@@ -6,7 +6,7 @@
   <Import Project="..\Directory.Build.props"/>
   <PropertyGroup>
     <DebugSymbols>false</DebugSymbols>
-    <PublishOutputToSymStore>false</PublishOutputToSymStore>
+    <PublishOutputToSymStore>true</PublishOutputToSymStore>
     <UseCommonOutputDirectory Condition="'$(UseCommonOutputDirectory)' == ''">true</UseCommonOutputDirectory>
 
     <!-- VSIX -->
