@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <TemplateID>Microsoft.VisualStudio.CSharp.GettingStartedTemplates.Console</TemplateID>
+    <TemplateID>Microsoft.VisualStudio.CSharp.MLDotNet.Console</TemplateID>
     <Name>ML.NET Console Application</Name>
-    <Description>A project for creating and using a ML.NET model in an application</Description>
+    <Description>A project for creating and using a ML.NET model in an application.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
