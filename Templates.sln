@@ -50,9 +50,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Temp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.Editorconfig.Wizard", "src\Tools\Microsoft.VisualStudio.Templates.Editorconfig.Wizard\Microsoft.VisualStudio.Templates.Editorconfig.Wizard.csproj", "{14FB6077-8F5C-4487-B8E3-400DBE9E004F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.MLDotNet.ModelLibrary", "src\Templates\MLDotNet\Microsoft.VisualStudio.Templates.MLDotNet.ModelLibrary\Microsoft.VisualStudio.Templates.MLDotNet.ModelLibrary.csproj", "{0621AA8C-BDAB-4387-BE4F-3154AE60A644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.MLDotNet.Console", "src\Templates\MLDotNet\Microsoft.VisualStudio.Templates.MLDotNet.Console\Microsoft.VisualStudio.Templates.MLDotNet.Console.csproj", "{C3BB4E94-91C9-4D18-90FF-1BC58320A11B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualSutdio.Templates.MLDotNet.Console", "src\Templates\MLDotNet\Microsoft.VisualSutdio.Templates.MLDotNet.Console\Microsoft.VisualSutdio.Templates.MLDotNet.Console.csproj", "{C3BB4E94-91C9-4D18-90FF-1BC58320A11B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.MLDotNet.ModelLibrary", "src\Templates\MLDotNet\Microsoft.VisualStudio.Templates.MLDotNet.ModelLibrary\Microsoft.VisualStudio.Templates.MLDotNet.ModelLibrary.csproj", "{0621AA8C-BDAB-4387-BE4F-3154AE60A644}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MLDotNet", "MLDotNet", "{BD820CB5-60A1-4C7D-8038-6324DF012FCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -309,7 +311,8 @@ Global
 		{472B58E0-B280-4A4B-AB48-B3E33D8F289A} = {71612166-740D-4489-86E6-0B1BD6487462}
 		{14FB6077-8F5C-4487-B8E3-400DBE9E004F} = {71612166-740D-4489-86E6-0B1BD6487462}
 		{C3BB4E94-91C9-4D18-90FF-1BC58320A11B} = {2E201165-DB41-485B-B11E-1C1DF256B2B8}
-		{0621AA8C-BDAB-4387-BE4F-3154AE60A644} = {CEAFE05D-9079-44A2-80E0-9D9C1CAD8B85}
+		{0621AA8C-BDAB-4387-BE4F-3154AE60A644} = {BD820CB5-60A1-4C7D-8038-6324DF012FCE}
+		{BD820CB5-60A1-4C7D-8038-6324DF012FCE} = {1BBCEFE6-1F67-4BBB-BDE7-E752AD8B023C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F3FC446-CADE-4812-8487-19861157EA49}
