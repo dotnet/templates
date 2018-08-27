@@ -53,7 +53,7 @@ namespace $safeprojectname$
             Console.WriteLine($"Predicted sentiment for \"{testInput.SentimentText}\" is: {sentiment}");
         }
 
-        // Input class that tells ML.NET how to read the dataset (which columns are included).
+        //<summary>Input class that tells ML.NET how to read the dataset (which columns are included).</summary>
         public class SentimentData
         {
             [Column(ordinal: "0", name: "Label")]
