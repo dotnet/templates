@@ -52,7 +52,6 @@ namespace $safeprojectname$
              * In order to build a sentiment analysis model with higher accuracy please follow the walkthrough at https://aka.ms/mlnetsentimentanalysis*/
             Console.WriteLine("Predicted sentiment for \"" + testInput.SentimentText + "\" is:" +  sentiment);
             Console.ReadKey();
-
         }
 
         // Input class that tells ML.NET how to read the dataset (which columns are included).

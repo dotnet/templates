@@ -3,13 +3,13 @@
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.MLDotNet.ModelLibrary</TemplateID>
     <Name>ML.NET Model Library (Preview)</Name>
-    <Description>A project for building a ML.NET library which consumes Machine Learning Models (e.g. ML.NET, ONNX etc.)</Description>
+    <Description>A project for building an ML.NET library which consumes Machine Learning Models (e.g. ML.NET, ONNX etc.)</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>1</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>ModelLibrary</DefaultName>
+    <DefaultName>MLNETModelLibrary</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <CreateInPlace>false</CreateInPlace>
   </TemplateData>
@@ -27,10 +27,6 @@
     <packages>
       <package id="Microsoft.ML" version="0.4.0"/>
       <package id="Microsoft.ML.CpuMath" version="0.4.0"/>
-      <package id="Newtonsoft.Json" version="10.0.3"/>
-      <package id="System.CodeDom" version="4.4.0"/>
-      <package id="System.Reflection.Emit.Lightweight" version="4.3.0"/>
-      <package id="System.Threading.Tasks.Dataflow" version="4.8.0"/>
     </packages>
   </WizardData>
 </VSTemplate>

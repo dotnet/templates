@@ -3,7 +3,7 @@
   <Metadata>
     <Identity Id="Microsoft.VisualStudio.Templates.CS.MLDotNet.Console" Version="|%CurrentProject%;GetBuildVersion|" Language="en-US" Publisher="Microsoft" />
     <DisplayName>ML.Net Console Application (Preview)</DisplayName>
-    <Description>A project for creating and using a ML.NET model in an application.</Description>
+    <Description>A project for creating and using an ML.NET model in an application.</Description>
   </Metadata>
   <Installation SystemComponent="true" Experimental="true">
     <InstallationTarget Version="[15.0,]" Id="Microsoft.VisualStudio.Pro" />

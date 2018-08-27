@@ -3,13 +3,13 @@
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.MLDotNet.Console</TemplateID>
     <Name>ML.NET Console Application</Name>
-    <Description>A project for creating and using a ML.NET model in an application.</Description>
+    <Description>A project for creating and using an ML.NET model in an application.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>0</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>ConsoleApp</DefaultName>
+    <DefaultName>MLNETConsoleApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <CreateInPlace>false</CreateInPlace>
   </TemplateData>
@@ -18,7 +18,6 @@
       <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">Assemblyinfo.cs</ProjectItem>
       <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
       <ProjectItem TargetFileName="App.config" ReplaceParameters="true">App.config</ProjectItem>
-      <ProjectItem TargetFileName="packages.config" ReplaceParameters="true">packages.config</ProjectItem>
       <ProjectItem TargetFileName="Data\wikipedia-detox-250-line-data.tsv" ReplaceParameters="false">wikipedia-detox-250-line-data.tsv</ProjectItem>
       <ProjectItem TargetFileName="Data\wikipedia-detox-250-line-test.tsv" ReplaceParameters="false">wikipedia-detox-250-line-test.tsv</ProjectItem>
     </Project>
@@ -31,10 +30,6 @@
     <packages>
       <package id="Microsoft.ML" version="0.4.0"/>
       <package id="Microsoft.ML.CpuMath" version="0.4.0"/>
-      <package id="Newtonsoft.Json" version="10.0.3"/>
-      <package id="System.CodeDom" version="4.4.0"/>
-      <package id="System.Reflection.Emit.Lightweight" version="4.3.0"/>
-      <package id="System.Threading.Tasks.Dataflow" version="4.8.0"/>
     </packages>
   </WizardData>
 </VSTemplate>
