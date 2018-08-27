@@ -14,14 +14,15 @@ namespace $safeprojectname$
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+
             //1. Build an ML.NET pipeline for training a sentiment analysis model
             Console.WriteLine("Training a model for Sentiment Analysis using ML.NET");
             var pipeline = new LearningPipeline();
 
             // 1a. Load the training data using a TextLoader.
-            pipeline.Add(new TextLoader(@"..\..\..\Data\wikipedia-detox-250-line-data.tsv").CreateFrom<SentimentData>(useHeader: true));
+            pipeline.Add(new TextLoader(@"wikipedia-detox-250-line-data.tsv").CreateFrom<SentimentData>(useHeader: true));
             
             // 1b. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
             pipeline.Add(new TextFeaturizer("Features", "SentimentText"));
@@ -30,12 +31,11 @@ namespace $safeprojectname$
             pipeline.Add(new AveragedPerceptronBinaryClassifier() { NumIterations = 10 });
             
             // 1d. Get a model by training the pipeline that was built.
-            PredictionModel<SentimentData, SentimentPrediction> model =
-                pipeline.Train<SentimentData, SentimentPrediction>();
+            PredictionModel<SentimentData, SentimentPrediction> model = pipeline.Train<SentimentData, SentimentPrediction>();
 
             // 2. Evaluate the model to see how well it performs on different data (output the percent of examples classified correctly).
             Console.WriteLine("Training of model is complete \nTesting the model with test data");
-            var testData = new TextLoader(@"..\..\..\Data\wikipedia-detox-250-line-test.tsv").CreateFrom<SentimentData>(useHeader: true);
+            var testData = new TextLoader(@"wikipedia-detox-250-line-test.tsv").CreateFrom<SentimentData>(useHeader: true);
             var evaluator = new BinaryClassificationEvaluator();
             BinaryClassificationMetrics metrics = evaluator.Evaluate(model, testData);
             Console.WriteLine($"Accuracy of trained model for test data is: {metrics.Accuracy:P2}");
@@ -50,8 +50,7 @@ namespace $safeprojectname$
             /* This template uses a minimal dataset to build a sentiment analysis model which leads to relatively low accuracy. 
              * Building good Machine Learning models require large volumes of data. This template comes with a minimal dataset (Data/wikipedia-detox) for sentiment analysis. 
              * In order to build a sentiment analysis model with higher accuracy please follow the walkthrough at https://aka.ms/mlnetsentimentanalysis*/
-            Console.WriteLine("Predicted sentiment for \"" + testInput.SentimentText + "\" is:" +  sentiment);
-            Console.ReadKey();
+            Console.WriteLine($"Predicted sentiment for \"{testInput.SentimentText}\" is: {sentiment}");
         }
 
         // Input class that tells ML.NET how to read the dataset (which columns are included).

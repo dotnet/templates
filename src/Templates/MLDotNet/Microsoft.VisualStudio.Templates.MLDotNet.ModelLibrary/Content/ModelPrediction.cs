@@ -1,10 +1,8 @@
 ﻿/* This template shows how to use a model trained with ML.NET (https://aka.ms/mlnet) to make predictions.
  * This model predicts whether a sentence has a positive or negative sentiment. It is based on a sample that can be 
  * found at https://aka.ms/mlnetsentimentanalysis, which provides a more detailed introduction to ML.NET and the scenario.
- * Note that this model was trained on a very small sample dataset, which leads to a relatively low accuracy.
- */
+ * Note that this model was trained on a very small sample dataset, which leads to a relatively low accuracy.*/
 using System;
-using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Runtime.Api;
 
@@ -18,13 +16,13 @@ namespace $safeprojectname$
               var model = PredictionModel.ReadAsync<SentimentData, SentimentPrediction>(@"Models\sentiment_model.zip").Result;
 
               // 2. Use the model for a single prediction.
-              var sentiment = (model.Predict(input).Sentiment == true) ? "Positive" : "Negative";
-              Console.WriteLine("Predicted sentiment for \"" + input.SentimentText + "\" is:" + sentiment);
+              var sentiment = model.Predict(input).Sentiment ? "Positive" : "Negative";
+              System.Console.WriteLine($"Predicted sentiment for \"{input.SentimentText}\" is: {sentiment}");
               return sentiment;
          }
     }
 
-    // Input class that tells ML.NET how to read the input for predictions.
+    // <summary>Input class that tells ML.NET how to read the input for predictions.</summary>
     public class SentimentData
     {
         [Column(ordinal: "0", name: "Label")]
@@ -39,5 +37,4 @@ namespace $safeprojectname$
         [ColumnName("PredictedLabel")]
         public bool Sentiment;
     }
-
 }

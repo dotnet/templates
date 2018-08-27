@@ -15,18 +15,8 @@
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.csproj" File="MLNETModelLibrary.csproj" ReplaceParameters="true">
-      <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
+      <ProjectItem TargetFileName="ModelPrediction.cs" ReplaceParameters="true" OpenInEditor="true">ModelPrediction.cs</ProjectItem>
       <ProjectItem TargetFileName="Models\sentiment_model.zip">sentiment_model.zip</ProjectItem>
     </Project>
   </TemplateContent>
-  <WizardExtension>
-      <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
-      <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
-  </WizardExtension>
-  <WizardData>
-    <packages>
-      <package id="Microsoft.ML" version="0.4.0"/>
-      <package id="Microsoft.ML.CpuMath" version="0.4.0"/>
-    </packages>
-  </WizardData>
 </VSTemplate>

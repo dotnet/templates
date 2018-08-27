@@ -18,6 +18,10 @@ x64/
 .dotnet/
 .tools/
 src/Templates/**/ModifiedTemplates/
+UpgradeLog.Htm
+
+#BackUp file
+BackUp/
 
 # Per-user project properties
 launchSettings.json
