@@ -20,7 +20,7 @@ x64/
 src/Templates/**/ModifiedTemplates/
 UpgradeLog.Htm
 
-#BackUp file
+# BackUp file
 BackUp/
 
 # Per-user project properties
