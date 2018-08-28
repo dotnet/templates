@@ -62,7 +62,7 @@ namespace $safeprojectname$
             public string SentimentText;
         }
 
-        // Output class for the prediction, in this case including only the predicted sentiment.
+        //<summary>Output class for the prediction, in this case including only the predicted sentiment.</summary>
         public class SentimentPrediction
         {
             [ColumnName("PredictedLabel")]
