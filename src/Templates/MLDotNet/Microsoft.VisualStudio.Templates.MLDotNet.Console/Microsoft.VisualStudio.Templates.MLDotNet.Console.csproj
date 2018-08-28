@@ -14,4 +14,97 @@
       <OutputSubPath>Machine Learning</OutputSubPath>
     </VSTemplate>
   </ItemGroup>
+  
+  <!-- Nuget Packages To Include In VSIX -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="[0.4.0]" />
+    <PackageReference Include="Microsoft.ML.CpuMath" Version="[0.4.0]" />
+    <PackageReference Include="Newtonsoft.Json" Version="[10.0.3]" />
+    <PackageReference Include="System.CodeDom" Version="[4.4.0]" />
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="[4.3.0]" />
+    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="[4.8.0]" />
+  </ItemGroup>
+  
+  <Target BeforeTargets="CreateVsixContainer" Name="MakeVsixOutputDirectory">
+    <MakeDir Condition="!Exists('$(OutDir)$(VsixOutDirSuffix)')" Directories="$(OutDir)$(VsixOutDirSuffix)" />
+  </Target>
+
+  <Target Name="GetVsixTemplateItems" DependsOnTargets="ZipProjects;ZipItems">
+    
+    <!-- Locate packages -->
+    <ItemGroup>
+      <MicrosoftMLPackage
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg" />
+      <MicrosoftMLPackage
+        Condition="Exists('$(NuGetPackageRoot)Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg')"
+        Include="$(NuGetPackageRoot)Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg" />
+
+      <MicrosoftMLCpuMathPackage
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg" />
+      <MicrosoftMLCpuMathPackage 
+        Condition="Exists('$(NuGetPackageRoot)Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg')"
+        Include="$(NuGetPackageRoot)Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg" />
+
+      <NewtonsoftJsonPackage
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg" />
+      <NewtonsoftJsonPackage 
+        Condition="Exists('$(NuGetPackageRoot)Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg')"
+        Include="$(NuGetPackageRoot)Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg" />
+
+      <SystemCodeDomPackage
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg" />
+      <SystemCodeDomPackage 
+        Condition="Exists('$(NuGetPackageRoot)System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg')"
+        Include="$(NuGetPackageRoot)System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg" />
+
+      <SystemReflectionEmitLightweightPackage
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg" />
+      <SystemReflectionEmitLightweightPackage 
+        Condition="Exists('$(NuGetPackageRoot)System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg')"
+        Include="$(NuGetPackageRoot)System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg" />
+
+      <SystemThreadingTasksDataflowPackage
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg" />
+      <SystemThreadingTasksDataflowPackage 
+        Condition="Exists('$(NuGetPackageRoot)System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg')"
+        Include="$(NuGetPackageRoot)System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <VSIXSourceItem Include="@(IntermediateZipItem)">
+        <VSIXSubPath>%(IntermediateZipItem.Filename)\%(IntermediateZipItem.Language)\%(IntermediateZipItem.OutputSubPath)\%(IntermediateZipItem.Culture)</VSIXSubPath>
+      </VSIXSourceItem>
+      <VSIXSourceItem Include="@(IntermediateZipProject)">
+        <VSIXSubPath>%(IntermediateZipProject.Filename)\%(IntermediateZipProject.Language)\%(IntermediateZipProject.OutputSubPath)\%(IntermediateZipProject.Culture)</VSIXSubPath>
+      </VSIXSourceItem>
+      <VSIXSourceItem Include="@(MicrosoftMLPackage)">
+        <VSIXSubPath>Packages</VSIXSubPath>
+      </VSIXSourceItem>
+      <VSIXSourceItem Include="@(MicrosoftMLCpuMathPackage)">
+        <VSIXSubPath>Packages</VSIXSubPath>
+      </VSIXSourceItem>
+      <VSIXSourceItem Include="@(NewtonsoftJsonPackage)">
+        <VSIXSubPath>Packages</VSIXSubPath>
+      </VSIXSourceItem>
+      <VSIXSourceItem Include="@(SystemCodeDomPackage)">
+        <VSIXSubPath>Packages</VSIXSubPath>
+      </VSIXSourceItem>
+      <VSIXSourceItem Include="@(SystemReflectionEmitLightweightPackage)">
+        <VSIXSubPath>Packages</VSIXSubPath>
+      </VSIXSourceItem>
+      <VSIXSourceItem Include="@(SystemThreadingTasksDataflowPackage)">
+        <VSIXSubPath>Packages</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
+  
+  <PropertyGroup>
+    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);GetVsixTemplateItems</GetVsixSourceItemsDependsOn>
+  </PropertyGroup>
 </Project>
