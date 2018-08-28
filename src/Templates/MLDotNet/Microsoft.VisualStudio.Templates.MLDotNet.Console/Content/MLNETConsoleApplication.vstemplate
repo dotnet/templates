@@ -18,8 +18,8 @@
       <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">Assemblyinfo.cs</ProjectItem>
       <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
       <ProjectItem TargetFileName="App.config" ReplaceParameters="true">App.config</ProjectItem>
-      <ProjectItem TargetFileName="wikipedia-detox-250-line-data.tsv" ReplaceParameters="false">wikipedia-detox-250-line-data.tsv</ProjectItem>
-      <ProjectItem TargetFileName="wikipedia-detox-250-line-test.tsv" ReplaceParameters="false">wikipedia-detox-250-line-test.tsv</ProjectItem>
+      <ProjectItem TargetFileName="Data\wikipedia-detox-250-line-data.tsv" ReplaceParameters="false">wikipedia-detox-250-line-data.tsv</ProjectItem>
+      <ProjectItem TargetFileName="Data\wikipedia-detox-250-line-test.tsv" ReplaceParameters="false">wikipedia-detox-250-line-test.tsv</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
