@@ -6,12 +6,13 @@
     <Description>A project for building an ML.NET library which consumes machine learning Models (e.g. ML.NET, ONNX etc.)</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
-    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>1</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>MLNETModelLibrary</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
-    <CreateInPlace>false</CreateInPlace>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.csproj" File="MLNETModelLibrary.csproj" ReplaceParameters="true">
