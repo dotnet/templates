@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="Content\**" />
-    <VSTemplate Include="Content\ConsoleApplication.vstemplate">
+    <VSTemplate Include="Content\MLNETConsoleApplication.vstemplate">
       <OutputSubPath>Machine Learning</OutputSubPath>
     </VSTemplate>
   </ItemGroup>
