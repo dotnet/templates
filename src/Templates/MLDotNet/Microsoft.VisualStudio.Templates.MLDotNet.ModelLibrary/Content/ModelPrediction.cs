@@ -22,7 +22,9 @@ namespace $safeprojectname$
          }
     }
 
-    //<summary>Input class that tells ML.NET how to read the input for predictions.</summary>
+    /// <summary>
+    /// Input class that tells ML.NET how to read the input for predictions.
+    /// </summary>
     public class SentimentData
     {
         [Column(ordinal: "0", name: "Label")]
@@ -31,7 +33,9 @@ namespace $safeprojectname$
         public string SentimentText;
     }
 
-    //<summary>Output class for the prediction, in this case including only the predicted sentiment.</summary>
+    /// <summary>
+    /// Output class for the prediction, in this case including only the predicted sentiment.
+    /// </summary>
     public class SentimentPrediction
     {
         [ColumnName("PredictedLabel")]
