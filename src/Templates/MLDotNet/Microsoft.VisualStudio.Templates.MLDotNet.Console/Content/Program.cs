@@ -19,16 +19,17 @@ namespace $safeprojectname$
 
             //1. Build an ML.NET pipeline for training a sentiment analysis model
             Console.WriteLine("Training a model for Sentiment Analysis using ML.NET");
-            var pipeline = new LearningPipeline();
+            var pipeline = new LearningPipeline
+            {
+                // 1a. Load the training data using a TextLoader.
+                new TextLoader(@"wikipedia-detox-250-line-data.tsv").CreateFrom<SentimentData>(useHeader: true),
 
-            // 1a. Load the training data using a TextLoader.
-            pipeline.Add(new TextLoader(@"wikipedia-detox-250-line-data.tsv").CreateFrom<SentimentData>(useHeader: true));
-            
-            // 1b. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
-            pipeline.Add(new TextFeaturizer("Features", "SentimentText"));
-            
-            // 1c. Add AveragedPerceptron (a linear learner) to the pipeline.
-            pipeline.Add(new AveragedPerceptronBinaryClassifier() { NumIterations = 10 });
+                // 1b. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
+                new TextFeaturizer("Features", "SentimentText"),
+
+                // 1c. Add AveragedPerceptron (a linear learner) to the pipeline.
+                new AveragedPerceptronBinaryClassifier() { NumIterations = 10 }
+            };
             
             // 1d. Get a model by training the pipeline that was built.
             PredictionModel<SentimentData, SentimentPrediction> model = pipeline.Train<SentimentData, SentimentPrediction>();
