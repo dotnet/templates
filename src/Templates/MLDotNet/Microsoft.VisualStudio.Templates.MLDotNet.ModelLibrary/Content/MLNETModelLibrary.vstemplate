@@ -3,7 +3,7 @@
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.MLDotNet.ModelLibrary</TemplateID>
     <Name>ML.NET Model Library (Preview)</Name>
-    <Description>A project for building an ML.NET library which consumes machine learning Models (e.g. ML.NET, ONNX etc.)</Description>
+    <Description>A project for building an ML.NET library which consumes machine learning models (e.g. ML.NET, ONNX etc.)</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>1</SortOrder>
