@@ -17,12 +17,12 @@
   
   <!-- Nuget Packages To Include In VSIX -->
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML" Version="[0.4.0]" />
-    <PackageReference Include="Microsoft.ML.CpuMath" Version="[0.4.0]" />
-    <PackageReference Include="Newtonsoft.Json" Version="[10.0.3]" />
-    <PackageReference Include="System.CodeDom" Version="[4.4.0]" />
-    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="[4.3.0]" />
-    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="[4.8.0]" />
+    <PackageReference Include="Microsoft.ML" Version="[$(MicrosoftMLVersion)]" />
+    <PackageReference Include="Microsoft.ML.CpuMath" Version="[$(MicrosoftMLCpuMathVersion)]" />
+    <PackageReference Include="Newtonsoft.Json" Version="[$(NewtonsoftJsonVersion)]" />
+    <PackageReference Include="System.CodeDom" Version="[$(SystemCodeDomVersion)]" />
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="[$(SystemReflectionEmitLightweightVersion)]" />
+    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="[$(SystemThreadingTasksDataflowVersion)]" />
   </ItemGroup>
   
   <Target BeforeTargets="CreateVsixContainer" Name="MakeVsixOutputDirectory">
@@ -34,46 +34,46 @@
     <!-- Locate packages -->
     <ItemGroup>
       <MicrosoftMLPackage
-        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg')"
-        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg" />
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML$(MicrosoftMLVersion)\Microsoft.ML.$(MicrosoftMLVersion).nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML\$(MicrosoftMLVersion)\Microsoft.ML.$(MicrosoftMLVersion).nupkg" />
       <MicrosoftMLPackage
-        Condition="Exists('$(NuGetPackageRoot)Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg')"
-        Include="$(NuGetPackageRoot)Microsoft.ML\0.4.0\Microsoft.ML.0.4.0.nupkg" />
+        Condition="Exists('$(NuGetPackageRoot)Microsoft.ML\$(MicrosoftMLVersion)\Microsoft.ML.$(MicrosoftMLVersion).nupkg')"
+        Include="$(NuGetPackageRoot)Microsoft.ML\$(MicrosoftMLVersion)\Microsoft.ML.$(MicrosoftMLVersion).nupkg" />
 
       <MicrosoftMLCpuMathPackage
-        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg')"
-        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg" />
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML.CpuMath\$(MicrosoftMLCpuMathVersion)\Microsoft.ML.CpuMath.$(MicrosoftMLCpuMathVersion).nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Microsoft.ML.CpuMath\$(MicrosoftMLCpuMathVersion)\Microsoft.ML.CpuMath.$(MicrosoftMLCpuMathVersion).nupkg" />
       <MicrosoftMLCpuMathPackage 
-        Condition="Exists('$(NuGetPackageRoot)Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg')"
-        Include="$(NuGetPackageRoot)Microsoft.ML.CpuMath\0.4.0\Microsoft.ML.CpuMath.0.4.0.nupkg" />
+        Condition="Exists('$(NuGetPackageRoot)Microsoft.ML.CpuMath\$(MicrosoftMLCpuMathVersion)\Microsoft.ML.CpuMath.$(MicrosoftMLCpuMathVersion).nupkg')"
+        Include="$(NuGetPackageRoot)Microsoft.ML.CpuMath\$(MicrosoftMLCpuMathVersion)\Microsoft.ML.CpuMath.$(MicrosoftMLCpuMathVersion).nupkg" />
 
       <NewtonsoftJsonPackage
-        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg')"
-        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg" />
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Newtonsoft.Json\$(NewtonsoftJsonVersion)\Newtonsoft.Json.$(NewtonsoftJsonVersion).nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\Newtonsoft.Json\$(NewtonsoftJsonVersion)\Newtonsoft.Json.$(NewtonsoftJsonVersion).nupkg" />
       <NewtonsoftJsonPackage 
-        Condition="Exists('$(NuGetPackageRoot)Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg')"
-        Include="$(NuGetPackageRoot)Newtonsoft.Json\10.0.3\Newtonsoft.Json.10.0.3.nupkg" />
+        Condition="Exists('$(NuGetPackageRoot)Newtonsoft.Json\$(NewtonsoftJsonVersion)\Newtonsoft.Json.$(NewtonsoftJsonVersion).nupkg')"
+        Include="$(NuGetPackageRoot)Newtonsoft.Json\$(NewtonsoftJsonVersion)\Newtonsoft.Json.$(NewtonsoftJsonVersion).nupkg" />
 
       <SystemCodeDomPackage
-        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg')"
-        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg" />
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.CodeDom\$(SystemCodeDomVersion)\System.CodeDom.$(SystemCodeDomVersion).nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.CodeDom\$(SystemCodeDomVersion)\System.CodeDom$(SystemCodeDomVersion).nupkg" />
       <SystemCodeDomPackage 
-        Condition="Exists('$(NuGetPackageRoot)System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg')"
-        Include="$(NuGetPackageRoot)System.CodeDom\4.4.0\System.CodeDom.4.4.0.nupkg" />
+        Condition="Exists('$(NuGetPackageRoot)System.CodeDom\$(SystemCodeDomVersion)\System.CodeDom.$(SystemCodeDomVersion).nupkg')"
+        Include="$(NuGetPackageRoot)System.CodeDom\$(SystemCodeDomVersion)\System.CodeDom.$(SystemCodeDomVersion).nupkg" />
 
       <SystemReflectionEmitLightweightPackage
-        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg')"
-        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg" />
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Reflection.Emit.Lightweight\$(SystemReflectionEmitLightweightVersion)\System.Reflection.Emit.Lightweight.$(SystemReflectionEmitLightweightVersion).nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Reflection.Emit.Lightweight\$(SystemReflectionEmitLightweightVersion)\System.Reflection.Emit.Lightweight.$(SystemReflectionEmitLightweightVersion).nupkg" />
       <SystemReflectionEmitLightweightPackage 
-        Condition="Exists('$(NuGetPackageRoot)System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg')"
-        Include="$(NuGetPackageRoot)System.Reflection.Emit.Lightweight\4.3.0\System.Reflection.Emit.Lightweight.4.3.0.nupkg" />
+        Condition="Exists('$(NuGetPackageRoot)System.Reflection.Emit.Lightweight\$(SystemReflectionEmitLightweightVersion)\System.Reflection.Emit.Lightweight.$(SystemReflectionEmitLightweightVersion).nupkg')"
+        Include="$(NuGetPackageRoot)System.Reflection.Emit.Lightweight\$(SystemReflectionEmitLightweightVersion)\System.Reflection.Emit.Lightweight.$(SystemReflectionEmitLightweightVersion).nupkg" />
 
       <SystemThreadingTasksDataflowPackage
-        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg')"
-        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg" />
+        Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Threading.Tasks.Dataflow\$(SystemThreadingTasksDataflowVersion)\System.Threading.Tasks.Dataflow.$(SystemThreadingTasksDataflowVersion).nupkg')"
+        Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\System.Threading.Tasks.Dataflow\$(SystemThreadingTasksDataflowVersion)\System.Threading.Tasks.Dataflow.$(SystemThreadingTasksDataflowVersion).nupkg" />
       <SystemThreadingTasksDataflowPackage 
-        Condition="Exists('$(NuGetPackageRoot)System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg')"
-        Include="$(NuGetPackageRoot)System.Threading.Tasks.Dataflow\4.8.0\System.Threading.Tasks.Dataflow.4.8.0.nupkg" />
+        Condition="Exists('$(NuGetPackageRoot)System.Threading.Tasks.Dataflow\$(SystemThreadingTasksDataflowVersion)\System.Threading.Tasks.Dataflow.$(SystemThreadingTasksDataflowVersion).nupkg')"
+        Include="$(NuGetPackageRoot)System.Threading.Tasks.Dataflow\$(SystemThreadingTasksDataflowVersion)\System.Threading.Tasks.Dataflow.$(SystemThreadingTasksDataflowVersion).nupkg" />
     </ItemGroup>
 
     <ItemGroup>
