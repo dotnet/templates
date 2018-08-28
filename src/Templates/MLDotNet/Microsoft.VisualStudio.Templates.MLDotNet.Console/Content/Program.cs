@@ -45,7 +45,7 @@ namespace $safeprojectname$
 
             // 4. Use the model for a single prediction.
             SentimentData testInput = new SentimentData { SentimentText = "ML.NET is fun, more samples at https://github.com/dotnet/machinelearning-samples" };
-            var sentiment = (model.Predict(testInput).Sentiment == true) ? "Positive" : "Negative";
+            var sentiment = model.Predict(testInput).Sentiment ? "Positive" : "Negative";
 
             /* This template uses a minimal dataset to build a sentiment analysis model which leads to relatively low accuracy. 
              * Building good Machine Learning models require large volumes of data. This template comes with a minimal dataset (Data/wikipedia-detox) for sentiment analysis. 
