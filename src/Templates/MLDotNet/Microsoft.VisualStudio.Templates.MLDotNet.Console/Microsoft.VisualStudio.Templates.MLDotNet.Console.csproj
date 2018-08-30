@@ -6,7 +6,7 @@
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
     <ExtensionInstallationFolder>Microsoft\MLDotNetTemplates\Console</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.MLDotNet.Console</VisualStudioInsertionComponent>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.MLDotNet</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Content\**" />

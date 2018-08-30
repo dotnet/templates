@@ -6,7 +6,7 @@
     <!-- VSIX -->
     <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
     <ExtensionInstallationFolder>Microsoft\MLDotNetTemplates\ModelLibrary</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.MLDotNet.ModelLibrary</VisualStudioInsertionComponent>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.MLDotNet</VisualStudioInsertionComponent>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Content\**" />
