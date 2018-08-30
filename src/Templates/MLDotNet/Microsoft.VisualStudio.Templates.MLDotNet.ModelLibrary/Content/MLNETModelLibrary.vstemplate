@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
     <TemplateID>Microsoft.VisualStudio.CSharp.MLDotNet.ModelLibrary</TemplateID>
     <Name>ML.NET Model Library (Preview)</Name>
