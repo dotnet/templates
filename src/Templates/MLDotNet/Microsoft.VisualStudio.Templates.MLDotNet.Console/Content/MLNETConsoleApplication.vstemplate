@@ -6,7 +6,7 @@
     <Description>A project for creating and using an ML.NET model in an application.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
-    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <RequiredFrameworkVersion>4.6.1</RequiredFrameworkVersion>
     <SortOrder>0</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>MLNETConsoleApp</DefaultName>
