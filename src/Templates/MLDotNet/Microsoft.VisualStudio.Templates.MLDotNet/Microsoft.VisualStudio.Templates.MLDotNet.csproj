@@ -2,19 +2,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-
-    <!-- VSIX -->
-    <ExtensionInstallationRoot>CommonExtensions</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>Microsoft\MLDotNetTemplates\Console</ExtensionInstallationFolder>
-    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.CS.MLDotNet</VisualStudioInsertionComponent>
   </PropertyGroup>
+
   <ItemGroup>
     <None Include="Content\**" />
-    <VSTemplate Include="Content\MLNETConsoleApplication.vstemplate">
+    <VSTemplate Include="Content\ConsoleApp\MLNETConsoleApplication.vstemplate">
       <OutputSubPath>Machine Learning</OutputSubPath>
     </VSTemplate>
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <None Include="Content\**" />
+    <VSTemplate Include="Content\Library\MLNETModelLibrary.vstemplate">
+      <OutputSubPath>Machine Learning</OutputSubPath>
+    </VSTemplate>
+  </ItemGroup>
+
   <!-- Nuget Packages To Include In VSIX -->
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="[$(MicrosoftMLVersion)]" />
