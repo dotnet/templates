@@ -2,6 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
+    <IsProductComponent>false</IsProductComponent>
   </PropertyGroup>
 
   <ItemGroup>
