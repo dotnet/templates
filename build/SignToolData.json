@@ -63,8 +63,7 @@
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.Setup.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.Templates.MLDotNet.Console.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.Templates.MLDotNet.ModelLibrary.vsix"
+        "VSSetup/Insertion/Microsoft.VisualStudio.Templates.MLDotNet.vsix"
       ]
     }
   ],
