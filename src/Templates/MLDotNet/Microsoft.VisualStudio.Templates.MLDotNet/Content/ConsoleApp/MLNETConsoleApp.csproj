@@ -10,6 +10,7 @@
     <AssemblyName>$safeprojectname$</AssemblyName>
     <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
