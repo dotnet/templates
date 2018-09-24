@@ -60,9 +60,9 @@ namespace $safeprojectname$
         public class SentimentData
         {
             [Column(ordinal: "0", name: "Label")]
-            public float Sentiment;
+            public float Sentiment { get; set; }
             [Column(ordinal: "1")]
-            public string SentimentText;
+            public string SentimentText { get; set; }
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace $safeprojectname$
         public class SentimentPrediction
         {
             [ColumnName("PredictedLabel")]
-            public bool Sentiment;
+            public bool Sentiment { get; set; }
         }
     }
 }
