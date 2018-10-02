@@ -1,0 +1,81 @@
+resources:
+- repo: self
+  clean: true
+queue:
+  name: VSEng-MicroBuildVS2017
+  demands: Cmd
+
+variables:
+  DropRoot: '\\cpvsbuild\drops'
+  BuildConfiguration: Release
+  BuildPlatform: 'any cpu'
+  RunningInMicroBuild: true
+  TeamName: Roslyn
+
+steps:
+- task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@1
+  displayName: 'Install Signing Plugin'
+  inputs:
+    signType: real
+
+- task: ms-vseng.MicroBuildTasks.32f78468-e895-4f47-962c-58a699361df8.MicroBuildSwixPlugin@1
+  displayName: 'Install Swix Plugin'
+  inputs:
+    dropName: 'Products/$(System.TeamProject)/dotnet-getting-started-templates/$(Build.SourceBranchName)/$(Build.BuildNumber)'
+
+- task: BatchScript@1
+  displayName: 'Run script CIBuild.cmd'
+  inputs:
+    filename: 'build\CIBuild.cmd'
+    arguments: '-configuration $(BuildConfiguration)'
+  continueOnError: true
+
+- task: PublishSymbols@1
+  displayName: 'Create Symbol Index'
+  inputs:
+    SymbolsPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)\$(Build.BuildNumber)\Symbols'
+    SearchPattern: '**\*.pdb;**\*.exe;**\*.dll'
+    SymbolsFolder: '$(Build.SourcesDirectory)\artifacts\$(BuildConfiguration)\SymStore'
+    SkipIndexing: true
+  continueOnError: true
+
+- task: ms-vscs-artifact.build-tasks.artifactSymbolTask-1.artifactSymbolTask@0
+  displayName: 'Publish to Symbols to Artifact Services'
+  inputs:
+    symbolServiceURI: 'https://microsoft.artifacts.visualstudio.com/DefaultCollection'
+    requestName: '$(system.teamProject)/$(Build.DefinitionName)/$(Build.BuildNumber)/$(Build.BuildId)'
+    sourcePath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)\$(Build.BuildNumber)\Symbols'
+    usePat: false
+
+
+- task: ms-vseng.MicroBuildTasks.4305a8de-ba66-4d8b-b2d1-0dc4ecbbf5e8.MicroBuildUploadVstsDropFolder@1
+  displayName: 'Upload VSTS Drop'
+  inputs:
+    DropFolder: 'artifacts\$(BuildConfiguration)\VSSetup\Insertion'
+
+- task: CopyPublishBuildArtifacts@1
+  displayName: 'Publish Drop'
+  inputs:
+    CopyRoot: '$(Build.SourcesDirectory)'
+    Contents: |
+     artifacts\$(BuildConfiguration)\bin
+     artifacts\$(BuildConfiguration)\log
+     artifacts\$(BuildConfiguration)\VSSetup
+    ArtifactName: '$(Build.BuildNumber)'
+    ArtifactType: FilePath
+    TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
+
+
+- task: ms-vseng.MicroBuildTasks.521a94ea-9e68-468a-8167-6dcf361ea776.MicroBuildCleanup@1
+  displayName: 'Execute cleanup tasks'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish MicroBuild Outputs'
+  inputs:
+    PathtoPublish: '$(Build.StagingDirectory)\MicroBuild\Output'
+    ArtifactName: '$(Build.BuildNumber)'
+    publishLocation: FilePath
+    TargetPath: '$(DropRoot)\$(TeamName)\$(Build.DefinitionName)'
+
+
+
