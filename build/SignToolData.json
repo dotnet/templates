@@ -62,7 +62,18 @@
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.GetStarted.Web.Setup.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.Setup.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.vsix"
+        "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.CSharp.ProjectTemplates.Test.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.CSharp.ProjectTemplates.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.FSharp.ProjectTemplates.Test.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.FSharp.ProjectTemplates.Web.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.FSharp.ProjectTemplates.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.VB.ProjectTemplates.Test.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.VB.ProjectTemplates.vsix",
+        "VSSetup/Insertion/Microsoft.NetStandard.CSharp.ProjectTemplates.vsix",
+        "VSSetup/Insertion/Microsoft.NetStandard.FSharp.ProjectTemplates.vsix",
+        "VSSetup/Insertion/Microsoft.NetStandard.VB.ProjectTemplates.vsix",
+        "VSSetup/Insertion/Microsoft.VisualStudio.NetCore.ProjectTemplates.1.x.vsix"
       ]
     }
   ],
