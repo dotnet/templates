@@ -20,8 +20,8 @@
     -->
     <MicroBuildPluginsSwixBuildVersion>1.0.422</MicroBuildPluginsSwixBuildVersion>
 
-    <MicrosoftMLVersion>0.5.0</MicrosoftMLVersion>
-    <MicrosoftMLCpuMathVersion>0.5.0</MicrosoftMLCpuMathVersion>
+    <MicrosoftMLVersion>0.7.0</MicrosoftMLVersion>
+    <MicrosoftMLCpuMathVersion>0.7.0</MicrosoftMLCpuMathVersion>
     <NewtonsoftJsonVersion>10.0.3</NewtonsoftJsonVersion>
     <SystemCodeDomVersion>4.4.0</SystemCodeDomVersion>
     <SystemReflectionEmitLightweightVersion>4.3.0</SystemReflectionEmitLightweightVersion>
