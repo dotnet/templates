@@ -17,7 +17,7 @@ namespace $safeprojectname$
         {
             // 1. Build an ML.NET pipeline for training a sentiment analysis model.
             Console.WriteLine("Training a model for Sentiment Analysis using ML.NET");
-            MLContext mlContext = new MLContext();
+            var mlContext = new MLContext();
             // 1a. Load the training data using a TextLoader.
             var reader = 
                 new TextLoader(
@@ -47,13 +47,13 @@ namespace $safeprojectname$
             Console.WriteLine("Training of model is complete \nTesting the model with test data");
             IDataView testDataView = reader.Read(new MultiFileSource(@"Data\wikipedia-detox-250-line-test.tsv"));
             var predictions = model.Transform(testDataView);
-            BinaryClassificationContext binClassificationCtx = new BinaryClassificationContext(mlContext);
-            BinaryClassifierEvaluator.CalibratedResult metrics = binClassificationCtx.Evaluate(predictions, "Label");
+            var binClassificationCtx = new BinaryClassificationContext(mlContext);
+            var metrics = binClassificationCtx.Evaluate(predictions, "Label");
             Console.WriteLine($"Accuracy: {metrics.Accuracy:P2}");
 
             // 5. Use the model for a single prediction.
-            PredictionFunction<SentimentData, SentimentPrediction> predictionFunct = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
-            SentimentData testInput = new SentimentData { Text = "ML.NET is fun, more samples at https://github.com/dotnet/machinelearning-samples" };
+            var predictionFunct = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
+            var testInput = new SentimentData { Text = "ML.NET is fun, more samples at https://github.com/dotnet/machinelearning-samples" };
             SentimentPrediction resultprediction = predictionFunct.Predict(testInput);
 
             /* This template uses a minimal dataset to build a sentiment analysis model which leads to relatively low accuracy. 
@@ -63,7 +63,7 @@ namespace $safeprojectname$
 
             // 6. Save the model to file so it can be used in another app.
             Console.WriteLine("Saving the model");
-            FileStream fs = new FileStream("sentiment_model.zip", FileMode.Create, FileAccess.Write, FileShare.Write);
+            var fs = new FileStream("sentiment_model.zip", FileMode.Create, FileAccess.Write, FileShare.Write);
             model.SaveTo(mlContext, fs);
         }
 

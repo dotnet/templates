@@ -15,7 +15,7 @@ namespace $safeprojectname$
         public static string Predict(SentimentData input)
         {
             // 1. Load the model from file.
-            MLContext mlContext = new MLContext();
+            var mlContext = new MLContext();
             var stream = new FileStream(@"Models\sentiment_model.zip", FileMode.Open, FileAccess.Read, FileShare.Read);
             var model = TransformerChain.LoadFrom(mlContext, stream);
 
