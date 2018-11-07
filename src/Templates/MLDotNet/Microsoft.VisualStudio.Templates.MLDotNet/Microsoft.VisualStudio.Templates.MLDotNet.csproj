@@ -3,6 +3,17 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <IsProductComponent>false</IsProductComponent>
+    <!-- 
+         Disable following error. The error is reported because an analyzer in the referenced Microsoft.ML nuget package is referencing v2.9.0 of the Roslyn nuget package.
+         However, this repo is being compiled with an older toolset compiler that's based on v2.7.0 of Roslyn. So the toolset compiler fails to run the analyzer.
+
+           error CS8032: An instance of analyzer Microsoft.ML.Analyzer.TypeIsSchemaShapeAnalyzer cannot be created from Microsoft.ML.Analyzer.dll
+           Could not load file or assembly 'Microsoft.CodeAnalysis, Version=2.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies.
+           The system cannot find the file specified.
+
+        TODO: Remove this NoWarn if Microsoft.ML analyzer switches to an older version of Roslyn or once we upgrade this repo to compile with newer toolset compiler.
+    -->
+    <NoWarn>8032</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
