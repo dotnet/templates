@@ -6,34 +6,19 @@
     <Description>A project for creating and using an ML.NET model in an application.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
-    <RequiredFrameworkVersion>4.6.1</RequiredFrameworkVersion>
     <SortOrder>0</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>MLNETConsoleApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
-    <CreateInPlace>false</CreateInPlace>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.csproj" File="MLNETConsoleApp.csproj" ReplaceParameters="true">
-      <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">Assemblyinfo.cs</ProjectItem>
       <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
-      <ProjectItem TargetFileName="App.config" ReplaceParameters="true">App.config</ProjectItem>
       <ProjectItem TargetFileName="Data\wikipedia-detox-250-line-data.tsv" ReplaceParameters="false">wikipedia-detox-250-line-data.tsv</ProjectItem>
       <ProjectItem TargetFileName="Data\wikipedia-detox-250-line-test.tsv" ReplaceParameters="false">wikipedia-detox-250-line-test.tsv</ProjectItem>
     </Project>
   </TemplateContent>
-  <WizardExtension>
-    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
-    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
-  </WizardExtension>
-  <WizardData>
-    <packages repository="extension" repositoryId="Microsoft.VisualStudio.Templates.CS.MLDotNet">
-      <package id="Microsoft.ML" version="0.7.0"/>
-      <package id="Microsoft.ML.CpuMath" version="0.7.0"/>
-      <package id="Newtonsoft.Json" version="10.0.3" />
-      <package id="System.CodeDom" version="4.4.0" />
-      <package id="System.Reflection.Emit.Lightweight" version="4.3.0" />
-      <package id="System.Threading.Tasks.Dataflow" version="4.8.0" />
-    </packages>
-  </WizardData>
 </VSTemplate>
