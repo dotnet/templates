@@ -69,10 +69,6 @@
   ],
   "exclude": [ 
     "Microsoft.ML.0.7.0.nupkg",
-    "Microsoft.ML.CpuMath.0.7.0.nupkg",
-    "Newtonsoft.Json.10.0.3.nupkg",
-    "System.CodeDom.4.4.0.nupkg",
-    "System.Reflection.Emit.Lightweight.4.3.0.nupkg",
-    "System.Threading.Tasks.Dataflow.4.8.0.nupkg"
+    "Microsoft.ML.CpuMath.0.7.0.nupkg"
   ]
 }

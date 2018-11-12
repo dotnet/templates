@@ -22,10 +22,6 @@
 
     <MicrosoftMLVersion>0.7.0</MicrosoftMLVersion>
     <MicrosoftMLCpuMathVersion>0.7.0</MicrosoftMLCpuMathVersion>
-    <NewtonsoftJsonVersion>10.0.3</NewtonsoftJsonVersion>
-    <SystemCodeDomVersion>4.4.0</SystemCodeDomVersion>
-    <SystemReflectionEmitLightweightVersion>4.3.0</SystemReflectionEmitLightweightVersion>
-    <SystemThreadingTasksDataflowVersion>4.8.0</SystemThreadingTasksDataflowVersion>
 
     <!-- VS SDK -->
     <VSLangProjVersion>7.0.3300</VSLangProjVersion>
