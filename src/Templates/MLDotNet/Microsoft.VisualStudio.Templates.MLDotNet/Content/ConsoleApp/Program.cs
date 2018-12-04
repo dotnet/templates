@@ -36,8 +36,7 @@ namespace $safeprojectname$
             IDataView trainingDataView = reader.Read(new MultiFileSource(@"Data\wikipedia-detox-250-line-data.tsv"));
             // 2. Create a pipeline to prepare your data, pick your features and apply a machine learning algorithm.
             // 2a. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
-            var pipeline = 
-                new TextFeaturizingEstimator(mlContext, "Text", "Features")
+            var pipeline = mlContext.Transforms.Text.FeaturizeText("Text", "Features")
                     .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent( "Label", "Features"));
 
             // 3. Get a model by training the pipeline that was built.
