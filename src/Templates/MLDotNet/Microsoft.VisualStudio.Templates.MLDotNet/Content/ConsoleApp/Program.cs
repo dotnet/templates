@@ -18,22 +18,17 @@ namespace $safeprojectname$
             // 1. Build an ML.NET pipeline for training a sentiment analysis model.
             Console.WriteLine("Training a model for Sentiment Analysis using ML.NET");
             var mlContext = new MLContext();
-            // 1a. Load the training data using a TextLoader.
-            var reader = 
-                new TextLoader(
-                    mlContext,
-                    new TextLoader.Arguments()
-                    {
-                        Separator = "tab",
-                        HasHeader = true,
-                        Column = new[]
-                        {
-                            new TextLoader.Column("Label", DataKind.Bool, 0),
-                            new TextLoader.Column("Text", DataKind.Text, 1)
-                        }
-                    });
 
-            IDataView trainingDataView = reader.Read(new MultiFileSource(@"Data\wikipedia-detox-250-line-data.tsv"));
+            // 1a. Load the training data using a TextLoader.
+            var reader = mlContext.Data.TextReader(
+                new[]
+                    {
+                        new TextLoader.Column("Label", DataKind.Bool, 0),
+                        new TextLoader.Column("Text", DataKind.Text, 1)
+                    },
+                options => { options.Separator = "tab"; options.HasHeader = true; });
+            IDataView trainingDataView = reader.Read(@"Data\wikipedia-detox-250-line-data.tsv");
+
             // 2. Create a pipeline to prepare your data, pick your features and apply a machine learning algorithm.
             // 2a. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
             var pipeline = mlContext.Transforms.Text.FeaturizeText("Text", "Features")
@@ -44,11 +39,10 @@ namespace $safeprojectname$
 
             // 4. Evaluate the model to see how well it performs on different data (output the percent of examples classified correctly).
             Console.WriteLine("Training of model is complete \nTesting the model with test data");
-            IDataView testDataView = reader.Read(new MultiFileSource(@"Data\wikipedia-detox-250-line-test.tsv"));
+            IDataView testDataView = reader.Read(@"Data\wikipedia-detox-250-line-test.tsv");
             var predictions = model.Transform(testDataView);
-            var binClassificationCtx = new BinaryClassificationContext(mlContext);
-            var metrics = binClassificationCtx.Evaluate(predictions, "Label");
-            Console.WriteLine($"Accuracy: {metrics.Accuracy:P2}");
+            var results = mlContext.BinaryClassification.Evaluate(predictions);
+            Console.WriteLine($"Accuracy: {results.Accuracy:P2}");
 
             // 5. Use the model for a single prediction.
             var predictionFunct = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
@@ -64,6 +58,8 @@ namespace $safeprojectname$
             Console.WriteLine("Saving the model");
             var fs = new FileStream("sentiment_model.zip", FileMode.Create, FileAccess.Write, FileShare.Write);
             model.SaveTo(mlContext, fs);
+
+            Console.ReadLine();
         }
 
         /// <summary>
