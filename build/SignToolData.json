@@ -64,6 +64,7 @@
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.Setup.vsix",
         "VSSetup/Insertion/Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.vsix",
         "VSSetup/Insertion/Microsoft.NetCore.CSharp.ProjectTemplates.Test.vsix",
+        "VSSetup/Insertion/Microsoft.NetCore.CSharp.ProjectTemplates.Desktop.vsix",
         "VSSetup/Insertion/Microsoft.NetCore.CSharp.ProjectTemplates.vsix",
         "VSSetup/Insertion/Microsoft.NetCore.FSharp.ProjectTemplates.Test.vsix",
         "VSSetup/Insertion/Microsoft.NetCore.FSharp.ProjectTemplates.Web.vsix",
