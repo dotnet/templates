@@ -74,7 +74,6 @@
         "VSSetup/Insertion/Microsoft.NetStandard.CSharp.ProjectTemplates.vsix",
         "VSSetup/Insertion/Microsoft.NetStandard.FSharp.ProjectTemplates.vsix",
         "VSSetup/Insertion/Microsoft.NetStandard.VB.ProjectTemplates.vsix",
-        "VSSetup/Insertion/Microsoft.VisualStudio.NetCore.ProjectTemplates.1.x.vsix"
       ]
     }
   ],
