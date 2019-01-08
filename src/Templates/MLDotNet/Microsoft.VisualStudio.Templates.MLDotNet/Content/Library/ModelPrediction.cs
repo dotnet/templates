@@ -5,8 +5,7 @@
 using System;
 using System.IO;
 using Microsoft.ML;
-using Microsoft.ML.Runtime.Api;
-using Microsoft.ML.Runtime.Data;
+using Microsoft.ML.Data;
 
 namespace $safeprojectname$
 {
@@ -20,8 +19,8 @@ namespace $safeprojectname$
             var model = mlContext.Model.Load(stream);
 
             // 2. Predict the sentiment.
-            var predictionFunct = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
-            var resultprediction = predictionFunct.Predict(input);
+            var predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
+            var resultprediction = predictionEngine.Predict(input);
             var sentiment = Convert.ToBoolean(resultprediction.Prediction) ? "Positive" : "Negative";
             Console.WriteLine($"Predicted sentiment for \"{input.Text}\" is:" + sentiment);
             return sentiment;

@@ -4,10 +4,8 @@
 
 using System;
 using System.IO;
-using Microsoft.ML.Runtime.Data;
 using Microsoft.ML;
-using Microsoft.ML.Runtime.Api;
-using Microsoft.ML.Transforms.Text;
+using Microsoft.ML.Data;
 
 namespace $safeprojectname$
 {
@@ -20,34 +18,35 @@ namespace $safeprojectname$
             var mlContext = new MLContext();
 
             // 1a. Load the training data using a TextLoader.
-            var reader = mlContext.Data.TextReader(
-                new[]
+            var reader = mlContext.Data.CreateTextReader(
+                columns: new TextLoader.Column[]
                     {
                         new TextLoader.Column("Label", DataKind.Bool, 0),
                         new TextLoader.Column("Text", DataKind.Text, 1)
                     },
-                options => { options.Separator = "tab"; options.HasHeader = true; });
+                hasHeader:true);
             IDataView trainingDataView = reader.Read(@"Data\wikipedia-detox-250-line-data.tsv");
 
             // 2. Create a pipeline to prepare your data, pick your features and apply a machine learning algorithm.
             // 2a. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
             var pipeline = mlContext.Transforms.Text.FeaturizeText("Text", "Features")
-                    .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent( "Label", "Features"));
+                    .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent("Label", "Features"));
 
             // 3. Get a model by training the pipeline that was built.
             var model = pipeline.Fit(trainingDataView);
 
             // 4. Evaluate the model to see how well it performs on different data (output the percent of examples classified correctly).
             Console.WriteLine("Training of model is complete \nTesting the model with test data");
+
             IDataView testDataView = reader.Read(@"Data\wikipedia-detox-250-line-test.tsv");
             var predictions = model.Transform(testDataView);
             var results = mlContext.BinaryClassification.Evaluate(predictions);
             Console.WriteLine($"Accuracy: {results.Accuracy:P2}");
 
             // 5. Use the model for a single prediction.
-            var predictionFunct = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
+            var predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
             var testInput = new SentimentData { Text = "ML.NET is fun, more samples at https://github.com/dotnet/machinelearning-samples" };
-            SentimentPrediction resultprediction = predictionFunct.Predict(testInput);
+            SentimentPrediction resultprediction = predictionEngine.Predict(testInput);
 
             /* This template uses a minimal dataset to build a sentiment analysis model which leads to relatively low accuracy. 
              * Building good Machine Learning models require large volumes of data. This template comes with a minimal dataset (Data/wikipedia-detox) for sentiment analysis. 
