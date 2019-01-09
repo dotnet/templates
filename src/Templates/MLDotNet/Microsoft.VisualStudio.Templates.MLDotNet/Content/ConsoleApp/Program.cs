@@ -17,14 +17,8 @@ namespace $safeprojectname$
             Console.WriteLine("Training a model for Sentiment Analysis using ML.NET");
             var mlContext = new MLContext();
 
-            // 1a. Load the training data using a TextLoader.
-            var reader = mlContext.Data.CreateTextReader(
-                columns: new TextLoader.Column[]
-                    {
-                        new TextLoader.Column("Label", DataKind.Bool, 0),
-                        new TextLoader.Column("Text", DataKind.Text, 1)
-                    },
-                hasHeader:true);
+            // 1a. Load the training data.
+            var reader = mlContext.Data.CreateTextReader<SentimentData>(hasHeader: true);
             IDataView trainingDataView = reader.Read(@"Data\wikipedia-detox-250-line-data.tsv");
 
             // 2. Create a pipeline to prepare your data, pick your features and apply a machine learning algorithm.
@@ -35,7 +29,7 @@ namespace $safeprojectname$
             // 3. Get a model by training the pipeline that was built.
             var model = pipeline.Fit(trainingDataView);
 
-            // 4. Evaluate the model to see how well it performs on different data (output the percent of examples classified correctly).
+            // 4. Evaluate the model to see how well it performs on different dataset (test data).
             Console.WriteLine("Training of model is complete \nTesting the model with test data");
 
             IDataView testDataView = reader.Read(@"Data\wikipedia-detox-250-line-test.tsv");
@@ -43,7 +37,7 @@ namespace $safeprojectname$
             var results = mlContext.BinaryClassification.Evaluate(predictions);
             Console.WriteLine($"Accuracy: {results.Accuracy:P2}");
 
-            // 5. Use the model for a single prediction.
+            // 5. Use the model for making a single prediction.
             var predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
             var testInput = new SentimentData { Text = "ML.NET is fun, more samples at https://github.com/dotnet/machinelearning-samples" };
             SentimentPrediction resultprediction = predictionEngine.Predict(testInput);
@@ -60,23 +54,26 @@ namespace $safeprojectname$
 
             Console.ReadLine();
         }
+    }
 
-        /// <summary>
-        /// Input class that tells ML.NET how to read the dataset.
-        /// </summary>
-        public class SentimentData
-        {
-            public bool Label { get; set; }
-            public string Text { get; set; }
-        }
+    /// <summary>
+    /// Input class that tells ML.NET how to read the dataset.
+    /// </summary>
+    public class SentimentData
+    {
+        [LoadColumn(0)]
+        public bool Label { get; set; }
 
-        /// <summary>
-        /// Output class for the prediction, in this case including only the predicted sentiment.
-        /// </summary>
-        public class SentimentPrediction
-        {
-            [ColumnName("PredictedLabel")]
-            public bool Prediction { get; set; }
-        }
+        [LoadColumn(1)]
+        public string Text { get; set; }
+    }
+
+    /// <summary>
+    /// Output class for the prediction, in this case including only the predicted sentiment.
+    /// </summary>
+    public class SentimentPrediction
+    {
+        [ColumnName("PredictedLabel")]
+        public bool Prediction { get; set; }
     }
 }
