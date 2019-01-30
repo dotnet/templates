@@ -10,7 +10,7 @@
     <TemplateID>Microsoft.CSharp.NETCore.Winforms</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
     <CreateInPlace>true</CreateInPlace>
-    <DefaultName>ConsoleApp</DefaultName>
+    <DefaultName>WindowsFormsApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
   </TemplateData>
