@@ -13,6 +13,7 @@
     <DefaultName>WpfApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <AppIdFilter>blend</AppIdFilter>
   </TemplateData>
   <TemplateContent>
     <ProjectCollection/>
