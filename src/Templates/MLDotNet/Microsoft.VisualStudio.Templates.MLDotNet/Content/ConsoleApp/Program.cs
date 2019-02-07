@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Data;
+using Microsoft.Data.DataView;
 
 namespace $safeprojectname$
 {
@@ -13,26 +14,26 @@ namespace $safeprojectname$
     {
         static void Main()
         {
-            // 1. Build an ML.NET pipeline for training a sentiment analysis model.
-            Console.WriteLine("Training a model for Sentiment Analysis using ML.NET");
+            // 1. Implement the pipeline for creating and training the model    
             var mlContext = new MLContext();
 
-            // 1a. Load the training data.
-            var reader = mlContext.Data.CreateTextReader<SentimentData>(hasHeader: true);
-            IDataView trainingDataView = reader.Read(@"Data\wikipedia-detox-250-line-data.tsv");
+            // 2. Specify how training data is going to be loaded into the DataView
+            IDataView trainingDataView = mlContext.Data.ReadFromTextFile<SentimentData>(@"Data\wikipedia-detox-250-line-data.tsv", hasHeader: true);
 
             // 2. Create a pipeline to prepare your data, pick your features and apply a machine learning algorithm.
             // 2a. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
-            var pipeline = mlContext.Transforms.Text.FeaturizeText("Text", "Features")
-                    .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent("Label", "Features"));
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: DefaultColumnNames.Features, inputColumnName: nameof(SentimentData.Text))
+                    .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent(labelColumn: DefaultColumnNames.Label, 
+                                                                                                   featureColumn: DefaultColumnNames.Features));
 
             // 3. Get a model by training the pipeline that was built.
-            var model = pipeline.Fit(trainingDataView);
+            Console.WriteLine("Creating and Training a model for Sentiment Analysis using ML.NET");
+            ITransformer model = pipeline.Fit(trainingDataView);
 
             // 4. Evaluate the model to see how well it performs on different dataset (test data).
-            Console.WriteLine("Training of model is complete \nTesting the model with test data");
+            Console.WriteLine("Training of model is complete \nEvaluating the model with test data");
 
-            IDataView testDataView = reader.Read(@"Data\wikipedia-detox-250-line-test.tsv");
+            IDataView testDataView = mlContext.Data.ReadFromTextFile<SentimentIssue>(@"Data\wikipedia-detox-250-line-test.tsv", hasHeader: true);
             var predictions = model.Transform(testDataView);
             var results = mlContext.BinaryClassification.Evaluate(predictions);
             Console.WriteLine($"Accuracy: {results.Accuracy:P2}");
