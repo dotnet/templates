@@ -50,8 +50,12 @@ namespace $safeprojectname$
 
             // 6. Save the model to file so it can be used in another app.
             Console.WriteLine("Saving the model");
-            var fs = new FileStream("sentiment_model.zip", FileMode.Create, FileAccess.Write, FileShare.Write);
-            model.SaveTo(mlContext, fs);
+
+            using (var fs = new FileStream("sentiment_model.zip", FileMode.Create, FileAccess.Write, FileShare.Write))
+            {
+                model.SaveTo(mlContext, fs);
+                fs.Close();
+            }
 
             Console.ReadLine();
         }
