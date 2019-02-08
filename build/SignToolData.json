@@ -79,8 +79,8 @@
     }
   ],
   "exclude": [ 
-    "Microsoft.ML.0.9.0.nupkg",
-    "Microsoft.ML.CpuMath.0.9.0.nupkg",
+    "Microsoft.ML.0.10.0.nupkg",
+    "Microsoft.ML.CpuMath.0.10.0.nupkg",
     "Microsoft.DotNet.Common.ProjectTemplates.1.x.1.0.0.nupkg",
     "Microsoft.DotNet.Test.ProjectTemplates.1.x.1.0.0.nupkg"
   ]
