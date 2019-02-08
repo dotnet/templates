@@ -22,7 +22,7 @@ namespace $safeprojectname$
             var predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
             var resultprediction = predictionEngine.Predict(input);
             var sentiment = Convert.ToBoolean(resultprediction.Prediction) ? "Positive" : "Negative";
-            Console.WriteLine($"Predicted sentiment for \"{input.Text}\" is:" + sentiment);
+            
             return sentiment;
         }
     }
