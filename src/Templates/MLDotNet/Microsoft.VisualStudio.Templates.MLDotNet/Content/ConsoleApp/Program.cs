@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Data;
+using Microsoft.ML.Core.Data;
 using Microsoft.Data.DataView;
 
 namespace $safeprojectname$
@@ -33,7 +34,7 @@ namespace $safeprojectname$
             // 4. Evaluate the model to see how well it performs on different dataset (test data).
             Console.WriteLine("Training of model is complete \nEvaluating the model with test data");
 
-            IDataView testDataView = mlContext.Data.ReadFromTextFile<SentimentIssue>(@"Data\wikipedia-detox-250-line-test.tsv", hasHeader: true);
+            IDataView testDataView = mlContext.Data.ReadFromTextFile<SentimentData>(@"Data\wikipedia-detox-250-line-test.tsv", hasHeader: true);
             var predictions = model.Transform(testDataView);
             var results = mlContext.BinaryClassification.Evaluate(predictions);
             Console.WriteLine($"Accuracy: {results.Accuracy:P2}");
