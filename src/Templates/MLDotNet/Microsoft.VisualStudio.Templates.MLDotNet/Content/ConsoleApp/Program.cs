@@ -1,6 +1,10 @@
-/* This template shows the building blocks for training a machine learning model with ML.NET (https://aka.ms/mlnet).
+/* 
+ ***************************************************************************************************************************
+ * This template shows the building blocks for training a machine learning model with ML.NET (https://aka.ms/mlnet).
  * This model predicts whether a sentence has a positive or negative sentiment. It is based on a sample that can be 
- * found at https://aka.ms/mlnetsentimentanalysis, which provides a more detailed introduction to ML.NET and the scenario. */
+ * found at https://aka.ms/mlnetsentimentanalysis, which provides a more detailed introduction to ML.NET and the scenario. 
+ ***************************************************************************************************************************
+*/
 
 using System;
 using System.IO;
