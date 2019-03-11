@@ -6,7 +6,6 @@ using System;
 using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.ML.Core.Data;
 using Microsoft.Data.DataView;
 
 namespace $safeprojectname$
@@ -19,13 +18,13 @@ namespace $safeprojectname$
             var mlContext = new MLContext();
 
             // 2. Specify how training data is going to be loaded into the DataView
-            IDataView trainingDataView = mlContext.Data.ReadFromTextFile<SentimentData>(@"Data\wikipedia-detox-250-line-data.tsv", hasHeader: true);
+            IDataView trainingDataView = mlContext.Data.LoadFromTextFile<SentimentData>(@"Data\wikipedia-detox-250-line-data.tsv", hasHeader: true);
 
             // 2. Create a pipeline to prepare your data, pick your features and apply a machine learning algorithm.
             // 2a. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
             var pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: DefaultColumnNames.Features, inputColumnName: nameof(SentimentData.Text))
-                    .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent(labelColumn: DefaultColumnNames.Label, 
-                                                                                                   featureColumn: DefaultColumnNames.Features));
+                    .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent(labelColumnName: DefaultColumnNames.Label, 
+                                                                                                   featureColumnName: DefaultColumnNames.Features));
 
             // 3. Get a model by training the pipeline that was built.
             Console.WriteLine("Creating and Training a model for Sentiment Analysis using ML.NET");
@@ -34,7 +33,7 @@ namespace $safeprojectname$
             // 4. Evaluate the model to see how well it performs on different dataset (test data).
             Console.WriteLine("Training of model is complete \nEvaluating the model with test data");
 
-            IDataView testDataView = mlContext.Data.ReadFromTextFile<SentimentData>(@"Data\wikipedia-detox-250-line-test.tsv", hasHeader: true);
+            IDataView testDataView = mlContext.Data.LoadFromTextFile<SentimentData>(@"Data\wikipedia-detox-250-line-test.tsv", hasHeader: true);
             var predictions = model.Transform(testDataView);
             var results = mlContext.BinaryClassification.Evaluate(predictions);
             Console.WriteLine($"Accuracy: {results.Accuracy:P2}");
