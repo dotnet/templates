@@ -10,10 +10,11 @@ using Microsoft.Data.DataView;
 
 namespace $safeprojectname$
 {
-   class Program
+    class Program
     {
-        static void Main(string[] args)
-        { // 1. Implement the pipeline for creating and training the model    
+        static void Main()
+        { 
+            // 1. Implement the pipeline for creating and training the model    
             var mlContext = new MLContext();
 
             // 2. Specify how training data is going to be loaded into the DataView

@@ -11,7 +11,7 @@ namespace $safeprojectname$
 {
     public static class ModelPrediction
     {
-       public static string Predict(SentimentData input)
+        public static string Predict(SentimentData input)
         {
             // 1. Load the model from file.
             var mlContext = new MLContext();
