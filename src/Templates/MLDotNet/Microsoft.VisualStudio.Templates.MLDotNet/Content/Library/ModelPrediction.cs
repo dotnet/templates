@@ -11,15 +11,14 @@ namespace $safeprojectname$
 {
     public static class ModelPrediction
     {
-        public static string Predict(SentimentData input)
+       public static string Predict(SentimentData input)
         {
             // 1. Load the model from file.
             var mlContext = new MLContext();
-            var stream = new FileStream(@"Models\sentiment_model.zip", FileMode.Open, FileAccess.Read, FileShare.Read);
-            var model = mlContext.Model.Load(stream);
+            var model = mlContext.Model.Load(@"Models\sentiment_model.zip", out var modelInputSchema);
 
             // 2. Predict the sentiment.
-            var predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
+            var predictionEngine = mlContext.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(model);
             var resultprediction = predictionEngine.Predict(input);
             var sentiment = Convert.ToBoolean(resultprediction.Prediction) ? "Positive" : "Negative";
             

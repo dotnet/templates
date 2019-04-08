@@ -10,11 +10,10 @@ using Microsoft.Data.DataView;
 
 namespace $safeprojectname$
 {
-    class Program
+   class Program
     {
-        static void Main()
-        {
-            // 1. Implement the pipeline for creating and training the model    
+        static void Main(string[] args)
+        { // 1. Implement the pipeline for creating and training the model    
             var mlContext = new MLContext();
 
             // 2. Specify how training data is going to be loaded into the DataView
@@ -22,9 +21,9 @@ namespace $safeprojectname$
 
             // 2. Create a pipeline to prepare your data, pick your features and apply a machine learning algorithm.
             // 2a. Featurize the text into a numeric vector that can be used by the machine learning algorithm.
-            var pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: DefaultColumnNames.Features, inputColumnName: nameof(SentimentData.Text))
-                    .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent(labelColumnName: DefaultColumnNames.Label, 
-                                                                                                   featureColumnName: DefaultColumnNames.Features));
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: "Features", inputColumnName: nameof(SentimentData.Text))
+                    .Append(mlContext.BinaryClassification.Trainers.SdcaLogisticRegression(labelColumnName: "Label",
+                                                                                                   featureColumnName: "Features"));
 
             // 3. Get a model by training the pipeline that was built.
             Console.WriteLine("Creating and Training a model for Sentiment Analysis using ML.NET");
@@ -35,11 +34,11 @@ namespace $safeprojectname$
 
             IDataView testDataView = mlContext.Data.LoadFromTextFile<SentimentData>(@"Data\wikipedia-detox-250-line-test.tsv", hasHeader: true);
             var predictions = model.Transform(testDataView);
-            var results = mlContext.BinaryClassification.Evaluate(predictions);
+            var results = mlContext.BinaryClassification.Evaluate(data: predictions);
             Console.WriteLine($"Accuracy: {results.Accuracy:P2}");
 
             // 5. Use the model for making a single prediction.
-            var predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
+            var predictionEngine = mlContext.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(model);
             var testInput = new SentimentData { Text = "ML.NET is fun, more samples at https://github.com/dotnet/machinelearning-samples" };
             SentimentPrediction resultprediction = predictionEngine.Predict(testInput);
 
@@ -51,11 +50,7 @@ namespace $safeprojectname$
             // 6. Save the model to file so it can be used in another app.
             Console.WriteLine("Saving the model");
 
-            using (var fs = new FileStream("sentiment_model.zip", FileMode.Create, FileAccess.Write, FileShare.Write))
-            {
-                model.SaveTo(mlContext, fs);
-                fs.Close();
-            }
+            mlContext.Model.Save(model,trainingDataView.Schema, "sentiment_model.zip");
 
             Console.ReadLine();
         }
