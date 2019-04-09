@@ -3,10 +3,8 @@
  * found at https://aka.ms/mlnetsentimentanalysis, which provides a more detailed introduction to ML.NET and the scenario. */
 
 using System;
-using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.Data.DataView;
 
 namespace $safeprojectname$
 {
