@@ -8,13 +8,13 @@ phases:
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.SourcesDirectory)\artifacts\log\$(_configuration)'
-        ArtifactName: '$(_configuration) unit test logs'
+        ArtifactName: '$(_configuration) log folder'
         publishLocation: Container
       continueOnError: true
       condition: failed()
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\bin\$(_configuration)'
+        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\bin'
         ArtifactName: '$(_configuration) bin folder'
         publishLocation: Container
       continueOnError: true
