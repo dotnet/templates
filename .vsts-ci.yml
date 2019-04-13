@@ -30,37 +30,19 @@ steps:
     arguments: '-configuration $(BuildConfiguration)'
   continueOnError: true
 
-- task: PublishSymbols@1
-  displayName: 'Create Symbol Index'
-  inputs:
-    SymbolsPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)\$(Build.BuildNumber)\Symbols'
-    SearchPattern: '**\*.pdb;**\*.exe;**\*.dll'
-    SymbolsFolder: '$(Build.SourcesDirectory)\artifacts\$(BuildConfiguration)\SymStore'
-    SkipIndexing: true
-  continueOnError: true
-
-- task: ms-vscs-artifact.build-tasks.artifactSymbolTask-1.artifactSymbolTask@0
-  displayName: 'Publish to Symbols to Artifact Services'
-  inputs:
-    symbolServiceURI: 'https://microsoft.artifacts.visualstudio.com/DefaultCollection'
-    requestName: '$(system.teamProject)/$(Build.DefinitionName)/$(Build.BuildNumber)/$(Build.BuildId)'
-    sourcePath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)\$(Build.BuildNumber)\Symbols'
-    usePat: false
-
-
 - task: ms-vseng.MicroBuildTasks.4305a8de-ba66-4d8b-b2d1-0dc4ecbbf5e8.MicroBuildUploadVstsDropFolder@1
   displayName: 'Upload VSTS Drop'
   inputs:
-    DropFolder: 'artifacts\$(BuildConfiguration)\VSSetup\Insertion'
+    DropFolder: 'artifacts\VSSetup\$(BuildConfiguration)\Insertion'
 
 - task: CopyPublishBuildArtifacts@1
   displayName: 'Publish Drop'
   inputs:
     CopyRoot: '$(Build.SourcesDirectory)'
     Contents: |
-     artifacts\$(BuildConfiguration)\bin
-     artifacts\$(BuildConfiguration)\log
-     artifacts\$(BuildConfiguration)\VSSetup
+     artifacts\bin
+     artifacts\log\$(BuildConfiguration)
+     artifacts\VSSetup\$(BuildConfiguration)
     ArtifactName: '$(Build.BuildNumber)'
     ArtifactType: FilePath
     TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
