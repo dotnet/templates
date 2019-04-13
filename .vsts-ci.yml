@@ -23,12 +23,14 @@ steps:
   inputs:
     dropName: 'Products/$(System.TeamProject)/dotnet-getting-started-templates/$(Build.SourceBranchName)/$(Build.BuildNumber)'
 
-- task: BatchScript@1
-  displayName: 'Run script CIBuild.cmd'
-  inputs:
-    filename: 'eng\common\CIBuild.cmd'
-    arguments: '-configuration $(BuildConfiguration)'
-  continueOnError: true
+- script: eng\common\CIBuild.cmd 
+          -configuration $(BuildConfiguration)
+          /p:OfficialBuildId=$(BUILD.BUILDNUMBER)
+          /p:VisualStudioDropName=$(VisualStudioDropName) # required if repository builds VS insertion components
+          /p:DotNetSignType=$(SignType)
+          /p:DotNetSymbolServerTokenMsdl=$(microsoft-symbol-server-pat)
+          /p:DotNetSymbolServerTokenSymWeb=$(symweb-symbol-server-pat)
+  displayName: Build
 
 - task: ms-vseng.MicroBuildTasks.4305a8de-ba66-4d8b-b2d1-0dc4ecbbf5e8.MicroBuildUploadVstsDropFolder@1
   displayName: 'Upload VSTS Drop'
