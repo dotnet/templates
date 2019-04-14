@@ -4,10 +4,8 @@
     <!-- This repo version -->
     <VersionBase>3.0.0</VersionBase>
     <PreReleaseVersionLabel>beta</PreReleaseVersionLabel>
-    
     <!-- Opt-in repo features -->
     <UsingToolVSSDK>true</UsingToolVSSDK>
-    
     <!-- VS SDK -->
     <VSLangProjVersion>7.0.3300</VSLangProjVersion>
     <VSSDKTemplateWizardInterfaceVersion>12.0.4</VSSDKTemplateWizardInterfaceVersion>
@@ -30,12 +28,11 @@
     <MicrosoftVisualStudioThreadingVersion>15.3.20</MicrosoftVisualStudioThreadingVersion>
     <MicrosoftDotNetProjectTemplatesVersion>1.0.0-beta2-20170629-269</MicrosoftDotNetProjectTemplatesVersion>
   </PropertyGroup>
-  
   <PropertyGroup>
     <RestoreSources>
       $(RestoreSources);
       https://dotnet.myget.org/F/roslyn-tools/api/v3/index.json;
       https://api.nuget.org/v3/index.json
     </RestoreSources>
-</PropertyGroup>
+  </PropertyGroup>
 </Project>
