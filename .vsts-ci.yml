@@ -26,7 +26,7 @@ steps:
 - script: eng\common\CIBuild.cmd 
           -configuration $(BuildConfiguration)
           /p:OfficialBuildId=$(BUILD.BUILDNUMBER)
-          /p:VisualStudioDropName=$(VisualStudioDropName) # required if repository builds VS insertion components
+          /p:VisualStudioDropName=$(VisualStudioDropName)
           /p:DotNetSignType=$(SignType)
           /p:DotNetSymbolServerTokenMsdl=$(microsoft-symbol-server-pat)
           /p:DotNetSymbolServerTokenSymWeb=$(symweb-symbol-server-pat)
