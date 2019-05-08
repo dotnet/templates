@@ -6,22 +6,23 @@ queue:
   demands: Cmd
 
 variables:
-  DropRoot: '\\cpvsbuild\drops'
   BuildConfiguration: Release
   BuildPlatform: 'any cpu'
-  RunningInMicroBuild: true
-  TeamName: Roslyn
+  TeamName: dotnet-templates
+  SignType: real
+  DropRoot: '\\cpvsbuild\drops'
+  VisualStudioDropName: Products/$(System.TeamProject)/$(Build.Repository.Name)/$(Build.SourceBranchName)/$(Build.BuildNumber)
 
 steps:
 - task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@1
   displayName: 'Install Signing Plugin'
   inputs:
-    signType: real
+    signType: $(SignType)
+    esrpSigning: true
+  condition: and(succeeded(), ne(variables['SignType'], ''))
 
 - task: ms-vseng.MicroBuildTasks.32f78468-e895-4f47-962c-58a699361df8.MicroBuildSwixPlugin@1
   displayName: 'Install Swix Plugin'
-  inputs:
-    dropName: 'Products/$(System.TeamProject)/dotnet-getting-started-templates/$(Build.SourceBranchName)/$(Build.BuildNumber)'
 
 - script: eng\common\CIBuild.cmd 
           -configuration $(BuildConfiguration)
@@ -37,6 +38,15 @@ steps:
   inputs:
     DropFolder: 'artifacts\VSSetup\$(BuildConfiguration)\Insertion'
 
+# Publishes setup VSIXes to a drop.
+# Note: The insertion tool looks for the display name of this task in the logs.
+- task: ms-vseng.MicroBuildTasks.4305a8de-ba66-4d8b-b2d1-0dc4ecbbf5e8.MicroBuildUploadVstsDropFolder@1
+  displayName: Upload VSTS Drop
+  inputs:
+    DropName: $(VisualStudioDropName)
+    DropFolder: 'artifacts\VSSetup\$(BuildConfiguration)\Insertion'
+    condition: succeeded()
+
 - task: CopyPublishBuildArtifacts@1
   displayName: 'Publish Drop'
   inputs:
@@ -49,17 +59,14 @@ steps:
     ArtifactType: FilePath
     TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
 
+# Publish an artifact that the RoslynInsertionTool is able to find by its name.
+- task: PublishBuildArtifacts@1
+  displayName: Publish Artifact VSSetup
+  inputs:
+    PathtoPublish: 'artifacts\VSSetup\$(BuildConfiguration)'
+    ArtifactName: 'VSSetup'
+  condition: succeeded()
 
 - task: ms-vseng.MicroBuildTasks.521a94ea-9e68-468a-8167-6dcf361ea776.MicroBuildCleanup@1
   displayName: 'Execute cleanup tasks'
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish MicroBuild Outputs'
-  inputs:
-    PathtoPublish: '$(Build.StagingDirectory)\MicroBuild\Output'
-    ArtifactName: '$(Build.BuildNumber)'
-    publishLocation: FilePath
-    TargetPath: '$(DropRoot)\$(TeamName)\$(Build.DefinitionName)'
-
-
 
