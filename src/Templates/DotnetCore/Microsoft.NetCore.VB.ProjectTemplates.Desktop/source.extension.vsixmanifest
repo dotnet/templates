@@ -21,5 +21,7 @@
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Winforms" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Wpf" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Wpf.Control" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Wpf.Custom.Control" />
   </Assets>
 </PackageManifest>
