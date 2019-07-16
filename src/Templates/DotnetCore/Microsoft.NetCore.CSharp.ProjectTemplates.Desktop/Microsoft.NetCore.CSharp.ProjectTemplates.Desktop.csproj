@@ -4,7 +4,16 @@
     <VSTemplate Include="Winforms.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
+    <VSTemplate Include="Wpf.Control.vstemplate">
+      <OutputSubPath>.NET Core</OutputSubPath>
+    </VSTemplate>
+    <VSTemplate Include="Wpf.Custom.Control.vstemplate">
+      <OutputSubPath>.NET Core</OutputSubPath>
+    </VSTemplate>
     <VSTemplate Include="Wpf.vstemplate">
+      <OutputSubPath>.NET Core</OutputSubPath>
+    </VSTemplate>
+    <VSTemplate Include="WpfLibrarya.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
   </ItemGroup>
