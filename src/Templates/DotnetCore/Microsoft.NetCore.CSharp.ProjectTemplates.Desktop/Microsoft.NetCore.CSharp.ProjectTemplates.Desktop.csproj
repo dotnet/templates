@@ -13,7 +13,7 @@
     <VSTemplate Include="Wpf.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
-    <VSTemplate Include="WpfLibrarya.vstemplate">
+    <VSTemplate Include="WpfLibrary.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
   </ItemGroup>

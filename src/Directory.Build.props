@@ -4,6 +4,7 @@
 
   <PropertyGroup>
     <LangVersion>Latest</LangVersion>
+    <TargetFramework>net472</TargetFramework>
     <VSSDKTargetPlatformRegRootSuffix>Exp</VSSDKTargetPlatformRegRootSuffix>
     <Copyright>$(CopyrightMicrosoft)</Copyright>
   </PropertyGroup>
