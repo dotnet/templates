@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="ConsoleApplication.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <VSTemplate Include="ConsoleApplication.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
