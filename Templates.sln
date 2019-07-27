@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Editorconfig", "Editorconfi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.Editorconfig", "src\Templates\Editorconfig\Microsoft.VisualStudio.Templates.Editorconfig\Microsoft.VisualStudio.Templates.Editorconfig.csproj", "{9D2ABE7E-EA38-4B47-8CEF-653840BB4D65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VisualStudio.Templates.Editorconfig.Setup", "src\Setup\Editorconfig\Microsoft.VisualStudio.Templates.Editorconfig.Setup\Microsoft.VisualStudio.Templates.Editorconfig.Setup.csproj", "{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.Editorconfig.Setup", "src\Setup\Editorconfig\Microsoft.VisualStudio.Templates.Editorconfig.Setup\Microsoft.VisualStudio.Templates.Editorconfig.Setup.csproj", "{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup", "src\Setup\Editorconfig\Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup\Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Setup.csproj", "{5499ED4E-A7D6-4519-AA50-BA03A22D2284}"
 EndProject
@@ -25,31 +25,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Temp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetCore", "DotnetCore", "{F467574B-E713-46CB-9C54-D70C42DD29C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.CSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetCore.CSharp.ProjectTemplates\Microsoft.NetCore.CSharp.ProjectTemplates.csproj", "{20AC23B1-6B12-4A23-9EC6-23ED108D773A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.CSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetCore.CSharp.ProjectTemplates\Microsoft.NetCore.CSharp.ProjectTemplates.csproj", "{20AC23B1-6B12-4A23-9EC6-23ED108D773A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.CSharp.ProjectTemplates.Test", "src\Templates\DotnetCore\Microsoft.NetCore.CSharp.ProjectTemplates.Test\Microsoft.NetCore.CSharp.ProjectTemplates.Test.csproj", "{CD001E88-19AD-41FC-87D4-5DBC08C4F9F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.CSharp.ProjectTemplates.Test", "src\Templates\DotnetCore\Microsoft.NetCore.CSharp.ProjectTemplates.Test\Microsoft.NetCore.CSharp.ProjectTemplates.Test.csproj", "{CD001E88-19AD-41FC-87D4-5DBC08C4F9F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.FSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetCore.FSharp.ProjectTemplates\Microsoft.NetCore.FSharp.ProjectTemplates.csproj", "{3A11BEF5-3BB3-4F73-908C-32A23E0595BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.FSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetCore.FSharp.ProjectTemplates\Microsoft.NetCore.FSharp.ProjectTemplates.csproj", "{3A11BEF5-3BB3-4F73-908C-32A23E0595BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.FSharp.ProjectTemplates.Test", "src\Templates\DotnetCore\Microsoft.NetCore.FSharp.ProjectTemplates.Test\Microsoft.NetCore.FSharp.ProjectTemplates.Test.csproj", "{D012A5A9-52BC-4F91-BD17-B16160870E43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.FSharp.ProjectTemplates.Test", "src\Templates\DotnetCore\Microsoft.NetCore.FSharp.ProjectTemplates.Test\Microsoft.NetCore.FSharp.ProjectTemplates.Test.csproj", "{D012A5A9-52BC-4F91-BD17-B16160870E43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.FSharp.ProjectTemplates.Web", "src\Templates\DotnetCore\Microsoft.NetCore.FSharp.ProjectTemplates.Web\Microsoft.NetCore.FSharp.ProjectTemplates.Web.csproj", "{515466BF-6E88-4723-8337-5123C07B0906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.FSharp.ProjectTemplates.Web", "src\Templates\DotnetCore\Microsoft.NetCore.FSharp.ProjectTemplates.Web\Microsoft.NetCore.FSharp.ProjectTemplates.Web.csproj", "{515466BF-6E88-4723-8337-5123C07B0906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.VB.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetCore.VB.ProjectTemplates\Microsoft.NetCore.VB.ProjectTemplates.csproj", "{20C62751-D7EE-4830-B4C4-87A5B424B118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.VB.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetCore.VB.ProjectTemplates\Microsoft.NetCore.VB.ProjectTemplates.csproj", "{20C62751-D7EE-4830-B4C4-87A5B424B118}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.VB.ProjectTemplates.Test", "src\Templates\DotnetCore\Microsoft.NetCore.VB.ProjectTemplates.Test\Microsoft.NetCore.VB.ProjectTemplates.Test.csproj", "{B2D9770C-4A71-4DC1-A64A-B80A9A3AA0FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.VB.ProjectTemplates.Test", "src\Templates\DotnetCore\Microsoft.NetCore.VB.ProjectTemplates.Test\Microsoft.NetCore.VB.ProjectTemplates.Test.csproj", "{B2D9770C-4A71-4DC1-A64A-B80A9A3AA0FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetStandard.CSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetStandard.CSharp.ProjectTemplates\Microsoft.NetStandard.CSharp.ProjectTemplates.csproj", "{2603783E-A95D-4568-A9F5-3F68BF9A6F7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetStandard.CSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetStandard.CSharp.ProjectTemplates\Microsoft.NetStandard.CSharp.ProjectTemplates.csproj", "{2603783E-A95D-4568-A9F5-3F68BF9A6F7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetStandard.FSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetStandard.FSharp.ProjectTemplates\Microsoft.NetStandard.FSharp.ProjectTemplates.csproj", "{4AC5680D-13D3-47D0-86F0-50465D14AE30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetStandard.FSharp.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetStandard.FSharp.ProjectTemplates\Microsoft.NetStandard.FSharp.ProjectTemplates.csproj", "{4AC5680D-13D3-47D0-86F0-50465D14AE30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetStandard.VB.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetStandard.VB.ProjectTemplates\Microsoft.NetStandard.VB.ProjectTemplates.csproj", "{0763236F-9838-4E0D-B493-DD8E34FD76B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetStandard.VB.ProjectTemplates", "src\Templates\DotnetCore\Microsoft.NetStandard.VB.ProjectTemplates\Microsoft.NetStandard.VB.ProjectTemplates.csproj", "{0763236F-9838-4E0D-B493-DD8E34FD76B6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetCore", "DotnetCore", "{85CAE3E7-7B7F-4DE3-8ED9-FB1553F2370C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.CSharp.ProjectTemplates.Desktop", "src\Templates\DotnetCore\Microsoft.NetCore.CSharp.ProjectTemplates.Desktop\Microsoft.NetCore.CSharp.ProjectTemplates.Desktop.csproj", "{3C759969-3AB2-432D-A7CB-D4E6DF1D510B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.CSharp.ProjectTemplates.Desktop", "src\Templates\DotnetCore\Microsoft.NetCore.CSharp.ProjectTemplates.Desktop\Microsoft.NetCore.CSharp.ProjectTemplates.Desktop.csproj", "{3C759969-3AB2-432D-A7CB-D4E6DF1D510B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.NetCore.VB.ProjectTemplates.Desktop", "src\Templates\DotnetCore\Microsoft.NetCore.VB.ProjectTemplates.Desktop\Microsoft.NetCore.VB.ProjectTemplates.Desktop.csproj", "{EE92284D-CA40-44AD-908C-85DA7F288A78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.VB.ProjectTemplates.Desktop", "src\Templates\DotnetCore\Microsoft.NetCore.VB.ProjectTemplates.Desktop\Microsoft.NetCore.VB.ProjectTemplates.Desktop.csproj", "{EE92284D-CA40-44AD-908C-85DA7F288A78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,16 +73,16 @@ Global
 		{9D2ABE7E-EA38-4B47-8CEF-653840BB4D65}.Release|x86.Build.0 = Release|Any CPU
 		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x64.ActiveCfg = Debug|x64
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x64.Build.0 = Debug|x64
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x86.ActiveCfg = Debug|x86
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x86.Build.0 = Debug|x86
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Debug|x86.Build.0 = Debug|Any CPU
 		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x64.ActiveCfg = Release|x64
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x64.Build.0 = Release|x64
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x86.ActiveCfg = Release|x86
-		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x86.Build.0 = Release|x86
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x64.Build.0 = Release|Any CPU
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x86.ActiveCfg = Release|Any CPU
+		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8}.Release|x86.Build.0 = Release|Any CPU
 		{5499ED4E-A7D6-4519-AA50-BA03A22D2284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5499ED4E-A7D6-4519-AA50-BA03A22D2284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5499ED4E-A7D6-4519-AA50-BA03A22D2284}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -278,7 +276,6 @@ Global
 		{2603783E-A95D-4568-A9F5-3F68BF9A6F7E} = {F467574B-E713-46CB-9C54-D70C42DD29C9}
 		{4AC5680D-13D3-47D0-86F0-50465D14AE30} = {F467574B-E713-46CB-9C54-D70C42DD29C9}
 		{0763236F-9838-4E0D-B493-DD8E34FD76B6} = {F467574B-E713-46CB-9C54-D70C42DD29C9}
-		{85CAE3E7-7B7F-4DE3-8ED9-FB1553F2370C} = {A6D5C98C-60B9-424A-8BFF-775C354B9FCC}
 		{3C759969-3AB2-432D-A7CB-D4E6DF1D510B} = {F467574B-E713-46CB-9C54-D70C42DD29C9}
 		{EE92284D-CA40-44AD-908C-85DA7F288A78} = {F467574B-E713-46CB-9C54-D70C42DD29C9}
 	EndGlobalSection
