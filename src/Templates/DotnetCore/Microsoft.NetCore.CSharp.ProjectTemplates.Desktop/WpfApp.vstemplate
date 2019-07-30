@@ -6,7 +6,7 @@
     <Icon Package="{b3bae735-386c-4030-8329-ef48eeda4036}" ID="4602" />
     <ProjectType>CSharp</ProjectType>
     <SortOrder>14</SortOrder>
-    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <TemplateID>Microsoft.CSharp.NetCore.WPF</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
     <CreateInPlace>true</CreateInPlace>

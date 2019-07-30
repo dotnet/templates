@@ -9,7 +9,7 @@
     <VSTemplate Include="Winforms.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
-    <VSTemplate Include="Wpf.vstemplate">
+    <VSTemplate Include="WpfApp.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="WpfLibrary.vstemplate">
