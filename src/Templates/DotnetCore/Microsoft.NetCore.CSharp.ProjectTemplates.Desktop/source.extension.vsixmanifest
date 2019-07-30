@@ -24,5 +24,6 @@
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Wpf.Control" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Wpf.Custom.Control" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="WpfLibrary" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="AssemblyInfo" />
   </Assets>
 </PackageManifest>
