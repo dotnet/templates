@@ -6,15 +6,9 @@ This repository contains various .net templates for Visual Studio.
 
 Templates for .NET Core in Visual Studio
 
-## Get Started
-
-Templates for getting started with the .NET Framework in Visual Studio.
-
-
 ## Editorconfig
 
 Templates for creating a default editorconfig in Visual Studio.
-
 
 ## Testing locally
 
