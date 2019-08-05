@@ -9,7 +9,7 @@
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <DefaultName>AssemblyInfo.cs</DefaultName>
-    <AppliesTo>(CSharp + CPS)</AppliesTo>
+    <AppliesTo>(CSharp + WPF)</AppliesTo>
     <ShowByDefault>false</ShowByDefault>
   </TemplateData>
   <TemplateContent>
