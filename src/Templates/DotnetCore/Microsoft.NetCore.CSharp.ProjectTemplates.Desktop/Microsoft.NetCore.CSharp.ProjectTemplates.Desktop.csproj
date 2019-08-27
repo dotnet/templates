@@ -22,7 +22,7 @@
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="AssemblyInfo\AssemblyInfo.vstemplate">
-      <OutputSubPath>.NET Core</OutputSubPath>
+      <OutputSubPath>General</OutputSubPath>
     </VSTemplate>
   </ItemGroup>
 </Project>
