@@ -3,7 +3,7 @@
   <TemplateData>
     <Name Package="{860A27C0-B665-47F3-BC12-637E16A1050A}" ID="3"/>
     <Description Package="{860A27C0-B665-47F3-BC12-637E16A1050A}" ID="4"/>
-    <Icon>ConsoleApplication.png</Icon>
+    <Icon Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="4501" />
     <ProjectType>VisualBasic</ProjectType>
     <SortOrder>12</SortOrder>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
