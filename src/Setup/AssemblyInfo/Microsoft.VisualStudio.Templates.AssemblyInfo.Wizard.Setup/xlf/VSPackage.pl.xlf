@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="pl" original="../VSPackage.resx">
+    <body>
+      <trans-unit id="110">
+        <source>ResourcePackage Extension</source>
+        <target state="translated">Rozszerzenie ResourcePackage</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="112">
+        <source>ResourcePackage Visual Studio Extension Detailed Info</source>
+        <target state="translated">Szczegółowe informacje dotyczące rozszerzenia ResourcePackage programu Visual Studio</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="115">
+        <source>AssemblyInfo File (default)</source>
+        <target state="translated">Plik AssemblyInfo (domyślny)</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="116">
+        <source>Create an AssemblyInfo file to persist your editor and code settings.</source>
+        <target state="translated">Utwórz plik AssemblyInfo w celu utrwalenia ustawień edytora i kodu.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="117">
+        <source>AssemblyInfo File (.NET)</source>
+        <target state="translated">Plik AssemblyInfo (.NET)</target>
+        <note />
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
