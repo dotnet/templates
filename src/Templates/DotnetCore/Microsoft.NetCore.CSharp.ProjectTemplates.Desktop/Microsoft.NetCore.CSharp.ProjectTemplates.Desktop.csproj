@@ -21,8 +21,5 @@
     <VSTemplate Include="WpfLibrary.vstemplate">
       <OutputSubPath>.NET Core</OutputSubPath>
     </VSTemplate>
-    <VSTemplate Include="AssemblyInfo\AssemblyInfo.vstemplate">
-      <OutputSubPath>General</OutputSubPath>
-    </VSTemplate>
   </ItemGroup>
 </Project>
