@@ -6,6 +6,13 @@
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="WizardResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WizardResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
   <!-- Package References -->
   <ItemGroup>
     <PackageReference Include="EnvDTE" Version="$(EnvDTEVersion)" />
@@ -30,5 +37,12 @@
     <PackageReference Include="VSLangProj" Version="$(VSLangProjVersion)" />
     <PackageReference Include="VSSDK.TemplateWizardInterface" Version="$(VSSDKTemplateWizardInterfaceVersion)" />
     <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="WizardResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WizardResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -1,48 +1,41 @@
 ﻿// Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
 using EnvDTE;
-
+using Microsoft;
+using Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard;
 using Microsoft.VisualStudio.TemplateWizard;
 
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
+using System.Text;
 
-public partial class AssemblyInfoTemplateWizard : IWizard
+public class AssemblyInfoTemplateWizard : IWizard
 {
+    private const int WrapCommentLineAfter = 80;
+    private const string CSharpCommentPrefix = "// ";
+    private const string VBCommentPrefix = "' ";
+
     private static readonly string CSharp_Minimal_AssemblyInfoTemplate = $@"using System.Runtime.InteropServices;
 
-// In SDK-style projects the assembly information is automatically
-// generated on build.
+{WrapComment(WizardResources.GenerationInfo, CSharpCommentPrefix)}
 
-// The information generated comes from the Package page on the Project Properties.
-
-// Other attributes can be specified here as necessary
-
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
+{WrapComment(WizardResources.ComVisibleInfo, CSharpCommentPrefix)}
 [assembly: ComVisible(false)]
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM
+{WrapComment(WizardResources.GuidInfo, CSharpCommentPrefix)}
 [assembly: Guid(""$guid1$"")]
 ";
+    
+    private static readonly string VB_Minimal_AssemblyInfoTemplate = $@"Import System.Runtime.InteropServices
 
-    private static readonly string VB_Minimal_AssemblyInfoTemplate = @"Import System.Runtime.InteropServices
+{WrapComment(WizardResources.GenerationInfo, VBCommentPrefix)}
 
-' In SDK-style projects the assembly information is automatically
-' generated on build.
-
-' The information generated comes from the Package page on the Project Properties.
-
-' Other attributes can be specified here as necessary
-
-' Setting ComVisible to false makes the types in this assembly not visible 
-' to COM components.  If you need to access a type in this assembly from 
-' COM, set the ComVisible attribute to true on that type.
+{WrapComment(WizardResources.ComVisibleInfo, VBCommentPrefix)}
 <Assembly: ComVisible(False)> 
 
-' The following GUID is for the ID of the typelib if this project is exposed to COM
+{WrapComment(WizardResources.GuidInfo, VBCommentPrefix)}
 <Assembly: Guid(""$guid1$"")> 
 ";
 
@@ -89,5 +82,35 @@ public partial class AssemblyInfoTemplateWizard : IWizard
 
     public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
     {
+    }
+
+    private static string WrapComment(string text, string commentPrefix)
+    {
+        Requires.NotNull(commentPrefix, nameof(commentPrefix));
+
+        if (string.IsNullOrWhiteSpace(text)) return string.Empty;
+
+        var sb = new StringBuilder();
+
+        sb.Append(commentPrefix);
+        int column = commentPrefix.Length;
+
+        foreach (char c in text)
+        {
+            if (char.IsWhiteSpace(c) && column > WrapCommentLineAfter)
+            {
+                sb.AppendLine();
+                sb.Append(commentPrefix);
+                column = commentPrefix.Length;
+            }
+            else
+            {
+                sb.Append(c);
+                column++;
+            }
+        }
+        sb.AppendLine();
+
+        return sb.ToString();
     }
 }
