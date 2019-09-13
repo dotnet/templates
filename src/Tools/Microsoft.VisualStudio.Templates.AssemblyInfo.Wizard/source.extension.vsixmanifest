@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard.Setup" Version="|%CurrentProject%;GetVsixVersion|" Language="en-US" Publisher="Microsoft" />
+    <Identity Id="Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard" Version="|%CurrentProject%;GetVsixVersion|" Language="en-US" Publisher="Microsoft" />
     <DisplayName>AssemblyInfo Wizard</DisplayName>
     <Description>Wizard that helps create AssemblyInfo files</Description>
   </Metadata>
@@ -23,10 +23,5 @@
            d:ProjectName="Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard"
            Path="|Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard|"
            AssemblyName="|Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard;AssemblyName|" />
-    
-    <Asset Type="Microsoft.VisualStudio.VsPackage"
-           d:Source="Project"
-           d:ProjectName="%CurrentProject%"
-           Path="Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard.Setup.pkgdef" />
   </Assets>
 </PackageManifest>
