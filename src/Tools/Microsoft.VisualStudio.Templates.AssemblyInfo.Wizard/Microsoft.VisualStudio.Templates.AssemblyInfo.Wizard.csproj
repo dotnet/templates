@@ -1,11 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <AssemblyName>Templates.AssemblyInfo.Wizard</AssemblyName>
-
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
-    <VisualStudioInsertionComponent>Templates.AssemblyInfo.Wizard</VisualStudioInsertionComponent>
+    <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard</VisualStudioInsertionComponent>
   </PropertyGroup>
 
   <ItemGroup>
