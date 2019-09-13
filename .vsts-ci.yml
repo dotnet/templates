@@ -8,6 +8,7 @@ trigger:
     - master
     - dev15.9.x
     - dev16.0.x
+    - dev16.3.x
   paths:
     exclude: # don't trigger the CI if only a eng file was changed
     - eng/*
