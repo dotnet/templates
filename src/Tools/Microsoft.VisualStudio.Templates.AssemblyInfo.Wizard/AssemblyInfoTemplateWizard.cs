@@ -86,7 +86,7 @@ public class AssemblyInfoTemplateWizard : IWizard
 
     private static string WrapComment(string text, string commentPrefix)
     {
-        commentPrefix ??= string.Empty;
+        commentPrefix = commentPrefix ?? string.Empty;
         if (string.IsNullOrWhiteSpace(text)) return string.Empty;
 
         var sb = new StringBuilder();
