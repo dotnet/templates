@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard</VisualStudioInsertionComponent>
   </PropertyGroup>
 
@@ -9,5 +9,6 @@
     <PackageReference Include="EnvDTE" Version="$(EnvDTEVersion)" />
     <PackageReference Include="EnvDTE80" Version="$(EnvDTE80Version)" />
     <PackageReference Include="VSSDK.TemplateWizardInterface" Version="$(VSSDKTemplateWizardInterfaceVersion)" />
+    <PackageReference Include="Microsoft.VisualStudio.Shell.14.0" Version="$(MicrosoftVisualStudioShell140Version)" />
   </ItemGroup>
 </Project>

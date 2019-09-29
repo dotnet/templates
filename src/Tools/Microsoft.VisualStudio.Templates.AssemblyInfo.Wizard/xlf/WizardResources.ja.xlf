@@ -2,6 +2,11 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en" target-language="ja" original="../WizardResources.resx">
     <body>
+      <trans-unit id="110">
+        <source>AssemblyInfo Wizard</source>
+        <target state="new">AssemblyInfo Wizard</target>
+        <note />
+      </trans-unit>
       <trans-unit id="ComVisibleInfo">
         <source>Setting ComVisible to false makes the types in this assembly not visible to COM components.  If you need to access a type in this assembly from COM, set the ComVisible attribute to true on that type.</source>
         <target state="new">Setting ComVisible to false makes the types in this assembly not visible to COM components.  If you need to access a type in this assembly from COM, set the ComVisible attribute to true on that type.</target>
