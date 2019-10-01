@@ -2,6 +2,8 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <UseCodebase>true</UseCodebase>
+    <Ngen>false</Ngen>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard</VisualStudioInsertionComponent>
   </PropertyGroup>
 
