@@ -27,7 +27,7 @@ public class AssemblyInfoTemplateWizard : IWizard
 {WrapComment(WizardResources.GuidInfo, CSharpCommentPrefix)}
 [assembly: Guid(""$guid1$"")]
 ";
-    
+
     private static readonly string VB_Minimal_AssemblyInfoTemplate = $@"Import System.Runtime.InteropServices
 
 {WrapComment(WizardResources.GenerationInfo, VBCommentPrefix)}
@@ -62,15 +62,18 @@ public class AssemblyInfoTemplateWizard : IWizard
             {
                 string filePath = projectItem.Properties.Item("FullPath").Value.ToString();
 
+                string template;
                 // if SDK style project, overwrite file with other contents
                 if (filePath.EndsWith(".cs", StringComparison.OrdinalIgnoreCase))
                 {
-                    File.WriteAllText(filePath, CSharp_Minimal_AssemblyInfoTemplate);
+                    template = CSharp_Minimal_AssemblyInfoTemplate;
                 }
                 else // we only get called for C# and VB, so no need to check this
                 {
-                    File.WriteAllText(filePath, VB_Minimal_AssemblyInfoTemplate);
+                    template = VB_Minimal_AssemblyInfoTemplate;
                 }
+
+                File.WriteAllText(filePath, template.Replace("$guid1$", Guid.NewGuid().ToString("D")));
             }
         }
         catch
