@@ -7,7 +7,6 @@ using Task = System.Threading.Tasks.Task;
 namespace Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard
 {
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true, RegisterUsing = RegistrationMethod.CodeBase)]
-    [InstalledProductRegistration("#110", "#110", "1.0")]
     [Guid(PackageGuidString)]
     public sealed class WizardPackage : AsyncPackage
     {
