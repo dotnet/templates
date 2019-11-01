@@ -4,17 +4,17 @@
     <body>
       <trans-unit id="ComVisibleInfo">
         <source>Setting ComVisible to false makes the types in this assembly not visible to COM components.  If you need to access a type in this assembly from COM, set the ComVisible attribute to true on that type.</source>
-        <target state="new">Setting ComVisible to false makes the types in this assembly not visible to COM components.  If you need to access a type in this assembly from COM, set the ComVisible attribute to true on that type.</target>
+        <target state="translated">La définition de ComVisible sur False rend les types dans cet assembly invisibles aux composants COM. Si vous devez accéder à un type dans cet assembly à partir de COM, définissez l'attribut ComVisible sur True pour ce type.</target>
         <note />
       </trans-unit>
       <trans-unit id="GenerationInfo">
         <source>In SDK-style projects such as this one, several assembly attributes that were historically defined in this file are now automatically added during build and populated with values defined in project properties. For details of which attributes are included and how to customise this process see: https://aka.ms/assembly-info-properties</source>
-        <target state="new">In SDK-style projects such as this one, several assembly attributes that were historically defined in this file are now automatically added during build and populated with values defined in project properties. For details of which attributes are included and how to customise this process see: https://aka.ms/assembly-info-properties</target>
+        <target state="translated">Dans les projets de type SDK comme celui-là, plusieurs attributs d'assembly définis historiquement dans ce fichier sont maintenant automatiquement ajoutés pendant la génération et renseignés avec des valeurs définies dans les propriétés du projet. Pour plus d'informations sur les attributs à inclure et sur la personnalisation de ce processus, consultez : https://aka.ms/assembly-info-properties</target>
         <note />
       </trans-unit>
       <trans-unit id="GuidInfo">
         <source>The following GUID is for the ID of the typelib if this project is exposed to COM.</source>
-        <target state="new">The following GUID is for the ID of the typelib if this project is exposed to COM.</target>
+        <target state="translated">Le GUID suivant concerne l'ID de typelib si ce projet est exposé à COM.</target>
         <note />
       </trans-unit>
     </body>
