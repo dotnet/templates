@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <VSTemplate Include="Web.vstemplate">
-      <OutputSubPath>.NET Core</OutputSubPath>
+      <OutputSubPath>.NET</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="Web.vstemplate">
       <OutputSubPath>Web</OutputSubPath>

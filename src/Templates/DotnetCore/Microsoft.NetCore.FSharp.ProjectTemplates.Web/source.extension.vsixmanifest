@@ -2,7 +2,7 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="Microsoft.NetCore.FSharp.ProjectTemplates.Web" Version="|%CurrentProject%;GetVsixVersion|" Language="en-US" Publisher="Microsoft" />
-    <DisplayName>F# .NETCore Project Templates Test</DisplayName>
+    <DisplayName>F# .NET Project Templates Test</DisplayName>
     <Description>F# project templates for ASP.NETCore.</Description>
   </Metadata>
   <Installation Experimental="true">

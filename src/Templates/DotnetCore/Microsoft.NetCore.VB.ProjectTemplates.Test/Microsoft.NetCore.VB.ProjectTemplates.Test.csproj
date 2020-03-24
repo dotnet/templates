@@ -7,19 +7,19 @@
 
   <ItemGroup>
     <VSTemplate Include="XUnitTest.vstemplate">
-      <OutputSubPath>.NET Core</OutputSubPath>
+      <OutputSubPath>.NET</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="XUnitTest.vstemplate">
       <OutputSubPath>Test</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="MSTest.vstemplate">
-      <OutputSubPath>.NET Core</OutputSubPath>
+      <OutputSubPath>.NET</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="MSTest.vstemplate">
       <OutputSubPath>Test</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="NUnitTest.vstemplate">
-      <OutputSubPath>.NET Core</OutputSubPath>
+      <OutputSubPath>.NET</OutputSubPath>
     </VSTemplate>
     <VSTemplate Include="NUnitTest.vstemplate">
       <OutputSubPath>Test</OutputSubPath>
