@@ -28,7 +28,7 @@
     <MicrosoftVisualStudioUtilitiesVersion>15.0.26606</MicrosoftVisualStudioUtilitiesVersion>
     <MicrosoftVisualStudioThreadingVersion>15.3.20</MicrosoftVisualStudioThreadingVersion>
     <MicrosoftDotNetProjectTemplatesVersion>1.0.0-beta2-20170629-269</MicrosoftDotNetProjectTemplatesVersion>
-    <UpdateTemplateVersionVersion>1.0.0</UpdateTemplateVersionVersion>
+    <UpdateTemplateVersionVersion>1.0.4-beta1</UpdateTemplateVersionVersion>
   </PropertyGroup>
   <PropertyGroup>
     <RestoreSources>
