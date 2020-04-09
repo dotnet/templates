@@ -15,6 +15,7 @@
     <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
     <AppIdFilter>blend</AppIdFilter>
     <LanguageTag>C#</LanguageTag>
+    <LanguageTag>XAML</LanguageTag>
     <PlatformTag>Windows</PlatformTag>
     <ProjectTypeTag>Desktop</ProjectTypeTag>
     <ProjectTypeTag>Library</ProjectTypeTag>
