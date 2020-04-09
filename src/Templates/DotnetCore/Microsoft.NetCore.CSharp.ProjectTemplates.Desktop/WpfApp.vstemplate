@@ -14,6 +14,10 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
     <AppIdFilter>blend</AppIdFilter>
+    <LanguageTag>CSharp</LanguageTag>
+    <LanguageTag>XAML</LanguageTag>
+    <PlatformTag>Windows</PlatformTag>
+    <ProjectTypeTag>Desktop</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <ProjectCollection/>
