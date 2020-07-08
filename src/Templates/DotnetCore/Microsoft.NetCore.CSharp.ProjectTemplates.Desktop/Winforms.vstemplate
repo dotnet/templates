@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Windows Forms App (.NET Core)</Name>
+    <Name>Windows Forms App (.NET)</Name>
     <Description Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="2319" />
     <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4554" />
     <ProjectType>CSharp</ProjectType>
