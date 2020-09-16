@@ -12,8 +12,7 @@ pr:
 jobs:
 - job: Windows
   pool:
-    name: NetCorePublic-Pool
-    queue: BuildPool.Windows.10.Amd64.Open
+    vmImage: 'vs2017-win2016'
   variables:
     _os: Windows
   strategy:
