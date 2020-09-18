@@ -19,5 +19,6 @@
 
   <ItemGroup>
     <None Include="source.extension.vsixmanifest" />
+    <None Include="*.vstemplate" />
   </ItemGroup>
 </Project>

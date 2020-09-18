@@ -1,27 +1,46 @@
-phases:
-- phase: Windows
-  queue:
-    name: Hosted VS2017
-    timeoutInMinutes: 90
+  
+# Branches that trigger a build on commit
+trigger:
+- master
+- feature/*
+
+# Branches that trigger builds on PR
+pr:
+- master
+- feature/*
+
+jobs:
+- job: Windows
+  pool:
+    vmImage: 'windows-2019'
+  variables:
+    _os: Windows
+  strategy:
+    maxParallel: 4
+    matrix:
+      Debug:
+        _configuration: Debug
+      Release:
+        _configuration: Release
   steps:
-    - script: build\CIBuild.cmd -configuration $(_configuration) -prepareMachine
+    - script: eng\common\CIBuild.cmd -configuration $(_configuration) -prepareMachine
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\$(_configuration)\log'
-        ArtifactName: '$(_configuration) unit test logs'
+        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\log\$(_configuration)'
+        ArtifactName: '$(_configuration) log folder'
         publishLocation: Container
       continueOnError: true
       condition: failed()
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\$(_configuration)\bin'
+        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\bin'
         ArtifactName: '$(_configuration) bin folder'
         publishLocation: Container
       continueOnError: true
       condition: failed()
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\$(_configuration)\VSSetup'
+        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\VSSetup\$(_configuration)'
         ArtifactName: '$(_configuration) VSSetup folder'
         publishLocation: Container
       continueOnError: true

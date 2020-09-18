@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="ru" original="../WizardResources.resx">
+    <body>
+      <trans-unit id="ComVisibleInfo">
+        <source>Setting ComVisible to false makes the types in this assembly not visible to COM components.  If you need to access a type in this assembly from COM, set the ComVisible attribute to true on that type.</source>
+        <target state="translated">При установке значения false для параметра ComVisible типы в этой сборке становятся невидимыми для компонентов COM. Если вам необходимо получить доступ к типу в этой сборке из модели COM, установите значение true для атрибута ComVisible этого типа.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="GenerationInfo">
+        <source>In SDK-style projects such as this one, several assembly attributes that were historically defined in this file are now automatically added during build and populated with values defined in project properties. For details of which attributes are included and how to customise this process see: https://aka.ms/assembly-info-properties</source>
+        <target state="translated">В проектах SDK, таких как этот, некоторые атрибуты сборки, которые ранее определялись в этом файле, теперь автоматически добавляются во время сборки и заполняются значениями, заданными в свойствах проекта. Подробные сведения о том, какие атрибуты включены и как настроить этот процесс, см. на странице: https://aka.ms/assembly-info-properties.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="GuidInfo">
+        <source>The following GUID is for the ID of the typelib if this project is exposed to COM.</source>
+        <target state="translated">Следующий GUID служит для идентификации библиотеки типов typelib, если этот проект будет видимым для COM.</target>
+        <note />
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
