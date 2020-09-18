@@ -16,6 +16,6 @@ To test this repository run the following from the command-line:
 ```ini
 >git clone https://github.com/dotnet/templates.git
 >cd templates
->build.cmd
+>build.cmd /p:DeployExtension=true
 >devenv /rootSuffix Exp
 ```
