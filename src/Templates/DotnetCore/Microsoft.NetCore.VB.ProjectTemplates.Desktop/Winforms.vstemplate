@@ -10,7 +10,7 @@
         <TemplateID>Microsoft.VB.NETCore.Winforms</TemplateID>
         <CreateNewFolder>true</CreateNewFolder>
         <CreateInPlace>true</CreateInPlace>
-        <DefaultName>WindowsFormsApp</DefaultName>
+        <DefaultName>WinFormsApp</DefaultName>
         <ProvideDefaultName>true</ProvideDefaultName>
         <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
     </TemplateData>
@@ -20,6 +20,7 @@
             <CustomParameter Name="$language$" Value="VB" />
             <CustomParameter Name="$uistyle$" Value="none" />
             <CustomParameter Name="$groupid$" Value="Microsoft.Common.WinForms" />
+            <CustomParameter Name="$platformversion$" Value="net5.0" />
         </CustomParameters>
     </TemplateContent>
     <WizardExtension>
