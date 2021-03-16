@@ -1,84 +1,104 @@
-# Responsible for producing the signed product build for insertion into the Visual Studio repository
-
-pr: none
-# Branches that trigger a build on commit
-trigger:
-  branches:
-    include:
-    - master
-    - dev15.9.x
-    - dev16.0.x
-    - dev16.3.x
-  paths:
-    exclude: # don't trigger the CI if only a eng file was changed
-    - eng/*
-    - global.json
-    - README.md
-
 resources:
 - repo: self
   clean: true
-queue:
-  name: VSEng-MicroBuildVS2017
-  demands: Cmd
 
+# The variables `_DotNetArtifactsCategory` and `_DotNetValidationArtifactsCategory` are required for proper publishing of build artifacts. See https://github.com/dotnet/roslyn/pull/38259
 variables:
-  BuildConfiguration: Release
-  BuildPlatform: 'any cpu'
-  TeamName: dotnet-templates
-  SignType: real
-  DropRoot: '\\cpvsbuild\drops'
-  VisualStudioDropName: Products/$(System.TeamProject)/$(Build.Repository.Name)/$(Build.SourceBranchName)/$(Build.BuildNumber)
+  - name: _DotNetArtifactsCategory
+    value: .NETCore
+  - name: _DotNetValidationArtifactsCategory
+    value: .NETCoreValidation
 
-steps:
-- task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@1
-  displayName: 'Install Signing Plugin'
-  inputs:
-    signType: $(SignType)
-    esrpSigning: true
-  condition: and(succeeded(), ne(variables['SignType'], ''))
+# Branches that trigger a build on commit
+trigger:
+- main
 
-- task: ms-vseng.MicroBuildTasks.32f78468-e895-4f47-962c-58a699361df8.MicroBuildSwixPlugin@1
-  displayName: 'Install Swix Plugin'
+stages:
+- stage: build
+  displayName: Build and Test
 
-- script: eng\common\CIBuild.cmd 
-          -configuration $(BuildConfiguration)
-          /p:OfficialBuildId=$(BUILD.BUILDNUMBER)
-          /p:VisualStudioDropName=$(VisualStudioDropName)
-          /p:DotNetSignType=$(SignType)
-          /p:DotNetSymbolServerTokenMsdl=$(microsoft-symbol-server-pat)
-          /p:DotNetSymbolServerTokenSymWeb=$(symweb-symbol-server-pat)
-  displayName: Build
+  jobs:
+  - job: OfficialBuild
+    displayName: Official Build
+    pool:
+      name: VSEngSS-MicroBuild2019
+      demands:
+      - cmd
 
-# Publishes setup VSIXes to a drop.
-# Note: The insertion tool looks for the display name of this task in the logs.
-- task: ms-vseng.MicroBuildTasks.4305a8de-ba66-4d8b-b2d1-0dc4ecbbf5e8.MicroBuildUploadVstsDropFolder@1
-  displayName: Upload VSTS Drop
-  inputs:
-    DropName: $(VisualStudioDropName)
-    DropFolder: 'artifacts\VSSetup\$(BuildConfiguration)\Insertion'
-    condition: succeeded()
+    steps:
+    - task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@1
+      displayName: Install Signing Plugin
+      inputs:
+        signType: $(SignType)
+        esrpSigning: true
+      condition: and(succeeded(), ne(variables['SignType'], ''))
 
-- task: CopyPublishBuildArtifacts@1
-  displayName: 'Publish Drop'
-  inputs:
-    CopyRoot: '$(Build.SourcesDirectory)'
-    Contents: |
-     artifacts\bin
-     artifacts\log\$(BuildConfiguration)
-     artifacts\VSSetup\$(BuildConfiguration)
-    ArtifactName: '$(Build.BuildNumber)'
-    ArtifactType: FilePath
-    TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
+    - task: ms-vseng.MicroBuildTasks.32f78468-e895-4f47-962c-58a699361df8.MicroBuildSwixPlugin@1
+      displayName: Install Swix Plugin
 
-# Publish an artifact that the RoslynInsertionTool is able to find by its name.
-- task: PublishBuildArtifacts@1
-  displayName: Publish Artifact VSSetup
-  inputs:
-    PathtoPublish: 'artifacts\VSSetup\$(BuildConfiguration)'
-    ArtifactName: 'VSSetup'
-  condition: succeeded()
+    - script: eng\common\CIBuild.cmd
+                -configuration $(BuildConfiguration)
+                /p:OfficialBuildId=$(Build.BuildNumber)
+                /p:VisualStudioDropName=$(VisualStudioDropName)
+                /p:DotNetSignType=$(SignType)
+                /p:DotNetSymbolServerTokenMsdl=$(microsoft-symbol-server-pat)
+                /p:DotNetSymbolServerTokenSymWeb=$(symweb-symbol-server-pat)
+                /p:DotNetArtifactsCategory=$(_DotNetArtifactsCategory)
+                /p:DotnetPublishUsingPipelines=true
+      displayName: Build
 
-- task: ms-vseng.MicroBuildTasks.521a94ea-9e68-468a-8167-6dcf361ea776.MicroBuildCleanup@1
-  displayName: 'Execute cleanup tasks'
+    - task: PublishTestResults@1
+      displayName: Publish Test Results
+      inputs:
+        testRunner: XUnit
+        testResultsFiles: 'artifacts/TestResults/$(BuildConfiguration)/*.xml'
+        mergeTestResults: true
+        testRunTitle: 'Unit Tests'
+      condition: always()
 
+    # Publishes setup VSIXes to a drop.
+    # Note: The insertion tool looks for the display name of this task in the logs.
+    - task: ms-vseng.MicroBuildTasks.4305a8de-ba66-4d8b-b2d1-0dc4ecbbf5e8.MicroBuildUploadVstsDropFolder@1
+      displayName: Upload VSTS Drop
+      inputs:
+        DropName: $(VisualStudioDropName)
+        DropFolder: 'artifacts\VSSetup\$(BuildConfiguration)\Insertion'
+        AccessToken: $(System.AccessToken)
+        condition: succeeded()
+
+    - task: PublishBuildArtifacts@1
+      displayName: Publish Logs
+      inputs:
+        PathtoPublish: '$(Build.SourcesDirectory)\artifacts\log\$(BuildConfiguration)'
+        ArtifactName: 'Logs'
+      continueOnError: true
+      condition: not(succeeded())
+
+    # Publish an artifact that the RoslynInsertionTool is able to find by its name.
+    - task: PublishBuildArtifacts@1
+      displayName: Publish Artifact VSSetup
+      inputs:
+        PathtoPublish: 'artifacts\VSSetup\$(BuildConfiguration)'
+        ArtifactName: 'VSSetup'
+      condition: succeeded()
+
+    - task: ms-vseng.MicroBuildTasks.521a94ea-9e68-468a-8167-6dcf361ea776.MicroBuildCleanup@1
+      displayName: Cleanup
+      condition: always()
+
+  # Publish to Build Asset Registry
+  - template: /eng/common/templates/job/publish-build-assets.yml
+    parameters:
+      publishUsingPipelines: true
+      dependsOn:
+        - OfficialBuild
+      queue:
+        name: Hosted VS2017
+
+- ${{ if and(ne(variables['System.TeamProject'], 'public'), notin(variables['Build.Reason'], 'PullRequest')) }}:
+  - template: eng\common\templates\post-build\post-build.yml
+    parameters:
+      # Symbol validation is not entirely reliable as of yet, so should be turned off until
+      # https://github.com/dotnet/arcade/issues/2871 is resolved.
+      enableSymbolValidation: false
+      enableSourceLinkValidation: false
