@@ -6,6 +6,7 @@ trigger:
   branches:
     include:
     - master
+    - main
     - dev15.9.x
     - dev16.0.x
     - dev16.3.x
