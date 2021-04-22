@@ -7,7 +7,7 @@
     <!-- Opt-in repo features -->
     <UsingToolVSSDK>true</UsingToolVSSDK>
     <UsingToolSymbolUploader>true</UsingToolSymbolUploader>
-    <MicrosoftVSSDKBuildToolsVersion>17.0.63-dev17-g3f11f5ab</MicrosoftVSSDKBuildToolsVersion>
+    <MicrosoftVSSDKBuildToolsVersion>17.0.32-dev17-g7a0e68a1</MicrosoftVSSDKBuildToolsVersion>
     <!-- VS SDK -->
     <VSLangProjVersion>17.0.0-preview-2-31221-277</VSLangProjVersion>
     <VSSDKTemplateWizardInterfaceVersion>12.0.4</VSSDKTemplateWizardInterfaceVersion>
