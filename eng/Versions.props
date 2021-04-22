@@ -9,24 +9,24 @@
     <UsingToolSymbolUploader>true</UsingToolSymbolUploader>
     <MicrosoftVSSDKBuildToolsVersion>17.0.63-dev17-g3f11f5ab</MicrosoftVSSDKBuildToolsVersion>
     <!-- VS SDK -->
-    <VSLangProjVersion>17.0.0-preview-1-31208-261</VSLangProjVersion>
+    <VSLangProjVersion>17.0.0-preview-2-31221-277</VSLangProjVersion>
     <VSSDKTemplateWizardInterfaceVersion>12.0.4</VSSDKTemplateWizardInterfaceVersion>
-    <EnvDTEVersion>17.0.0-preview-1-31208-261</EnvDTEVersion>
-    <EnvDTE80Version>17.0.0-preview-1-31208-261</EnvDTE80Version>
+    <EnvDTEVersion>17.0.0-preview-2-31221-277</EnvDTEVersion>
+    <EnvDTE80Version>17.0.0-preview-2-31221-277</EnvDTE80Version>
     <MicrosoftVisualStudioComponentModelHostVersion>15.0.26606</MicrosoftVisualStudioComponentModelHostVersion>
     <MicrosoftVisualStudioCoreUtilityVersion>15.0.26606</MicrosoftVisualStudioCoreUtilityVersion>
     <MicrosoftVisualStudioEditorVersion>15.0.26606</MicrosoftVisualStudioEditorVersion>
-    <MicrosoftVisualStudioOLEInteropVersion>17.0.0-preview-1-31208-261</MicrosoftVisualStudioOLEInteropVersion>
+    <MicrosoftVisualStudioOLEInteropVersion>17.0.0-preview-2-31221-277</MicrosoftVisualStudioOLEInteropVersion>
     <MicrosoftVisualStudioShell140Version>14.3.25407</MicrosoftVisualStudioShell140Version>
-    <MicrosoftVisualStudioShellInteropVersion>17.0.0-preview-1-31208-261</MicrosoftVisualStudioShellInteropVersion>
-    <MicrosoftVisualStudioShellInterop80Version>17.0.0-preview-1-31208-261</MicrosoftVisualStudioShellInterop80Version>
-    <MicrosoftVisualStudioShellInterop90Version>17.0.0-preview-1-31208-261</MicrosoftVisualStudioShellInterop90Version>
-    <MicrosoftVisualStudioShellInterop100Version>17.0.0-preview-1-31208-261</MicrosoftVisualStudioShellInterop100Version>
+    <MicrosoftVisualStudioShellInteropVersion>17.0.0-preview-2-31221-277</MicrosoftVisualStudioShellInteropVersion>
+    <MicrosoftVisualStudioShellInterop80Version>17.0.0-preview-2-31221-277</MicrosoftVisualStudioShellInterop80Version>
+    <MicrosoftVisualStudioShellInterop90Version>17.0.0-preview-2-31221-277</MicrosoftVisualStudioShellInterop90Version>
+    <MicrosoftVisualStudioShellInterop100Version>17.0.0-preview-2-31221-277</MicrosoftVisualStudioShellInterop100Version>
     <MicrosoftVisualStudioTextDataVersion>15.0.26606</MicrosoftVisualStudioTextDataVersion>
     <MicrosoftVisualStudioTextLogicVersion>15.0.26606</MicrosoftVisualStudioTextLogicVersion>
-    <MicrosoftVisualStudioTextManagerInteropVersion>17.0.0-preview-1-31208-261</MicrosoftVisualStudioTextManagerInteropVersion>
+    <MicrosoftVisualStudioTextManagerInteropVersion>17.0.0-preview-2-31221-277</MicrosoftVisualStudioTextManagerInteropVersion>
     <MicrosoftVisualStudioTextUIVersion>15.0.26606</MicrosoftVisualStudioTextUIVersion>
-    <MicrosoftVisualStudioUtilitiesVersion>17.0.0-preview-1-31208-261</MicrosoftVisualStudioUtilitiesVersion>
+    <MicrosoftVisualStudioUtilitiesVersion>17.0.0-preview-2-31221-277</MicrosoftVisualStudioUtilitiesVersion>
     <MicrosoftVisualStudioThreadingVersion>16.8.55</MicrosoftVisualStudioThreadingVersion>
     <MicrosoftDotNetProjectTemplatesVersion>1.0.0-beta2-20170629-269</MicrosoftDotNetProjectTemplatesVersion>
     <UpdateTemplateVersionVersion>1.0.0</UpdateTemplateVersionVersion>
