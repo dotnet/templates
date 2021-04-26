@@ -35,6 +35,7 @@ jobs:
 - template: /eng/common/templates/job/onelocbuild.yml
   parameters:
     CreatePr: false
+
 - job: Build
   steps:
   - task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@1
@@ -48,12 +49,12 @@ jobs:
     displayName: 'Install Swix Plugin'
 
   - script: eng\common\CIBuild.cmd 
-            -configuration $(BuildConfiguration)
-            /p:OfficialBuildId=$(BUILD.BUILDNUMBER)
-            /p:VisualStudioDropName=$(VisualStudioDropName)
-            /p:DotNetSignType=$(SignType)
-            /p:DotNetSymbolServerTokenMsdl=$(microsoft-symbol-server-pat)
-            /p:DotNetSymbolServerTokenSymWeb=$(symweb-symbol-server-pat)
+              -configuration $(BuildConfiguration)
+              /p:OfficialBuildId=$(BUILD.BUILDNUMBER)
+              /p:VisualStudioDropName=$(VisualStudioDropName)
+              /p:DotNetSignType=$(SignType)
+              /p:DotNetSymbolServerTokenMsdl=$(microsoft-symbol-server-pat)
+              /p:DotNetSymbolServerTokenSymWeb=$(symweb-symbol-server-pat)
     displayName: Build
 
   # Publishes setup VSIXes to a drop.
@@ -70,12 +71,12 @@ jobs:
     inputs:
       CopyRoot: '$(Build.SourcesDirectory)'
       Contents: |
-      artifacts\bin
-      artifacts\log\$(BuildConfiguration)
-      artifacts\VSSetup\$(BuildConfiguration)
-      ArtifactName: '$(Build.BuildNumber)'
-      ArtifactType: FilePath
-      TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
+        artifacts\bin
+        artifacts\log\$(BuildConfiguration)
+        artifacts\VSSetup\$(BuildConfiguration)
+        ArtifactName: '$(Build.BuildNumber)'
+        ArtifactType: FilePath
+        TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
 
   # Publish an artifact that the RoslynInsertionTool is able to find by its name.
   - task: PublishBuildArtifacts@1
