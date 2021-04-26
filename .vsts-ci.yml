@@ -16,13 +16,6 @@ trigger:
     - global.json
     - README.md
 
-resources:
-- repo: self
-  clean: true
-queue:
-  name: VSEng-MicroBuildVS2017
-  demands: Cmd
-
 variables:
   BuildConfiguration: Release
   BuildPlatform: 'any cpu'
@@ -37,7 +30,12 @@ jobs:
     CreatePr: false
 
 - job: Build
+  pool:
+    name: VSEng-MicroBuildVS2019
+    demands: Cmd
   steps:
+  - checkout: self
+    clean: true
   - task: ms-vseng.MicroBuildTasks.30666190-6959-11e5-9f96-f56098202fef.MicroBuildSigningPlugin@1
     displayName: 'Install Signing Plugin'
     inputs:
