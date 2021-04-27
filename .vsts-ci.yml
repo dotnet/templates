@@ -28,6 +28,8 @@ jobs:
 - template: /eng/common/templates/job/onelocbuild.yml
   parameters:
     CreatePr: false
+    LclSource: lclFilesfromPackage
+    LclPackageId: 'LCL-JUNO-PROD-TEMPLATE'
 
 - job: Build
   pool:
