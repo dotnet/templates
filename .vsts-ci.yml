@@ -74,9 +74,9 @@ jobs:
         artifacts\bin
         artifacts\log\$(BuildConfiguration)
         artifacts\VSSetup\$(BuildConfiguration)
-        ArtifactName: '$(Build.BuildNumber)'
-        ArtifactType: FilePath
-        TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
+      ArtifactName: '$(Build.BuildNumber)'
+      ArtifactType: FilePath
+      TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
 
   # Publish an artifact that the RoslynInsertionTool is able to find by its name.
   - task: PublishBuildArtifacts@1
