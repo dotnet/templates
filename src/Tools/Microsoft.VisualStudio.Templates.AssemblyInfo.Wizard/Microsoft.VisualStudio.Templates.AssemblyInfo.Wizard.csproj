@@ -1,16 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <UseCodebase>true</UseCodebase>
     <Ngen>false</Ngen>
     <VisualStudioInsertionComponent>Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard</VisualStudioInsertionComponent>
+    <SetupProductArch>Neutral</SetupProductArch>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="EnvDTE" Version="$(EnvDTEVersion)" />
     <PackageReference Include="EnvDTE80" Version="$(EnvDTE80Version)" />
-    <PackageReference Include="VSSDK.TemplateWizardInterface" Version="$(VSSDKTemplateWizardInterfaceVersion)" />
-    <PackageReference Include="Microsoft.VisualStudio.Shell.14.0" Version="$(MicrosoftVisualStudioShell140Version)" />
+    <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface" Version="$(MicrosoftVisualStudioTemplateWizardInterfaceVersion)" />
+    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" Version="$(MicrosoftVisualStudioShell150Version)" />
+    <PackageReference Include="Microsoft.VisualStudio.Validation" Version="$(MicrosoftVisualStudioValidationVersion)" />
   </ItemGroup>
 </Project>
