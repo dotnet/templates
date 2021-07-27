@@ -7,5 +7,6 @@
     <TargetFramework>net472</TargetFramework>
     <VSSDKTargetPlatformRegRootSuffix>Exp</VSSDKTargetPlatformRegRootSuffix>
     <Copyright>$(CopyrightMicrosoft)</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 </Project>
