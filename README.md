@@ -1,6 +1,6 @@
 # dotnet-templates
 
-This repository contains various .NET templates for Visual Studio.
+This repository contains various .NET templates for Visual Studio. Issues for ASP.NET Core templates should be opened in https://github.com/dotnet/aspnetcore.
 
 ## .NET Core
 
