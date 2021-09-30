@@ -25,15 +25,16 @@ variables:
   VisualStudioDropName: Products/$(System.TeamProject)/$(Build.Repository.Name)/$(Build.SourceBranchName)/$(Build.BuildNumber)
 
 jobs:
-- template: /eng/common/templates/job/onelocbuild.yml
-  parameters:
-    CreatePr: true
-    LclSource: lclFilesfromPackage
-    LclPackageId: 'LCL-JUNO-PROD-TEMPLATE'
+- ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/main') }}:
+  - template: /eng/common/templates/job/onelocbuild.yml
+    parameters:
+      CreatePr: true
+      LclSource: lclFilesfromPackage
+      LclPackageId: 'LCL-JUNO-PROD-TEMPLATE'
 
 - job: Build
   pool:
-    name: VSEngSS-MicroBuild2019
+    name: VSEngSS-MicroBuild2019-1ES
     demands: Cmd
   steps:
   - checkout: self
@@ -64,20 +65,17 @@ jobs:
     inputs:
       DropName: $(VisualStudioDropName)
       DropFolder: 'artifacts\VSSetup\$(BuildConfiguration)\Insertion'
+      AccessToken: $(System.AccessToken)
       condition: succeeded()
 
-  - task: CopyPublishBuildArtifacts@1
-    displayName: 'Publish Drop'
+  - task: PublishBuildArtifacts@1
+    displayName: Publish Logs
     inputs:
-      CopyRoot: '$(Build.SourcesDirectory)'
-      Contents: |
-        artifacts\bin
-        artifacts\log\$(BuildConfiguration)
-        artifacts\VSSetup\$(BuildConfiguration)
-      ArtifactName: '$(Build.BuildNumber)'
-      ArtifactType: FilePath
-      TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
-
+      PathtoPublish: 'artifacts\log\$(BuildConfiguration)'
+      ArtifactName: 'Build Logs'
+    continueOnError: true
+    condition: succeededOrFailed()
+      
   # Publish an artifact that the RoslynInsertionTool is able to find by its name.
   - task: PublishBuildArtifacts@1
     displayName: Publish Artifact VSSetup
