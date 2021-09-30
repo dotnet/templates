@@ -65,6 +65,7 @@ jobs:
     inputs:
       DropName: $(VisualStudioDropName)
       DropFolder: 'artifacts\VSSetup\$(BuildConfiguration)\Insertion'
+      AccessToken: $(System.AccessToken)
       condition: succeeded()
 
   - task: CopyPublishBuildArtifacts@1
