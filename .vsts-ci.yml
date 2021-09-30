@@ -68,18 +68,14 @@ jobs:
       AccessToken: $(System.AccessToken)
       condition: succeeded()
 
-  - task: CopyPublishBuildArtifacts@1
-    displayName: 'Publish Drop'
+  - task: PublishBuildArtifacts@1
+    displayName: Publish Logs
     inputs:
-      CopyRoot: '$(Build.SourcesDirectory)'
-      Contents: |
-        artifacts\bin
-        artifacts\log\$(BuildConfiguration)
-        artifacts\VSSetup\$(BuildConfiguration)
-      ArtifactName: '$(Build.BuildNumber)'
-      ArtifactType: FilePath
-      TargetPath: '$(DropRoot)\Roslyn\$(Build.DefinitionName)'
-
+      PathtoPublish: 'artifacts\log\$(BuildConfiguration)'
+      ArtifactName: 'Build Logs'
+    continueOnError: true
+    condition: succeededOrFailed()
+      
   # Publish an artifact that the RoslynInsertionTool is able to find by its name.
   - task: PublishBuildArtifacts@1
     displayName: Publish Artifact VSSetup
