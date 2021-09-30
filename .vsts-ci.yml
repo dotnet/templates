@@ -25,11 +25,12 @@ variables:
   VisualStudioDropName: Products/$(System.TeamProject)/$(Build.Repository.Name)/$(Build.SourceBranchName)/$(Build.BuildNumber)
 
 jobs:
-- template: /eng/common/templates/job/onelocbuild.yml
-  parameters:
-    CreatePr: true
-    LclSource: lclFilesfromPackage
-    LclPackageId: 'LCL-JUNO-PROD-TEMPLATE'
+- ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/main') }}:
+  - template: /eng/common/templates/job/onelocbuild.yml
+    parameters:
+      CreatePr: true
+      LclSource: lclFilesfromPackage
+      LclPackageId: 'LCL-JUNO-PROD-TEMPLATE'
 
 - job: Build
   pool:
