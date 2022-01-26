@@ -11,7 +11,12 @@ Issues for the templates should be opened in following repositories:
 |WPF templates|[dotnet/wpf](https://github.com/dotnet/wpf)|
 |Windows Forms templates|[dotnet/winforms](https://github.com/dotnet/winforms)|
 |Test templates|[dotnet/test-templates](https://github.com/dotnet/test-templates)|
-|MAUI templates|[dotnet/maui](https://github.com/dotnet/maui)|
+|Microsoft.Maui.Templates|[dotnet/maui](https://github.com/dotnet/maui)|
+|Microsoft.iOS.Templates| [xamarin/xamarin-macios](https://github.com/xamarin/xamarin-macios) |
+|Microsoft.MacCatalyst.Templates| [xamarin/xamarin-macios](https://github.com/xamarin/xamarin-macios) |
+|Microsoft.MacOS.Templates| [xamarin/xamarin-macios](https://github.com/xamarin/xamarin-macios) |
+|Microsoft.tvOS.Templates| [xamarin/xamarin-macios](https://github.com/xamarin/xamarin-macios) |
+|Microsoft.Android.Templates| [xamarin/xamarin-android](https://github.com/xamarin/xamarin-android) |
 
 ## .NET Core
 
