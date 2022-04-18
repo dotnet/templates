@@ -1,4 +1,5 @@
 <!-- Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.-->
 <Project>
   <Import Project="Sdk.targets" Sdk="Microsoft.DotNet.Arcade.Sdk" />
+  <Import Project="$(MSBuildThisProjectFileDirectory)..\eng\Versions.targets" />
 </Project>
