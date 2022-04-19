@@ -13,6 +13,7 @@
     <CommonMicrosoftVisualStudioShellVersion>17.1.32210.191</CommonMicrosoftVisualStudioShellVersion>
     <CommonMicrosoftVisualStudioEditorVersion>17.1.386</CommonMicrosoftVisualStudioEditorVersion>
     <CommonMicrosoftCodeAnalysisVersion>4.2.0-2.final</CommonMicrosoftCodeAnalysisVersion>
+    <MicrosoftVisualStudioSDKVersion>17.1.32210.191</MicrosoftVisualStudioSDKVersion>
 
     <VisualStudioShellPackageVersion>17.2.32414.248</VisualStudioShellPackageVersion>
     <VisualStudioEditorPackageVersion>17.2.3192</VisualStudioEditorPackageVersion>
@@ -36,6 +37,7 @@
     <MicrosoftVisualStudioTextLogicVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioTextLogicVersion>
     <MicrosoftVisualStudioTextUIVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioTextUIVersion>
 
+    <MicrosoftVisualStudioWorkspaceVSIntegrationVersion>17.1.11-preview-0002</MicrosoftVisualStudioWorkspaceVSIntegrationVersion>
     <MicrosoftVisualStudioThreadingVersion>17.2.37</MicrosoftVisualStudioThreadingVersion>
     <MicrosoftVisualStudioValidationVersion>17.0.57</MicrosoftVisualStudioValidationVersion>
     <MicrosoftVisualStudioTemplateWizardInterfaceVersion>17.2.32414.248</MicrosoftVisualStudioTemplateWizardInterfaceVersion>
