@@ -6,9 +6,11 @@
     <PreReleaseVersionLabel>beta</PreReleaseVersionLabel>
     <!-- Opt-in repo features -->
     <UsingToolVSSDK>true</UsingToolVSSDK>
+    <MicrosoftVSSDKBuildToolsVersion>17.1.4057</MicrosoftVSSDKBuildToolsVersion>
+    <UsingToolMicrosoftNetCompilers>true</UsingToolMicrosoftNetCompilers>
+    <MicrosoftNetCompilersToolsetVersion>4.2.0-1.final</MicrosoftNetCompilersToolsetVersion>
     <UsingToolSymbolUploader>true</UsingToolSymbolUploader>
     <MicroBuildPluginsSwixBuildVersion>1.1.33</MicroBuildPluginsSwixBuildVersion>
-    <MicrosoftVSSDKBuildToolsVersion>17.1.4057</MicrosoftVSSDKBuildToolsVersion>
     <!-- VS SDK -->
     <CommonMicrosoftVisualStudioShellVersion>17.1.32210.191</CommonMicrosoftVisualStudioShellVersion>
     <CommonMicrosoftVisualStudioEditorVersion>17.1.386</CommonMicrosoftVisualStudioEditorVersion>
