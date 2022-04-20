@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29017.117
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32418.120
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CEAFE05D-9079-44A2-80E0-9D9C1CAD8B85}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard", "src\Tools\Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard\Microsoft.VisualStudio.Templates.AssemblyInfo.Wizard.csproj", "{EB64E055-6458-41AD-BB07-BB572A90AF42}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.NetCore.VB.ProjectTemplates.Desktop", "src\Templates\DotnetCore\Microsoft.NetCore.VB.ProjectTemplates.Desktop\Microsoft.NetCore.VB.ProjectTemplates.Desktop.csproj", "{07454CA2-3BA6-47F2-A05F-CF44E69858C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.Editorconfig.Command", "src\Tools\Microsoft.VisualStudio.Templates.Editorconfig.Command\Microsoft.VisualStudio.Templates.Editorconfig.Command.csproj", "{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -265,6 +267,18 @@ Global
 		{07454CA2-3BA6-47F2-A05F-CF44E69858C3}.Release|x64.Build.0 = Release|Any CPU
 		{07454CA2-3BA6-47F2-A05F-CF44E69858C3}.Release|x86.ActiveCfg = Release|Any CPU
 		{07454CA2-3BA6-47F2-A05F-CF44E69858C3}.Release|x86.Build.0 = Release|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Debug|x64.Build.0 = Debug|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Debug|x86.Build.0 = Debug|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Release|x64.ActiveCfg = Release|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Release|x64.Build.0 = Release|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -293,6 +307,7 @@ Global
 		{3C759969-3AB2-432D-A7CB-D4E6DF1D510B} = {F467574B-E713-46CB-9C54-D70C42DD29C9}
 		{EB64E055-6458-41AD-BB07-BB572A90AF42} = {71612166-740D-4489-86E6-0B1BD6487462}
 		{07454CA2-3BA6-47F2-A05F-CF44E69858C3} = {F467574B-E713-46CB-9C54-D70C42DD29C9}
+		{7C4C00F3-8906-4FCC-9DE9-DBE1E41F7116} = {71612166-740D-4489-86E6-0B1BD6487462}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F3FC446-CADE-4812-8487-19861157EA49}
