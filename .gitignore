@@ -18,6 +18,7 @@ x64/
 .dotnet/
 .tools/
 src/Templates/**/ModifiedTemplates/
+.packages/
 
 # Per-user project properties
 launchSettings.json
