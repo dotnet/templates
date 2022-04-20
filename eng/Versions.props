@@ -38,6 +38,7 @@
     <MicrosoftVisualStudioTextUIVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioTextUIVersion>
 
     <MicrosoftVisualStudioWorkspaceVSIntegrationVersion>17.1.11-preview-0002</MicrosoftVisualStudioWorkspaceVSIntegrationVersion>
+    <MicrosoftVisualStudioTelemetryVersion>16.4.56</MicrosoftVisualStudioTelemetryVersion>
     <MicrosoftVisualStudioThreadingVersion>17.2.37</MicrosoftVisualStudioThreadingVersion>
     <MicrosoftVisualStudioValidationVersion>17.0.57</MicrosoftVisualStudioValidationVersion>
     <MicrosoftVisualStudioTemplateWizardInterfaceVersion>17.2.32414.248</MicrosoftVisualStudioTemplateWizardInterfaceVersion>
