@@ -16,10 +16,8 @@
     <CommonMicrosoftVisualStudioEditorVersion>17.1.386</CommonMicrosoftVisualStudioEditorVersion>
     <CommonMicrosoftCodeAnalysisVersion>4.2.0-2.final</CommonMicrosoftCodeAnalysisVersion>
     <MicrosoftVisualStudioSDKVersion>17.1.32210.191</MicrosoftVisualStudioSDKVersion>
-
     <VisualStudioShellPackageVersion>17.2.32414.248</VisualStudioShellPackageVersion>
     <VisualStudioEditorPackageVersion>17.2.3192</VisualStudioEditorPackageVersion>
-
     <EnvDTE80Version>$(CommonMicrosoftVisualStudioShellVersion)</EnvDTE80Version>
     <EnvDTEVersion>$(CommonMicrosoftVisualStudioShellVersion)</EnvDTEVersion>
     <MicrosoftVisualStudioOLEInteropVersion>$(CommonMicrosoftVisualStudioShellVersion)</MicrosoftVisualStudioOLEInteropVersion>
@@ -31,14 +29,12 @@
     <MicrosoftVisualStudioTextManagerInteropVersion>$(CommonMicrosoftVisualStudioShellVersion)</MicrosoftVisualStudioTextManagerInteropVersion>
     <MicrosoftVisualStudioUtilitiesVersion>$(CommonMicrosoftVisualStudioShellVersion)</MicrosoftVisualStudioUtilitiesVersion>
     <VSLangProjVersion>$(CommonMicrosoftVisualStudioShellVersion)</VSLangProjVersion>
-
     <MicrosoftVisualStudioComponentModelHostVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioComponentModelHostVersion>
     <MicrosoftVisualStudioCoreUtilityVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioCoreUtilityVersion>
     <MicrosoftVisualStudioEditorVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioEditorVersion>
     <MicrosoftVisualStudioTextDataVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioTextDataVersion>
     <MicrosoftVisualStudioTextLogicVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioTextLogicVersion>
     <MicrosoftVisualStudioTextUIVersion>$(CommonMicrosoftVisualStudioEditorVersion)</MicrosoftVisualStudioTextUIVersion>
-
     <MicrosoftVisualStudioWorkspaceVSIntegrationVersion>17.1.11-preview-0002</MicrosoftVisualStudioWorkspaceVSIntegrationVersion>
     <MicrosoftVisualStudioTelemetryVersion>16.4.56</MicrosoftVisualStudioTelemetryVersion>
     <MicrosoftVisualStudioThreadingVersion>17.2.37</MicrosoftVisualStudioThreadingVersion>
@@ -47,7 +43,6 @@
     <MicrosoftDotNetProjectTemplatesVersion>1.0.0-beta2-20170629-269</MicrosoftDotNetProjectTemplatesVersion>
     <UpdateTemplateVersionVersion>1.0.0</UpdateTemplateVersionVersion>
     <SystemValueTupleVersion>4.5.0</SystemValueTupleVersion>
-
     <MicrosoftCodeAnalysisWorkspacesCommonVersion>$(CommonMicrosoftCodeAnalysisVersion)</MicrosoftCodeAnalysisWorkspacesCommonVersion>
     <MicrosoftVisualStudioLanguageServicesVersion>$(CommonMicrosoftCodeAnalysisVersion)</MicrosoftVisualStudioLanguageServicesVersion>
     <StreamJsonRpcVersion>2.11.34</StreamJsonRpcVersion>
