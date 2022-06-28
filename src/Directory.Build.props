@@ -9,4 +9,14 @@
     <Copyright>$(CopyrightMicrosoft)</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <!-- Nullable annotations for netstandard 2.0 -->
+  <PropertyGroup>
+    <AnnotatedReferenceAssemblyVersion>6.0.1</AnnotatedReferenceAssemblyVersion>
+    <GenerateNullableAttributes>false</GenerateNullableAttributes>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' != '.NETCoreApp' AND $(Nullable) == 'enable'">
+    <PackageReference Include="TunnelVisionLabs.ReferenceAssemblyAnnotator" Version="1.0.0-alpha.160" PrivateAssets="all" />
+    <PackageDownload Include="Microsoft.NETCore.App.Ref" Version="[$(AnnotatedReferenceAssemblyVersion)]" />
+  </ItemGroup>
 </Project>
