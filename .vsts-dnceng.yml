@@ -4,6 +4,10 @@ trigger:
 - main
 - feature/*
 
+variables:
+  - name: Codeql.Enabled
+    value: true
+
 # Branches that trigger builds on PR
 pr:
 - master
