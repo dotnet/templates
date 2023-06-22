@@ -6,7 +6,7 @@
     <PreReleaseVersionLabel>beta</PreReleaseVersionLabel>
     <!-- Opt-in repo features -->
     <UsingToolVSSDK>true</UsingToolVSSDK>
-    <MicrosoftVSSDKBuildToolsVersion>17.1.4057</MicrosoftVSSDKBuildToolsVersion>
+    <MicrosoftVSSDKBuildToolsVersion>17.5.4074</MicrosoftVSSDKBuildToolsVersion>
     <UsingToolMicrosoftNetCompilers>true</UsingToolMicrosoftNetCompilers>
     <MicrosoftNetCompilersToolsetVersion>4.2.0-1.final</MicrosoftNetCompilersToolsetVersion>
     <UsingToolSymbolUploader>true</UsingToolSymbolUploader>
