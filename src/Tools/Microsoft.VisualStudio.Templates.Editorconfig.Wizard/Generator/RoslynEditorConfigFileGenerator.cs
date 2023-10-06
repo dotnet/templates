@@ -15,6 +15,9 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Reflection;
 using static Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Logging.Logger;
+using Microsoft.CodeAnalysis.ExternalAccess;
+using Microsoft.CodeAnalysis.Options.EditorConfig;
+using Microsoft.VisualStudio.OLE.Interop;
 
 namespace Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Generator;
 
@@ -81,6 +84,8 @@ public class RoslynEditorConfigFileGenerator
             // get IOptionService
             var componentModel = _serviceProvider.GetService(typeof(SComponentModel)) as IComponentModel;
             var workspace = componentModel?.GetService<VisualStudioWorkspace>();
+
+            // var editorService = (EditorConfigGeneratorWrapper)_serviceProvider.GetService(typeof(EditorConfigGeneratorWrapper));
             if (workspace is null)
             {
                 return null;

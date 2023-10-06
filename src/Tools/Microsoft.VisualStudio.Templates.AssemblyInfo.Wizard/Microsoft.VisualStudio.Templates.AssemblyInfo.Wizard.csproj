@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EnvDTE" />
-    <PackageReference Include="EnvDTE80" />
-    <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface" />
-    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Validation" />
-    <PackageReference Include="StreamJsonRpc" />
+    <PackageReference Include="EnvDTE" Version="17.9.35087-preview.1" />
+    <PackageReference Include="EnvDTE80" Version="17.9.35087-preview.1" />
+    <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface" Version="17.9.35087-preview.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" Version="17.9.35087-preview.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Validation" Version="17.8.8" />
+    <PackageReference Include="StreamJsonRpc" Version="2.17.9" />
   </ItemGroup>
 </Project>
