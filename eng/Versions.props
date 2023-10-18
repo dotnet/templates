@@ -8,13 +8,13 @@
     <UsingToolVSSDK>true</UsingToolVSSDK>
     <MicrosoftVSSDKBuildToolsVersion>17.5.4074</MicrosoftVSSDKBuildToolsVersion>
     <UsingToolMicrosoftNetCompilers>true</UsingToolMicrosoftNetCompilers>
-    <MicrosoftNetCompilersToolsetVersion>4.9.0-1.23505.1</MicrosoftNetCompilersToolsetVersion>
+    <MicrosoftNetCompilersToolsetVersion>4.9.0-1.23506.7</MicrosoftNetCompilersToolsetVersion>
     <UsingToolSymbolUploader>true</UsingToolSymbolUploader>
     <MicroBuildPluginsSwixBuildVersion>1.1.33</MicroBuildPluginsSwixBuildVersion>
     <!-- VS SDK -->
     <CommonMicrosoftVisualStudioShellVersion>17.7.36673</CommonMicrosoftVisualStudioShellVersion>
     <CommonMicrosoftVisualStudioEditorVersion>17.7.188</CommonMicrosoftVisualStudioEditorVersion>
-    <CommonMicrosoftCodeAnalysisVersion>4.9.0-1.23505.1</CommonMicrosoftCodeAnalysisVersion>
+    <CommonMicrosoftCodeAnalysisVersion>4.9.0-1.23506.7</CommonMicrosoftCodeAnalysisVersion>
     <MicrosoftVisualStudioSDKVersion>17.7.36673</MicrosoftVisualStudioSDKVersion>
     <VisualStudioShellPackageVersion>17.2.32414.248</VisualStudioShellPackageVersion>
     <VisualStudioEditorPackageVersion>17.2.3192</VisualStudioEditorPackageVersion>

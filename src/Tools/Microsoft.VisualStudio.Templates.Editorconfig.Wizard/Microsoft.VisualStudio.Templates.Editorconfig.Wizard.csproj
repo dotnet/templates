@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface" Version="17.9.35087-preview.1" />
     <PackageReference Include="StreamJsonRpc" Version="2.17.9" />
     <PackageReference Include="System.ValueTuple" />
+    <PackageReference Include="Microsoft.VisualStudio.RpcContracts" Version="17.7.9.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="WizardResource.Designer.cs">
@@ -29,5 +30,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>WizardResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
   </ItemGroup>
 </Project>
