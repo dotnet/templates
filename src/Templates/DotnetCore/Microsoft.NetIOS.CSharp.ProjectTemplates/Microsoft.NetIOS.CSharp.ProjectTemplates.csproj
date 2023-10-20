@@ -1,0 +1,22 @@
+﻿<!-- Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.-->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <VSTemplate Include="IOSApp.vstemplate">
+      <OutputSubPath>.NET</OutputSubPath>
+    </VSTemplate>
+    <VSTemplate Include="IOSBinding.vstemplate">
+      <OutputSubPath>.NET</OutputSubPath>
+    </VSTemplate>
+    <VSTemplate Include="IOSClassLib.vstemplate">
+      <OutputSubPath>.NET</OutputSubPath>
+    </VSTemplate>
+    <VSTemplate Include="IOSTabbed.vstemplate">
+      <OutputSubPath>.NET</OutputSubPath>
+    </VSTemplate>
+  </ItemGroup>
+</Project>
