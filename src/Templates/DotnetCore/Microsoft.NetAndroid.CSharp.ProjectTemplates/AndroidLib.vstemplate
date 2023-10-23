@@ -13,6 +13,7 @@
     <DefaultName>AndroidLib1</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <Hidden>true</Hidden>
   </TemplateData>
   <TemplateContent>
     <ProjectCollection/>
