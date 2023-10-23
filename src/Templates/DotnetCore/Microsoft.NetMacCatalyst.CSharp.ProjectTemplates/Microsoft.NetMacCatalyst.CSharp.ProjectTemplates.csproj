@@ -1,0 +1,19 @@
+﻿<!-- Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.-->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <VSTemplate Include="MacCatalystApp.vstemplate">
+      <OutputSubPath>.NET</OutputSubPath>
+    </VSTemplate>
+    <VSTemplate Include="MacCatalystBinding.vstemplate">
+      <OutputSubPath>.NET</OutputSubPath>
+    </VSTemplate>
+    <VSTemplate Include="MacCatalystLibrary.vstemplate">
+      <OutputSubPath>.NET</OutputSubPath>
+    </VSTemplate>
+  </ItemGroup>
+</Project>
