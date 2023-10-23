@@ -7,7 +7,7 @@
   "tools": {
     "dotnet": "8.0.100-rc.2.23502.2",
     "vs": {
-      "version": "17.6.0"
+      "version": "17.7.0"
     },
     "xcopy-msbuild": "17.6.0-2"
   },
