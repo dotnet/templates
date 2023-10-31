@@ -15,7 +15,7 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Reflection;
 using static Microsoft.VisualStudio.Templates.Editorconfig.Wizard.Logging.Logger;
-using Microsoft.CodeAnalysis.ExternalAccess;
+// using Microsoft.CodeAnalysis.ExternalAccess.EditorConfigGenerator;
 using Microsoft.CodeAnalysis.Options.EditorConfig;
 using Microsoft.VisualStudio.OLE.Interop;
 
