@@ -30,8 +30,6 @@ public class RoslynEditorConfigFileGenerator
 
     public string? Generate(string language)
     {
-        var testing = "hello"; 
-        Console.WriteLine(testing);
         try
         {
             var editorConfigGenerator = _serviceProvider.GetService(typeof(IEditorConfigGenerator)) as IEditorConfigGenerator;

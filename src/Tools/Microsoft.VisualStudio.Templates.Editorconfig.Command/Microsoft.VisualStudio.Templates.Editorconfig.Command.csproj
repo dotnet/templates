@@ -39,9 +39,9 @@
 
   <!-- Package References -->
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.9.35087-preview.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Workspace.VSIntegration" Version="17.8.15-preview-0002" />
-    <PackageReference Include="Microsoft.VisualStudio.Telemetry" Version="17.8.143" />
+    <PackageReference Include="Microsoft.VisualStudio.SDK" />
+    <PackageReference Include="Microsoft.VisualStudio.Workspace.VSIntegration" />
+    <PackageReference Include="Microsoft.VisualStudio.Telemetry" />
   </ItemGroup>
 
 </Project>
