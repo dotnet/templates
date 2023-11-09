@@ -46,6 +46,10 @@ jobs:
       esrpSigning: true
     condition: and(succeeded(), ne(variables['SignType'], ''))
 
+  - task: MicroBuildSbomPlugin@1
+    displayName: Install MicroBuild Sbom Plugin
+    condition: and(succeeded(), ne(variables['SignType'], ''))
+
   - task: ms-vseng.MicroBuildTasks.32f78468-e895-4f47-962c-58a699361df8.MicroBuildSwixPlugin@1
     displayName: 'Install Swix Plugin'
 
