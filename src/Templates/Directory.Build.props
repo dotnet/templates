@@ -14,7 +14,7 @@
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <SBOMFileDestPath>$(OutDirName)</SBOMFileDestPath>
+    <SBOMFileDestPath>$(VsixFilePath)</SBOMFileDestPath>
 
   </PropertyGroup>
 
