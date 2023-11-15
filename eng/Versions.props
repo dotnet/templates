@@ -45,6 +45,7 @@
     <SystemValueTupleVersion>4.5.0</SystemValueTupleVersion>
     <MicrosoftCodeAnalysisWorkspacesCommonVersion>$(CommonMicrosoftCodeAnalysisVersion)</MicrosoftCodeAnalysisWorkspacesCommonVersion>
     <MicrosoftVisualStudioLanguageServicesVersion>$(CommonMicrosoftCodeAnalysisVersion)</MicrosoftVisualStudioLanguageServicesVersion>
+    <MicrosoftVisualStudioEditorConfigGeneratorVersion>$(CommonMicrosoftCodeAnalysisVersion)</MicrosoftVisualStudioEditorConfigGeneratorVersion>
     <StreamJsonRpcVersion>2.17.8</StreamJsonRpcVersion>
   </PropertyGroup>
 </Project>

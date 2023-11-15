@@ -4,7 +4,7 @@
     <PackageReference Update="EnvDTE" Version="$(EnvDTEVersion)" />
     <PackageReference Update="EnvDTE80" Version="$(EnvDTE80Version)" />
     <PackageReference Update="Microsoft.CodeAnalysis.Workspaces.Common" Version="$(MicrosoftCodeAnalysisWorkspacesCommonVersion)" />
-    <PackageReference Update="Microsoft.CodeAnalysis.ExternalAccess.EditorConfigGenerator" Version="$(MicrosoftCodeAnalysisWorkspacesCommonVersion)" />
+    <PackageReference Update="Microsoft.CodeAnalysis.ExternalAccess.EditorConfigGenerator" Version="$(MicrosoftVisualStudioEditorConfigGeneratorVersion)" />
     <PackageReference Update="Microsoft.VisualStudio.ComponentModelHost" Version="$(MicrosoftVisualStudioComponentModelHostVersion)" />
     <PackageReference Update="Microsoft.VisualStudio.CoreUtility" Version="$(MicrosoftVisualStudioCoreUtilityVersion)" />
     <PackageReference Update="Microsoft.VisualStudio.Editor" Version="$(MicrosoftVisualStudioEditorVersion)" />
