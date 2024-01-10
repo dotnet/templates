@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>.NET MAUI Content Page (XAML)</Name>
+    <Description>A page for displaying content using XAML.</Description>
+    <Icon Package="{b3bae735-386c-4030-8329-ef48eeda4036}" ID="4600" />
+    <TemplateID>Microsoft.CSharp.NETMAUI.XamlContentPage</TemplateID>
+    <AppliesTo>CSharp</AppliesTo>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>111</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>NewPage1.xaml</DefaultName>
+    <ShowByDefault>false</ShowByDefault>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$groupid$" Value="Microsoft.Maui.XamlContentPage" />
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>.NET MAUI Resource Dictionary (XAML)</Name>
+    <Description>A repository for resources that are used by a .NET MAUI app. Typical resources that are stored in a ResourceDictionary include styles, control templates, data templates, converters, and colors.</Description>
+    <Icon Package="{b3bae735-386c-4030-8329-ef48eeda4036}" ID="4600" />
+    <TemplateID>Microsoft.CSharp.NETMAUI.XamlResourceDictionary</TemplateID>
+    <AppliesTo>CSharp</AppliesTo>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>114</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Dictionary1.xaml</DefaultName>
+    <ShowByDefault>false</ShowByDefault>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$groupid$" Value="Microsoft.Maui.XamlResourceDictionary" />
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>
