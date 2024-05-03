@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Temp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.VisualStudio.Templates.Editorconfig.Wizard", "src\Tools\Microsoft.VisualStudio.Templates.Editorconfig.Wizard\Microsoft.VisualStudio.Templates.Editorconfig.Wizard.csproj", "{14FB6077-8F5C-4487-B8E3-400DBE9E004F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetCore", "DotnetCore", "{F467574B-E713-46CB-9C54-D70C42DD29C9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,7 +95,6 @@ Global
 		{6FD38D20-D8DF-43BE-B6DA-369E3D4B44C8} = {DC5D5B1E-0B1A-4921-B2BE-DBBA9A25D361}
 		{5499ED4E-A7D6-4519-AA50-BA03A22D2284} = {DC5D5B1E-0B1A-4921-B2BE-DBBA9A25D361}
 		{14FB6077-8F5C-4487-B8E3-400DBE9E004F} = {71612166-740D-4489-86E6-0B1BD6487462}
-		{F467574B-E713-46CB-9C54-D70C42DD29C9} = {1BBCEFE6-1F67-4BBB-BDE7-E752AD8B023C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F3FC446-CADE-4812-8487-19861157EA49}
