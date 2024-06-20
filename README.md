@@ -1,12 +1,12 @@
 # dotnet-templates (read-only)
 
-This repository contained various .NET templates for Visual Studio. At this time, all templates have been moved into their respective repos or the https://github.com/dotnet/sdk repo. Any templates used for testing have been moved into the Visual Studio internal repo. See https://github.com/dotnet/templates/pull/846 for more details.
+This repository contained various .NET templates for Visual Studio. At this time, all templates have been moved into their respective repos or the [dotnet/sdk](https://github.com/dotnet/sdk) repo. Any templates used for testing have been moved into the Visual Studio internal repo. See https://github.com/dotnet/templates/pull/846 for more details.
 
 Issues for the templates should be opened in following repositories:
 
 | Templates | Repository |
 |---|---|
-|Common project (classlib, console) and item templates|[dotnet/templating](https://github.com/dotnet/templating)|
+|Common project (classlib, console) and item templates|[dotnet/sdk](https://github.com/dotnet/sdk)|
 |ASP.NET and Blazor templates|[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore)|
 |WPF templates|[dotnet/wpf](https://github.com/dotnet/wpf)|
 |Windows Forms templates|[dotnet/winforms](https://github.com/dotnet/winforms)|
